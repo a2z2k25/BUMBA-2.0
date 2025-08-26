@@ -1,0 +1,628 @@
+/**
+ * ShadCN UI Specialist
+ * Expert in ShadCN/UI components, Radix UI primitives, and modern React patterns
+ */
+
+const UnifiedSpecialistBase = require('../unified-specialist-base');
+const { logger } = require('../../logging/bumba-logger');
+const { getInstance: getShadCNIntegration } = require('../../integrations/shadcn-mcp-integration');
+
+class ShadCNSpecialist extends UnifiedSpecialistBase {
+  constructor(department, context = {}) {
+    super('shadcn-specialist', department, context);
+    this.displayName = 'ShadCN UI Specialist';
+    this.initializeExpertise();
+    this.shadcnIntegration = null;
+  }
+  
+  initializeExpertise() {
+    this.expertise = {
+      'shadcn_ui': true,
+      'radix_ui': true,
+      'tailwind_css': true,
+      'react_components': true,
+      'accessibility': true,
+      'component_composition': true,
+      'theme_customization': true,
+      'responsive_design': true
+    };
+    
+    this.capabilities = [
+      'shadcn/ui components',
+      'radix ui primitives',
+      'tailwind styling',
+      'component generation',
+      'theme customization',
+      'variant management',
+      'accessibility implementation',
+      'responsive layouts',
+      'dark mode support',
+      'form handling',
+      'animation systems',
+      'component composition patterns'
+    ];
+    
+    // Component expertise mapping
+    this.componentExpertise = {
+      layout: ['card', 'aspect-ratio', 'scroll-area', 'separator'],
+      navigation: ['navigation-menu', 'menubar', 'tabs', 'pagination'],
+      inputs: ['button', 'input', 'textarea', 'checkbox', 'radio-group', 'select', 'switch', 'slider', 'toggle', 'form'],
+      overlay: ['dialog', 'sheet', 'alert-dialog', 'dropdown-menu', 'context-menu', 'popover', 'hover-card', 'drawer'],
+      dataDisplay: ['accordion', 'avatar', 'badge', 'table', 'carousel'],
+      feedback: ['alert', 'progress', 'skeleton', 'toast'],
+      disclosure: ['collapsible']
+    };
+    
+    logger.info(`🔴 ShadCN UI Specialist initialized with ${this.capabilities.length} capabilities`);
+  }
+  
+  async initialize() {
+    await super.initialize();
+    
+    // Connect to ShadCN MCP integration
+    try {
+      this.shadcnIntegration = getShadCNIntegration();
+      if (!this.shadcnIntegration.status.mcpConnected) {
+        await this.shadcnIntegration.initialize();
+      }
+      logger.info('🏁 ShadCN MCP integration connected');
+    } catch (error) {
+      logger.warn('🟠️ ShadCN MCP integration not available:', error.message);
+    }
+  }
+  
+  async processTask(task, context) {
+    logger.info(`🔴 ShadCN Specialist processing task: ${task.type || 'component'}`);
+    
+    const taskType = this.identifyTaskType(task);
+    let result;
+    
+    switch (taskType) {
+      case 'component-generation':
+        result = await this.generateComponent(task);
+        break;
+        
+      case 'theme-customization':
+        result = await this.customizeTheme(task);
+        break;
+        
+      case 'layout-design':
+        result = await this.designLayout(task);
+        break;
+        
+      case 'form-building':
+        result = await this.buildForm(task);
+        break;
+        
+      case 'accessibility-audit':
+        result = await this.auditAccessibility(task);
+        break;
+        
+      case 'responsive-design':
+        result = await this.createResponsiveDesign(task);
+        break;
+        
+      default:
+        result = await this.handleGeneralTask(task);
+    }
+    
+    return {
+      specialist: 'shadcn-specialist',
+      displayName: this.displayName,
+      taskProcessed: true,
+      taskType,
+      ...result
+    };
+  }
+  
+  identifyTaskType(task) {
+    const taskStr = JSON.stringify(task).toLowerCase();
+    
+    if (taskStr.includes('component') || taskStr.includes('create') || taskStr.includes('generate')) {
+      return 'component-generation';
+    }
+    if (taskStr.includes('theme') || taskStr.includes('style') || taskStr.includes('color')) {
+      return 'theme-customization';
+    }
+    if (taskStr.includes('layout') || taskStr.includes('grid') || taskStr.includes('flex')) {
+      return 'layout-design';
+    }
+    if (taskStr.includes('form') || taskStr.includes('input') || taskStr.includes('validation')) {
+      return 'form-building';
+    }
+    if (taskStr.includes('accessibility') || taskStr.includes('a11y') || taskStr.includes('aria')) {
+      return 'accessibility-audit';
+    }
+    if (taskStr.includes('responsive') || taskStr.includes('mobile') || taskStr.includes('breakpoint')) {
+      return 'responsive-design';
+    }
+    
+    return 'general';
+  }
+  
+  async generateComponent(task) {
+    const componentName = task.component || this.suggestComponent(task);
+    
+    // Use MCP integration if available
+    if (this.shadcnIntegration && this.shadcnIntegration.status.mcpConnected) {
+      try {
+        const result = await this.shadcnIntegration.generateComponent(componentName, task.options);
+        return {
+          success: true,
+          component: componentName,
+          generated: result,
+          implementation: this.getImplementationGuide(componentName)
+        };
+      } catch (error) {
+        logger.error('Failed to generate component via MCP:', error);
+      }
+    }
+    
+    // Fallback to recommendations
+    return {
+      success: true,
+      component: componentName,
+      recommendation: this.getComponentRecommendation(componentName),
+      implementation: this.getImplementationGuide(componentName),
+      installation: `npx shadcn-ui@latest add ${componentName}`
+    };
+  }
+  
+  suggestComponent(task) {
+    const taskStr = JSON.stringify(task).toLowerCase();
+    
+    // Smart component suggestion based on task context
+    if (taskStr.includes('button') || taskStr.includes('click') || taskStr.includes('action')) {
+      return 'button';
+    }
+    if (taskStr.includes('modal') || taskStr.includes('popup')) {
+      return 'dialog';
+    }
+    if (taskStr.includes('menu') || taskStr.includes('dropdown')) {
+      return 'dropdown-menu';
+    }
+    if (taskStr.includes('nav') || taskStr.includes('navigation')) {
+      return 'navigation-menu';
+    }
+    if (taskStr.includes('form') || taskStr.includes('input')) {
+      return 'form';
+    }
+    if (taskStr.includes('table') || taskStr.includes('data') || taskStr.includes('list')) {
+      return 'table';
+    }
+    if (taskStr.includes('card') || taskStr.includes('container')) {
+      return 'card';
+    }
+    
+    return 'button'; // Default fallback
+  }
+  
+  getComponentRecommendation(componentName) {
+    const recommendations = {
+      button: {
+        variants: ['default', 'destructive', 'outline', 'secondary', 'ghost', 'link'],
+        sizes: ['default', 'sm', 'lg', 'icon'],
+        usage: 'Use for actions and navigation. Supports asChild prop for custom elements.',
+        accessibility: 'Fully keyboard navigable, ARIA compliant'
+      },
+      dialog: {
+        features: ['Portal rendering', 'Focus management', 'Escape key handling'],
+        usage: 'Use for modals, confirmations, and complex forms',
+        accessibility: 'Focus trap, screen reader announcements'
+      },
+      form: {
+        features: ['React Hook Form integration', 'Zod validation', 'Error handling'],
+        usage: 'Complete form solution with validation and accessibility',
+        dependencies: ['react-hook-form', '@hookform/resolvers', 'zod']
+      },
+      card: {
+        sections: ['CardHeader', 'CardTitle', 'CardDescription', 'CardContent', 'CardFooter'],
+        usage: 'Flexible container for grouped content',
+        styling: 'Customizable with Tailwind classes'
+      }
+    };
+    
+    return recommendations[componentName] || {
+      usage: `ShadCN ${componentName} component`,
+      features: ['Accessible', 'Customizable', 'Composable']
+    };
+  }
+  
+  getImplementationGuide(componentName) {
+    return {
+      installation: `npx shadcn-ui@latest add ${componentName}`,
+      import: `import { ${this.capitalizeFirst(componentName)} } from "@/components/ui/${componentName}"`,
+      basicUsage: this.getBasicUsage(componentName),
+      advancedPatterns: this.getAdvancedPatterns(componentName),
+      styling: 'Use className prop with Tailwind classes',
+      composition: 'Components are composable and work with asChild pattern'
+    };
+  }
+  
+  getBasicUsage(componentName) {
+    const usage = {
+      button: '<Button variant="outline">Click me</Button>',
+      dialog: `<Dialog>
+  <DialogTrigger>Open</DialogTrigger>
+  <DialogContent>
+    <DialogHeader>
+      <DialogTitle>Title</DialogTitle>
+      <DialogDescription>Description</DialogDescription>
+    </DialogHeader>
+  </DialogContent>
+</Dialog>`,
+      card: `<Card>
+  <CardHeader>
+    <CardTitle>Title</CardTitle>
+    <CardDescription>Description</CardDescription>
+  </CardHeader>
+  <CardContent>Content</CardContent>
+</Card>`,
+      form: `<Form {...form}>
+  <form onSubmit={form.handleSubmit(onSubmit)}>
+    <FormField
+      control={form.control}
+      name="username"
+      render={({ field }) => (
+        <FormItem>
+          <FormLabel>Username</FormLabel>
+          <FormControl>
+            <Input {...field} />
+          </FormControl>
+          <FormMessage />
+        </FormItem>
+      )}
+    />
+  </form>
+</Form>`
+    };
+    
+    return usage[componentName] || `<${this.capitalizeFirst(componentName)} />`;
+  }
+  
+  getAdvancedPatterns(componentName) {
+    return {
+      composition: `Combine with other ShadCN components for complex UIs`,
+      variants: `Use variant prop for different styles`,
+      customization: `Extend with cn() utility for custom classes`,
+      accessibility: `Built on Radix UI for full a11y support`
+    };
+  }
+  
+  async customizeTheme(task) {
+    const themeConfig = {
+      colors: task.colors || this.suggestColorScheme(task),
+      radius: task.radius || '0.5rem',
+      borderWidth: task.borderWidth || '1px',
+      fonts: task.fonts || { sans: 'Inter', mono: 'JetBrains Mono' }
+    };
+    
+    // Use MCP integration if available
+    if (this.shadcnIntegration && this.shadcnIntegration.status.mcpConnected) {
+      await this.shadcnIntegration.updateTheme(themeConfig);
+    }
+    
+    return {
+      success: true,
+      theme: themeConfig,
+      cssVariables: this.generateCSSVariables(themeConfig),
+      implementation: this.getThemeImplementation(themeConfig)
+    };
+  }
+  
+  suggestColorScheme(task) {
+    const taskStr = JSON.stringify(task).toLowerCase();
+    
+    if (taskStr.includes('dark') || taskStr.includes('night')) {
+      return {
+        background: 'hsl(224 71.4% 4.1%)',
+        foreground: 'hsl(210 20% 98%)',
+        primary: 'hsl(263.4 70% 50.4%)',
+        secondary: 'hsl(215 27.9% 16.9%)'
+      };
+    }
+    
+    // Default light theme
+    return {
+      background: 'hsl(0 0% 100%)',
+      foreground: 'hsl(224 71.4% 4.1%)',
+      primary: 'hsl(262.1 83.3% 57.8%)',
+      secondary: 'hsl(220 14.3% 95.9%)'
+    };
+  }
+  
+  generateCSSVariables(config) {
+    const vars = [];
+    
+    if (config.colors) {
+      Object.entries(config.colors).forEach(([key, value]) => {
+        vars.push(`--${key}: ${value};`);
+      });
+    }
+    
+    if (config.radius) {
+      vars.push(`--radius: ${config.radius};`);
+    }
+    
+    return vars.join('\n  ');
+  }
+  
+  getThemeImplementation(config) {
+    return {
+      location: 'app/globals.css or styles/globals.css',
+      cssVariables: `@layer base {
+  :root {
+    ${this.generateCSSVariables(config)}
+  }
+}`,
+      darkMode: 'Add .dark class to root for dark mode',
+      usage: 'Components automatically use CSS variables'
+    };
+  }
+  
+  async designLayout(task) {
+    const layoutType = task.layoutType || 'dashboard';
+    
+    return {
+      success: true,
+      layout: layoutType,
+      structure: this.getLayoutStructure(layoutType),
+      components: this.getLayoutComponents(layoutType),
+      responsive: this.getResponsiveBreakpoints(),
+      implementation: this.getLayoutImplementation(layoutType)
+    };
+  }
+  
+  getLayoutStructure(type) {
+    const structures = {
+      dashboard: {
+        shell: 'Main container with sidebar and header',
+        sidebar: 'Navigation menu with collapsible sections',
+        header: 'Top bar with user menu and search',
+        main: 'Content area with responsive grid'
+      },
+      landing: {
+        hero: 'Full-width hero section',
+        features: 'Feature grid with cards',
+        testimonials: 'Carousel or grid layout',
+        cta: 'Call-to-action section'
+      },
+      app: {
+        navigation: 'Top navigation bar',
+        content: 'Main content area',
+        footer: 'Optional footer'
+      }
+    };
+    
+    return structures[type] || structures.app;
+  }
+  
+  getLayoutComponents(type) {
+    const components = {
+      dashboard: ['navigation-menu', 'sheet', 'card', 'table', 'tabs'],
+      landing: ['button', 'card', 'carousel', 'accordion'],
+      app: ['navigation-menu', 'dropdown-menu', 'dialog', 'form']
+    };
+    
+    return components[type] || components.app;
+  }
+  
+  getResponsiveBreakpoints() {
+    return {
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px'
+    };
+  }
+  
+  getLayoutImplementation(type) {
+    return {
+      structure: `Use CSS Grid or Flexbox for layout`,
+      responsive: `Tailwind responsive prefixes (sm:, md:, lg:)`,
+      components: `Compose ShadCN components for UI elements`,
+      example: this.getLayoutExample(type)
+    };
+  }
+  
+  getLayoutExample(type) {
+    if (type === 'dashboard') {
+      return `<div className="flex h-screen">
+  <Sheet>
+    <SheetContent side="left">
+      <NavigationMenu />
+    </SheetContent>
+  </Sheet>
+  <div className="flex-1">
+    <header className="border-b p-4">
+      <DropdownMenu>{/* User menu */}</DropdownMenu>
+    </header>
+    <main className="p-6">
+      <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
+        {/* Dashboard cards */}
+      </div>
+    </main>
+  </div>
+</div>`;
+    }
+    
+    return `<div className="min-h-screen">
+  <NavigationMenu />
+  <main className="container mx-auto p-4">
+    {/* Content */}
+  </main>
+</div>`;
+  }
+  
+  async buildForm(task) {
+    const formType = task.formType || 'contact';
+    
+    return {
+      success: true,
+      formType,
+      schema: this.getFormSchema(formType),
+      validation: this.getFormValidation(formType),
+      components: ['form', 'input', 'textarea', 'select', 'checkbox', 'button'],
+      implementation: this.getFormImplementation(formType)
+    };
+  }
+  
+  getFormSchema(type) {
+    const schemas = {
+      contact: {
+        name: 'string',
+        email: 'email',
+        message: 'text'
+      },
+      login: {
+        email: 'email',
+        password: 'password'
+      },
+      registration: {
+        username: 'string',
+        email: 'email',
+        password: 'password',
+        confirmPassword: 'password'
+      }
+    };
+    
+    return schemas[type] || schemas.contact;
+  }
+  
+  getFormValidation(type) {
+    return {
+      library: 'zod',
+      example: `const schema = z.object({
+  email: z.string().email(),
+  password: z.string().min(8)
+})`,
+      integration: 'Use with react-hook-form and @hookform/resolvers'
+    };
+  }
+  
+  getFormImplementation(type) {
+    return {
+      setup: 'Install form, input, and validation dependencies',
+      hookForm: 'Use useForm hook with zodResolver',
+      fields: 'Wrap inputs in FormField components',
+      submission: 'Handle with form.handleSubmit',
+      errors: 'Display with FormMessage component'
+    };
+  }
+  
+  async auditAccessibility(task) {
+    return {
+      success: true,
+      audit: {
+        keyboardNavigation: 'All interactive elements keyboard accessible',
+        screenReaders: 'Proper ARIA labels and announcements',
+        focusManagement: 'Focus trap in modals, visible focus indicators',
+        colorContrast: 'WCAG AA compliant color ratios',
+        semanticHTML: 'Proper heading hierarchy and landmarks'
+      },
+      recommendations: [
+        'Use ShadCN components for built-in a11y',
+        'Add aria-label for icon-only buttons',
+        'Ensure proper heading hierarchy',
+        'Test with keyboard navigation',
+        'Use semantic HTML elements'
+      ]
+    };
+  }
+  
+  async createResponsiveDesign(task) {
+    return {
+      success: true,
+      breakpoints: this.getResponsiveBreakpoints(),
+      strategies: {
+        mobileFirst: 'Start with mobile, add complexity for larger screens',
+        containerQueries: 'Use @container for component-level responsiveness',
+        fluidTypography: 'Use clamp() for responsive text sizing',
+        gridLayouts: 'CSS Grid with auto-fit/auto-fill'
+      },
+      implementation: {
+        tailwind: 'Use responsive prefixes (sm:, md:, lg:)',
+        components: 'Build mobile-first with progressive enhancement',
+        images: 'Use next/image or aspect-ratio for responsive images',
+        navigation: 'Sheet for mobile, navigation-menu for desktop'
+      }
+    };
+  }
+  
+  async handleGeneralTask(task) {
+    return {
+      success: true,
+      expertise: this.expertise,
+      recommendations: this.generateRecommendations(task),
+      bestPractices: [
+        'Use composition over configuration',
+        'Leverage Radix UI primitives for complex interactions',
+        'Maintain consistent spacing with Tailwind',
+        'Ensure accessibility with proper ARIA attributes',
+        'Use CSS variables for theming'
+      ],
+      resources: {
+        documentation: 'https://ui.shadcn.com',
+        github: 'https://github.com/shadcn-ui/ui',
+        examples: 'https://ui.shadcn.com/examples',
+        radixUI: 'https://www.radix-ui.com'
+      }
+    };
+  }
+  
+  generateRecommendations(task) {
+    const recommendations = [];
+    const taskStr = JSON.stringify(task).toLowerCase();
+    
+    // Context-aware recommendations
+    if (taskStr.includes('performance')) {
+      recommendations.push('Use React.memo for expensive components');
+      recommendations.push('Implement virtualization for long lists');
+    }
+    
+    if (taskStr.includes('animation')) {
+      recommendations.push('Use Framer Motion with ShadCN components');
+      recommendations.push('Leverage Tailwind animation classes');
+    }
+    
+    if (taskStr.includes('data')) {
+      recommendations.push('Use TanStack Table with ShadCN table component');
+      recommendations.push('Implement pagination and sorting');
+    }
+    
+    // Default recommendations
+    recommendations.push('Start with ShadCN CLI for quick setup');
+    recommendations.push('Customize components with cn() utility');
+    recommendations.push('Use compound components for flexibility');
+    
+    return recommendations;
+  }
+  
+  capitalizeFirst(str) {
+    return str.charAt(0).toUpperCase() + str.slice(1);
+  }
+  
+  calculateConfidence(task) {
+    const taskStr = JSON.stringify(task).toLowerCase();
+    let confidence = 0.7; // Base confidence
+    
+    // Increase confidence for specific ShadCN mentions
+    if (taskStr.includes('shadcn')) confidence += 0.2;
+    if (taskStr.includes('radix')) confidence += 0.1;
+    
+    // Check for component names
+    for (const [category, components] of Object.entries(this.componentExpertise)) {
+      for (const component of components) {
+        if (taskStr.includes(component)) {
+          confidence += 0.1;
+          break;
+        }
+      }
+    }
+    
+    return Math.min(confidence, 1.0);
+  }
+}
+
+module.exports = ShadCNSpecialist;

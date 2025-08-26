@@ -1,0 +1,160 @@
+{
+  "version": "2.0",
+  "generated": "2025-08-25T09:16:57.569Z",
+  "specialists": [
+    {
+      "id": "javascript-specialist",
+      "name": "javascript",
+      "maturity": {
+        "level": 4,
+        "name": "Verified",
+        "icon": "🏆",
+        "description": "Battle-tested in production",
+        "color": "gold"
+      },
+      "lastVerified": "2025-01-20",
+      "notes": "Extensively tested, handles all JS/Node patterns",
+      "capabilities": {
+        "claimed": [
+          "es6+",
+          "async/await",
+          "node.js"
+        ],
+        "verified": [
+          "es6+",
+          "async/await",
+          "node.js"
+        ]
+      }
+    },
+    {
+      "id": "typescript-specialist",
+      "name": "typescript",
+      "maturity": {
+        "level": 4,
+        "name": "Verified",
+        "icon": "🏆",
+        "description": "Battle-tested in production",
+        "color": "gold"
+      },
+      "lastVerified": "2025-01-20",
+      "notes": "Excellent type checking and interface design",
+      "capabilities": {
+        "claimed": [
+          "types",
+          "interfaces",
+          "generics"
+        ],
+        "verified": [
+          "types",
+          "interfaces",
+          "generics"
+        ]
+      }
+    },
+    {
+      "id": "python-specialist",
+      "name": "python",
+      "maturity": {
+        "level": 4,
+        "name": "Verified",
+        "icon": "🏆",
+        "description": "Battle-tested in production",
+        "color": "gold"
+      },
+      "lastVerified": "2025-01-20",
+      "notes": "Comprehensive Python 3 support",
+      "capabilities": {
+        "claimed": [
+          "python3",
+          "async",
+          "data science"
+        ],
+        "verified": [
+          "python3",
+          "async"
+        ]
+      }
+    },
+    {
+      "id": "react-specialist",
+      "name": "react",
+      "maturity": {
+        "level": 3,
+        "name": "Stable",
+        "icon": "✅",
+        "description": "Production ready",
+        "color": "green"
+      },
+      "lastVerified": "2025-01-15",
+      "notes": "Solid React/hooks support",
+      "capabilities": {
+        "claimed": [
+          "components",
+          "hooks",
+          "state"
+        ],
+        "verified": [
+          "components",
+          "hooks"
+        ]
+      }
+    },
+    {
+      "id": "database-admin",
+      "name": "database admin",
+      "maturity": {
+        "level": 3,
+        "name": "Stable",
+        "icon": "✅",
+        "description": "Production ready",
+        "color": "green"
+      },
+      "lastVerified": "2025-01-15",
+      "notes": "Good SQL and schema design",
+      "capabilities": {
+        "claimed": [
+          "sql",
+          "optimization",
+          "design"
+        ],
+        "verified": [
+          "sql",
+          "design"
+        ]
+      }
+    },
+    {
+      "id": "api-architect",
+      "name": "api architect",
+      "maturity": {
+        "level": 3,
+        "name": "Stable",
+        "icon": "✅",
+        "description": "Production ready",
+        "color": "green"
+      },
+      "lastVerified": "2025-01-15",
+      "notes": "RESTful API design patterns",
+      "capabilities": {
+        "claimed": [
+          "rest",
+          "graphql",
+          "openapi"
+        ],
+        "verified": [
+          "rest",
+          "openapi"
+        ]
+      }
+    }
+  ],
+  "stats": {
+    "total": 13,
+    "verified": 3,
+    "stable": 3,
+    "beta": 3,
+    "alpha": 2,
+    "experimental": 2
+  }
+}

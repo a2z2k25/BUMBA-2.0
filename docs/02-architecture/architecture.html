@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUMBA Framework Architecture</title>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .diagram-container {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .mermaid {
+            text-align: center;
+        }
+        .nav {
+            position: fixed;
+            right: 20px;
+            top: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .nav h3 {
+            margin-top: 0;
+        }
+        .nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .nav li {
+            margin: 5px 0;
+        }
+        .nav a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .nav a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 1200px) {
+            .nav {
+                position: static;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+    <script>
+        mermaid.initialize({ 
+            startOnLoad: true,
+            theme: 'default',
+            themeVariables: {
+                primaryColor: '#4A90E2',
+                primaryBorderColor: '#357ABD',
+                primaryTextColor: '#fff',
+                lineColor: '#5D6D7E',
+                secondaryColor: '#E8F5E9',
+                tertiaryColor: '#FFF3E0'
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="nav">
+        <h3>Navigation</h3>
+        <ul>
+            <li><a href="#overview">System Overview</a></li>
+            <li><a href="#flow">Command Flow</a></li>
+            <li><a href="#coordination">Coordination</a></li>
+            <li><a href="#health">Health System</a></li>
+            <li><a href="#modes">Mode Switching</a></li>
+            <li><a href="#mcp">MCP Integration</a></li>
+            <li><a href="#resources">Resources</a></li>
+            <li><a href="#errors">Error Handling</a></li>
+            <li><a href="#performance">Performance</a></li>
+            <li><a href="#deployment">Deployment</a></li>
+        </ul>
+    </div>
+    
+    <div class="container">
+        <h1>🏁 BUMBA Framework Architecture</h1>
+        <p>Interactive visual documentation of the BUMBA Framework architecture</p>
+        
+        <div id="overview" class="diagram-container">
+            <h2>System Overview</h2>
+            <p>Complete system architecture showing all layers and components</p>
+            <div class="mermaid">
+graph TB
+    subgraph "External Layer"
+        CLI[CLI Commands]
+        API[API Endpoints]
+        WEB[Web Interface]
+    end
+    
+    subgraph "Security Layer"
+        VAL[Command Validator]
+        SAN[Path Sanitizer]
+        RBAC[RBAC System]
+        SEC[Secure Executor]
+    end
+    
+    subgraph "Routing Layer"
+        URS[Unified Routing System]
+        IA[Intent Analyzer]
+        PM[Pattern Matcher]
+        RM[Routing Memory]
+    end
+    
+    subgraph "Department Layer"
+        PSM[Product Strategist Manager]
+        DEM[Design Engineer Manager]
+        BEM[Backend Engineer Manager]
+    end
+    
+    subgraph "Core Services"
+        HC[Health Check System]
+        RM2[Resource Manager]
+        CM[Config Manager]
+        EM[Error Handler]
+    end
+    
+    CLI --> VAL
+    API --> VAL
+    WEB --> VAL
+    
+    VAL --> URS
+    URS --> PSM
+    URS --> DEM
+    URS --> BEM
+    
+    PSM --> HC
+    DEM --> HC
+    BEM --> HC
+            </div>
+        </div>
+        
+        <div id="flow" class="diagram-container">
+            <h2>Command Flow Sequence</h2>
+            <p>Step-by-step command processing flow</p>
+            <div class="mermaid">
+sequenceDiagram
+    participant User
+    participant CLI
+    participant Security
+    participant Router
+    participant Dept as Department Manager
+    participant Spec as Specialist
+    participant Core as Core Services
+    
+    User->>CLI: /bumba:implement feature
+    CLI->>Security: Validate command
+    Security->>Security: Check permissions
+    Security->>Router: Route command
+    Router->>Router: Analyze intent
+    Router->>Dept: Select department
+    Dept->>Dept: Evaluate complexity
+    Dept->>Spec: Spawn specialist
+    Spec->>Core: Use services
+    Core-->>Spec: Results
+    Spec-->>Dept: Task complete
+    Dept-->>Router: Response
+    Router-->>CLI: Formatted output
+    CLI-->>User: Display result
+            </div>
+        </div>
+        
+        <div id="coordination" class="diagram-container">
+            <h2>Department Coordination</h2>
+            <p>Inter-department communication and handoffs</p>
+            <div class="mermaid">
+graph LR
+    subgraph "Strategic"
+        PSM2[Product Strategist]
+        REQ[Requirements]
+    end
+    
+    subgraph "Experience"
+        DEM2[Design Engineer]
+        UI[UI Design]
+    end
+    
+    subgraph "Technical"
+        BEM2[Backend Engineer]
+        API2[API Design]
+    end
+    
+    PSM2 --> REQ
+    REQ --> DEM2
+    DEM2 --> UI
+    UI --> BEM2
+    BEM2 --> API2
+    
+    REQ -.->|Requirements| UI
+    UI -.->|Design Specs| API2
+    API2 -.->|Tech Feasibility| REQ
+            </div>
+        </div>
+        
+        <div id="health" class="diagram-container">
+            <h2>Health Monitoring System</h2>
+            <p>Comprehensive health checks and auto-repair</p>
+            <div class="mermaid">
+graph TD
+    subgraph "Health Checks"
+        SYS[System Health]
+        FS2[File System]
+        DEP[Dependencies]
+        COMP[Components]
+    end
+    
+    subgraph "Monitoring"
+        CPU[CPU Usage]
+        MEM[Memory]
+        DISK[Disk Space]
+        NET2[Network]
+    end
+    
+    subgraph "Actions"
+        AR[Auto Repair]
+        AL[Alerts]
+        LOG[Logging]
+    end
+    
+    SYS --> CPU
+    SYS --> MEM
+    CPU --> AR
+    MEM --> AL
+            </div>
+        </div>
+        
+        <div id="modes" class="diagram-container">
+            <h2>Mode Switching Architecture</h2>
+            <p>Dynamic switching between Full and Lite modes</p>
+            <div class="mermaid">
+stateDiagram-v2
+    [*] --> FullMode: Default
+    
+    FullMode --> LiteMode: Resource Limit
+    FullMode --> LiteMode: User Request
+    LiteMode --> FullMode: Resources Available
+    LiteMode --> FullMode: User Request
+    
+    state FullMode {
+        [*] --> AllServices
+        AllServices --> Departments
+        Departments --> Specialists
+    }
+    
+    state LiteMode {
+        [*] --> CoreOnly
+        CoreOnly --> BasicAgents
+        BasicAgents --> FastExecution
+    }
+            </div>
+        </div>
+        
+        <div id="mcp" class="diagram-container">
+            <h2>MCP Server Integration</h2>
+            <p>Resilient MCP server integration with fallbacks</p>
+            <div class="mermaid">
+graph TB
+    subgraph "BUMBA"
+        CMD[Commands]
+        MCPR[MCP Resilience]
+        CB[Circuit Breaker]
+    end
+    
+    subgraph "MCP Servers"
+        REF[Ref MCP]
+        SEM[Semgrep MCP]
+        MEM2[Memory MCP]
+    end
+    
+    subgraph "Fallbacks"
+        WEB2[Web Search]
+        LOCAL[Local Scan]
+        FILE[File Storage]
+    end
+    
+    CMD --> MCPR
+    MCPR --> CB
+    
+    CB --> REF
+    CB --> SEM
+    CB --> MEM2
+    
+    REF -.->|Failure| WEB2
+    SEM -.->|Failure| LOCAL
+    MEM2 -.->|Failure| FILE
+            </div>
+        </div>
+        
+        <div id="resources" class="diagram-container">
+            <h2>Resource Management</h2>
+            <p>Resource pooling and allocation strategy</p>
+            <div class="mermaid">
+graph LR
+    subgraph "Resource Pools"
+        AP[Agent Pool<br/>Min: 2, Max: 10]
+        CP[Connection Pool<br/>Max: 20]
+        WP[Worker Pool<br/>Max: 4]
+    end
+    
+    subgraph "Allocation"
+        REQ2[Request]
+        CHECK[Check Limits]
+        ALLOC[Allocate]
+    end
+    
+    subgraph "Cleanup"
+        REL[Release]
+        GC[Garbage Collect]
+    end
+    
+    REQ2 --> CHECK
+    CHECK --> ALLOC
+    ALLOC --> AP
+    ALLOC --> CP
+    ALLOC --> WP
+    AP --> REL
+    REL --> GC
+            </div>
+        </div>
+        
+        <div id="errors" class="diagram-container">
+            <h2>Error Handling Flow</h2>
+            <p>Comprehensive error recovery strategies</p>
+            <div class="mermaid">
+flowchart TD
+    START[Error Occurs] --> CATCH[Error Boundary]
+    CATCH --> CLASS[Classify Error]
+    
+    CLASS --> REC{Recoverable?}
+    REC -->|Yes| STRAT[Select Strategy]
+    REC -->|No| LOG2[Log & Report]
+    
+    STRAT --> RETRY{Retryable?}
+    RETRY -->|Yes| BACKOFF[Exponential Backoff]
+    RETRY -->|No| FALL[Fallback]
+    
+    BACKOFF --> EXEC[Retry Execution]
+    EXEC -->|Success| DONE[Complete]
+    EXEC -->|Fail| FALL
+    
+    FALL --> ALT[Alternative Method]
+    ALT --> DONE
+            </div>
+        </div>
+        
+        <div id="performance" class="diagram-container">
+            <h2>Performance Optimization</h2>
+            <p>Multi-layer caching and optimization strategy</p>
+            <div class="mermaid">
+graph TD
+    subgraph "Caching"
+        L1[L1: Memory<br/>200 items]
+        L2[L2: Disk<br/>Persistent]
+    end
+    
+    subgraph "Optimization"
+        LAZY[Lazy Loading]
+        POOL[Pooling]
+        BATCH[Batching]
+    end
+    
+    subgraph "Monitoring"
+        HIT[Hit Rate]
+        LAT[Latency]
+        MEM3[Memory]
+    end
+    
+    L1 --> L2
+    LAZY --> L1
+    POOL --> L1
+    BATCH --> L2
+    
+    L1 --> HIT
+    POOL --> LAT
+    L2 --> MEM3
+            </div>
+        </div>
+        
+        <div id="deployment" class="diagram-container">
+            <h2>Deployment Architecture</h2>
+            <p>CI/CD pipeline and deployment flow</p>
+            <div class="mermaid">
+graph TB
+    subgraph "Development"
+        DEV[Local Dev]
+        TEST[Test Suite]
+        BUILD[Build System]
+    end
+    
+    subgraph "CI/CD"
+        GH[GitHub Actions]
+        LINT[Linting]
+        UNIT[Unit Tests]
+        INT[Integration]
+    end
+    
+    subgraph "Production"
+        NPM[NPM Registry]
+        CDN[CDN]
+        MON2[Monitoring]
+    end
+    
+    DEV --> TEST
+    TEST --> BUILD
+    BUILD --> GH
+    
+    GH --> LINT
+    GH --> UNIT
+    GH --> INT
+    
+    UNIT --> NPM
+    NPM --> CDN
+    CDN --> MON2
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+{
+  "name": "bumba-framework",
+  "version": "2.0.0",
+  "description": "BUMBA: Enterprise-grade AI orchestration framework with intelligent agent coordination, security validation, and production-ready workflows",
+  "main": "src/index.js",
+  "bin": {
+    "bumba": "src/index.js"
+  },
+  "exports": {
+    ".": "./src/index.js",
+    "./widgets": "./src/core/widgets/index.js"
+  },
+  "scripts": {
+    "demo": "node examples/demo.js",
+    "start": "node src/index.js",
+    "test": "jest --config config/jest.config.js",
+    "test:coverage": "jest --config config/jest.config.js --coverage",
+    "test:features": "node tests/integration/whispers-chaining.test.js",
+    "lint": "eslint src/ --config config/eslint.config.mjs",
+    "postinstall": "node scripts/post-install.js"
+  },
+  "keywords": [
+    "claude",
+    "ai",
+    "framework",
+    "orchestration",
+    "zero-config",
+    "development",
+    "automation",
+    "security",
+    "enterprise",
+    "agent-coordination",
+    "production-ready",
+    "intelligent-agents"
+  ],
+  "author": "azellinger",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a2z2k25/bumba-claude.git"
+  },
+  "homepage": "https://github.com/a2z2k25/bumba-claude#readme",
+  "bugs": {
+    "url": "https://github.com/a2z2k25/bumba-claude/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.20.0",
+    "@google/generative-ai": "^0.5.0",
+    "better-sqlite3": "^12.2.0",
+    "blessed": "^0.1.81",
+    "blessed-contrib": "^4.11.0",
+    "boxen": "^8.0.1",
+    "canvas": "^3.2.0",
+    "chalk": "^4.1.2",
+    "chokidar": "^4.0.3",
+    "cli-progress": "^3.12.0",
+    "cli-table3": "^0.6.5",
+    "figlet": "^1.8.2",
+    "fuzzy": "^0.1.3",
+    "inquirer": "^9.3.7",
+    "openai": "^4.40.0",
+    "ora": "^5.4.1",
+    "winston": "^3.17.0",
+    "ws": "^8.18.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.28.3",
+    "@babel/preset-env": "^7.28.3",
+    "babel-jest": "^30.0.5",
+    "eslint": "^9.32.0",
+    "glob": "^11.0.3",
+    "jest": "^30.0.5"
+  },
+  "files": [
+    "src/",
+    "config/",
+    "assets/audio/",
+    "README.md",
+    "LICENSE",
+    "scripts/post-install.js",
+    "scripts/npm-publish.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}

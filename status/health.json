@@ -1,0 +1,49 @@
+{
+  "timestamp": "2025-08-26T04:32:01.528Z",
+  "uptime": "0h 0m 0s",
+  "checks": {
+    "memory": {
+      "status": "healthy",
+      "metrics": {
+        "heapUsed": "19MB",
+        "heapTotal": "33MB",
+        "external": "2MB",
+        "percentage": "58%"
+      },
+      "message": "Memory usage at 58%"
+    },
+    "filesystem": {
+      "status": "healthy",
+      "message": "All required directories present"
+    },
+    "departments": {
+      "status": "healthy",
+      "metrics": {
+        "departments": 3,
+        "totalSpecialists": 40,
+        "loadedSpecialists": 0,
+        "efficiency": "100%"
+      },
+      "message": "0/40 specialists loaded"
+    },
+    "failures": {
+      "status": "healthy",
+      "metrics": {
+        "totalFailures": 1,
+        "recovered": 0,
+        "critical": 0,
+        "recoveryRate": "0.00%"
+      },
+      "message": "1 failures, 0.00% recovery rate"
+    },
+    "performance": {
+      "status": "healthy",
+      "metrics": {
+        "responseTime": "0.01ms",
+        "operations": 100
+      },
+      "message": "Performance check completed in 0.01ms"
+    }
+  },
+  "status": "healthy"
+}

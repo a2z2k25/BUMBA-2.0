@@ -1,0 +1,4 @@
+# Ignore all temp files
+*
+!.gitignore
+!README.md

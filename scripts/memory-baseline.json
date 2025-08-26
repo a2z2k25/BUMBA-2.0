@@ -1,0 +1,79 @@
+{
+  "timestamp": "2025-08-23T04:45:11.102Z",
+  "initial": {
+    "rss": 40304640,
+    "heapTotal": 5324800,
+    "heapUsed": 4638440,
+    "external": 1479565,
+    "arrayBuffers": 10691
+  },
+  "components": {
+    "Configuration Manager": {
+      "rss": 7.671875,
+      "heapUsed": 0.31247711181640625,
+      "heapTotal": 1.25
+    },
+    "Command Handler": {
+      "rss": 3.046875,
+      "heapUsed": 0.9903717041015625,
+      "heapTotal": 3.25
+    },
+    "Error Manager": {
+      "rss": 0,
+      "heapUsed": 0.0052642822265625,
+      "heapTotal": 0
+    },
+    "API Validator": {
+      "rss": 0.015625,
+      "heapUsed": 0.05077362060546875,
+      "heapTotal": 0
+    },
+    "Notion Hub": {
+      "rss": 0.015625,
+      "heapUsed": 0.06229400634765625,
+      "heapTotal": 0
+    },
+    "Resource Enforcer": {
+      "rss": 0.046875,
+      "heapUsed": 0.0557861328125,
+      "heapTotal": 0
+    },
+    "Specialist Registry": {
+      "rss": 0.015625,
+      "heapUsed": 0.12314605712890625,
+      "heapTotal": 0
+    },
+    "Product Manager": {
+      "rss": 2.125,
+      "heapUsed": 1.047271728515625,
+      "heapTotal": 1
+    },
+    "Design Manager": {
+      "rss": 0.609375,
+      "heapUsed": 0.29187774658203125,
+      "heapTotal": 0.171875
+    },
+    "Backend Manager": {
+      "rss": 0.421875,
+      "heapUsed": 0.46851348876953125,
+      "heapTotal": 0
+    }
+  },
+  "total": {
+    "rss": 42.234375,
+    "heapUsed": 15.22235107421875,
+    "heapTotal": 26.375
+  },
+  "framework": {
+    "rss": 28.15625,
+    "heapUsed": 11.724578857421875,
+    "heapTotal": 20.703125
+  },
+  "final": {
+    "rss": 84590592,
+    "heapTotal": 32980992,
+    "heapUsed": 20600232,
+    "external": 2254784,
+    "arrayBuffers": 17036
+  }
+}

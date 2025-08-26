@@ -1,0 +1,553 @@
+/**
+ * BUMBA Specialist Migration Tool
+ * Converts placeholder specialists into fully operational AI-powered agents
+ * Includes batch processing, rollback, and progress tracking
+ */
+
+const fs = require('fs').promises;
+const path = require('path');
+const { logger } = require('../logging/bumba-logger');
+const { activator } = require('./specialist-activator');
+const knowledgeTemplates = require('./knowledge-templates');
+const { audioFallbackSystem } = require('../audio-fallback-system');
+
+class SpecialistMigrationTool {
+  constructor() {
+    this.migratedSpecialists = new Map();
+    this.backups = new Map();
+    this.progress = {
+      total: 0,
+      completed: 0,
+      failed: 0,
+      skipped: 0,
+      rollbacks: []
+    };
+    
+    this.options = {
+      createBackups: true,
+      validateAfterMigration: true,
+      dryRun: false,
+      verbose: true,
+      parallel: false,
+      batchSize: 5
+    };
+  }
+  
+  /**
+   * Migrate a single specialist file
+   */
+  async migrateSpecialist(specialistPath, options = {}) {
+    const opts = { ...this.options, ...options };
+    const fileName = path.basename(specialistPath);
+    const specialistType = this.extractSpecialistType(fileName);
+    
+    try {
+      logger.info(`🔄 Migrating: ${fileName}`);
+      
+      // Step 1: Analyze current implementation
+      const analysis = await this.analyzeSpecialistFile(specialistPath);
+      
+      if (analysis.isFullyImplemented) {
+        logger.info(`🏁 ${fileName} already fully implemented, skipping`);
+        this.progress.skipped++;
+        return { status: 'skipped', reason: 'already implemented' };
+      }
+      
+      // Step 2: Create backup if enabled
+      if (opts.createBackups && !opts.dryRun) {
+        await this.createBackup(specialistPath);
+      }
+      
+      // Step 3: Generate upgraded code
+      const upgradedCode = await this.generateUpgradedCode(specialistType, analysis);
+      
+      // Step 4: Write upgraded code (or simulate in dry run)
+      if (!opts.dryRun) {
+        await fs.writeFile(specialistPath, upgradedCode);
+        logger.info(`🏁 Migrated: ${fileName}`);
+      } else {
+        logger.info(`🔍 [DRY RUN] Would migrate: ${fileName}`);
+      }
+      
+      // Step 5: Validate if enabled
+      if (opts.validateAfterMigration && !opts.dryRun) {
+        const isValid = await this.validateMigration(specialistPath);
+        if (!isValid) {
+          logger.warn(`🟠️ Validation failed for ${fileName}, rolling back`);
+          await this.rollback(specialistPath);
+          this.progress.failed++;
+          return { status: 'failed', reason: 'validation failed' };
+        }
+      }
+      
+      // Track migration
+      this.migratedSpecialists.set(specialistPath, {
+        timestamp: Date.now(),
+        type: specialistType,
+        analysis,
+        success: true
+      });
+      
+      this.progress.completed++;
+      return { status: 'success', type: specialistType };
+      
+    } catch (error) {
+      logger.error(`🔴 Failed to migrate ${fileName}:`, error);
+      this.progress.failed++;
+      
+      // Attempt rollback on error
+      if (opts.createBackups && !opts.dryRun) {
+        await this.rollback(specialistPath);
+      }
+      
+      return { status: 'error', error: error.message };
+    }
+  }
+  
+  /**
+   * Analyze a specialist file to determine its implementation status
+   */
+  async analyzeSpecialistFile(filePath) {
+    const content = await fs.readFile(filePath, 'utf8');
+    const analysis = {
+      isFullyImplemented: false,
+      hasProcessTask: false,
+      hasInitializeExpertise: false,
+      hasAIIntegration: false,
+      isEmpty: false,
+      lineCount: content.split('\n').length,
+      className: null,
+      baseClass: null,
+      methods: []
+    };
+    
+    // Extract class information
+    const classMatch = content.match(/class\s+(\w+)\s+extends\s+(\w+)/);
+    if (classMatch) {
+      analysis.className = classMatch[1];
+      analysis.baseClass = classMatch[2];
+    }
+    
+    // Check for key methods
+    analysis.hasProcessTask = /async\s+processTask|processTask\s*\(/.test(content);
+    analysis.hasInitializeExpertise = /initializeExpertise/.test(content);
+    analysis.hasAIIntegration = /executeWithAI|buildTaskPrompt/.test(content);
+    
+    // Extract method names
+    const methodMatches = content.matchAll(/async\s+(\w+)\s*\(|(\w+)\s*\([^)]*\)\s*{/g);
+    for (const match of methodMatches) {
+      const methodName = match[1] || match[2];
+      if (methodName && methodName !== 'constructor') {
+        analysis.methods.push(methodName);
+      }
+    }
+    
+    // Check if it's an empty placeholder
+    analysis.isEmpty = analysis.methods.length <= 2 && analysis.lineCount < 100;
+    
+    // Determine if fully implemented
+    analysis.isFullyImplemented = 
+      analysis.hasProcessTask && 
+      analysis.hasInitializeExpertise && 
+      (analysis.hasAIIntegration || analysis.methods.length > 5);
+    
+    return analysis;
+  }
+  
+  /**
+   * Generate upgraded code for a specialist
+   */
+  async generateUpgradedCode(specialistType, analysis) {
+    // Get the appropriate template
+    const template = knowledgeTemplates.getTemplate(specialistType, this.getCategoryFromType(specialistType));
+    
+    // Build the upgraded specialist code
+    const className = analysis.className || this.toClassName(specialistType);
+    const baseClass = analysis.baseClass || 'SpecialistAgent';
+    
+    const code = `/**
+ * ${template.name || className}
+ * Auto-upgraded by BUMBA Migration Tool
+ * Enhanced with AI capabilities and knowledge injection
+ */
+
+const { ${baseClass} } = require('../../specialist-agent');
+const { logger } = require('../../logging/bumba-logger');
+
+class ${className} extends ${baseClass} {
+  constructor(department, context = {}) {
+    super('${specialistType}', department, {
+      ...context,
+      name: '${template.name || className}',
+      expertise: ${JSON.stringify(template.expertise || {}, null, 2).split('\n').map((line, i) => i === 0 ? line : '      ' + line).join('\n')},
+      capabilities: ${JSON.stringify(template.capabilities || [], null, 2).split('\n').map((line, i) => i === 0 ? line : '      ' + line).join('\n')},
+      tools: ${JSON.stringify(template.tools || [], null, 2).split('\n').map((line, i) => i === 0 ? line : '      ' + line).join('\n')},
+      frameworks: ${JSON.stringify(template.frameworks || [], null, 2).split('\n').map((line, i) => i === 0 ? line : '      ' + line).join('\n')}
+    });
+    
+    this.displayName = '${template.name || className}';
+    this.initializeExpertise();
+  }
+  
+  initializeExpertise() {
+    // Enhanced expertise initialization
+    this.bestPractices = ${JSON.stringify(template.bestPractices || [], null, 2).split('\n').map((line, i) => i === 0 ? line : '    ' + line).join('\n')};
+    
+    // Code patterns for this specialist
+    this.codePatterns = ${JSON.stringify(template.codePatterns || {}, null, 2).split('\n').map((line, i) => i === 0 ? line : '    ' + line).join('\n')};
+    
+    // Additional context for AI
+    this.additionalContext = \`${template.systemPromptAdditions || ''}\`;
+  }
+  
+  /**
+   * Process task with specialized knowledge
+   * Inherits AI capabilities from unified base class
+   */
+  async processTask(task, context = {}) {
+    logger.debug(\`${className} processing task: \${task}\`);
+    
+    // Add specialist-specific context
+    const enhancedContext = {
+      ...context,
+      bestPractices: this.bestPractices,
+      codePatterns: this.codePatterns,
+      additionalPrompt: this.additionalContext
+    };
+    
+    // Use the AI-powered processTask from base class
+    const result = await super.processTask(task, enhancedContext);
+    
+    // Add any specialist-specific post-processing
+    if (result.success) {
+      result.specialist = '${specialistType}';
+      result.enhancedBy = 'migration-tool';
+    }
+    
+    return result;
+  }
+  
+  /**
+   * Get specialist information
+   */
+  getInfo() {
+    return {
+      ...super.getInfo(),
+      displayName: this.displayName,
+      migrated: true,
+      version: '2.0'
+    };
+  }
+}
+
+module.exports = ${className};
+module.exports.${className} = ${className};`;
+    
+    return code;
+  }
+  
+  /**
+   * Create backup of a file
+   */
+  async createBackup(filePath) {
+    const backupPath = filePath + '.backup.' + Date.now();
+    const content = await fs.readFile(filePath, 'utf8');
+    await fs.writeFile(backupPath, content);
+    
+    this.backups.set(filePath, {
+      backupPath,
+      originalContent: content,
+      timestamp: Date.now()
+    });
+    
+    logger.debug(`📦 Backup created: ${backupPath}`);
+    return backupPath;
+  }
+  
+  /**
+   * Rollback a migration
+   */
+  async rollback(filePath) {
+    const backup = this.backups.get(filePath);
+    if (!backup) {
+      logger.error(`No backup found for ${filePath}`);
+      return false;
+    }
+    
+    try {
+      await fs.writeFile(filePath, backup.originalContent);
+      this.progress.rollbacks.push(filePath);
+      logger.info(`↩️ Rolled back: ${path.basename(filePath)}`);
+      return true;
+    } catch (error) {
+      logger.error(`Failed to rollback ${filePath}:`, error);
+      return false;
+    }
+  }
+  
+  /**
+   * Validate a migrated specialist
+   */
+  async validateMigration(filePath) {
+    try {
+      // Try to require the module
+      delete require.cache[require.resolve(filePath)];
+      const SpecialistClass = require(filePath);
+      
+      // Try to instantiate
+      const instance = new SpecialistClass('test', {});
+      
+      // Check for required methods
+      if (typeof instance.processTask !== 'function') {
+        return false;
+      }
+      
+      // Try to process a simple task
+      const result = await instance.processTask('test task');
+      
+      return result && typeof result === 'object';
+    } catch (error) {
+      logger.debug(`Validation error for ${filePath}:`, error.message);
+      return false;
+    }
+  }
+  
+  /**
+   * Batch migrate multiple specialists
+   */
+  async batchMigrate(specialists, options = {}) {
+    const opts = { ...this.options, ...options };
+    const results = {
+      total: specialists.length,
+      successful: [],
+      failed: [],
+      skipped: []
+    };
+    
+    this.progress.total = specialists.length;
+    
+    logger.info(`🟢 Starting batch migration of ${specialists.length} specialists`);
+    
+    if (opts.parallel) {
+      // Process in parallel batches
+      for (let i = 0; i < specialists.length; i += opts.batchSize) {
+        const batch = specialists.slice(i, i + opts.batchSize);
+        const batchResults = await Promise.all(
+          batch.map(spec => this.migrateSpecialist(spec, opts))
+        );
+        
+        batchResults.forEach((result, index) => {
+          const specialist = batch[index];
+          if (result.status === 'success') {
+            results.successful.push(specialist);
+          } else if (result.status === 'skipped') {
+            results.skipped.push(specialist);
+          } else {
+            results.failed.push({ specialist, reason: result.reason || result.error });
+          }
+        });
+        
+        this.reportProgress();
+      }
+    } else {
+      // Process sequentially
+      for (const specialist of specialists) {
+        const result = await this.migrateSpecialist(specialist, opts);
+        
+        if (result.status === 'success') {
+          results.successful.push(specialist);
+        } else if (result.status === 'skipped') {
+          results.skipped.push(specialist);
+        } else {
+          results.failed.push({ specialist, reason: result.reason || result.error });
+        }
+        
+        this.reportProgress();
+      }
+    }
+    
+    // Play completion sound if enabled
+    if (!opts.dryRun && results.successful.length > 0) {
+      try {
+        await audioFallbackSystem.playAchievementAudio('MIGRATION_COMPLETE', {
+          migrated: results.successful.length,
+          total: results.total
+        });
+      } catch (e) {
+        // Audio is optional
+      }
+    }
+    
+    return results;
+  }
+  
+  /**
+   * Migrate all specialists in a directory
+   */
+  async migrateDirectory(dirPath, options = {}) {
+    const files = await this.findSpecialistFiles(dirPath);
+    return this.batchMigrate(files, options);
+  }
+  
+  /**
+   * Find all specialist files in a directory
+   */
+  async findSpecialistFiles(dirPath) {
+    const files = [];
+    
+    async function scanDir(dir) {
+      const entries = await fs.readdir(dir, { withFileTypes: true });
+      
+      for (const entry of entries) {
+        const fullPath = path.join(dir, entry.name);
+        
+        if (entry.isDirectory()) {
+          await scanDir(fullPath);
+        } else if (entry.name.endsWith('-specialist.js') || entry.name.endsWith('Specialist.js')) {
+          files.push(fullPath);
+        }
+      }
+    }
+    
+    await scanDir(dirPath);
+    return files;
+  }
+  
+  /**
+   * Report migration progress
+   */
+  reportProgress() {
+    const percentage = ((this.progress.completed + this.progress.failed + this.progress.skipped) / this.progress.total * 100).toFixed(1);
+    logger.info(`📊 Progress: ${percentage}% (🏁 ${this.progress.completed} | ⏭️ ${this.progress.skipped} | 🔴 ${this.progress.failed})`);
+  }
+  
+  /**
+   * Generate migration report
+   */
+  generateReport() {
+    const report = {
+      timestamp: new Date().toISOString(),
+      summary: {
+        total: this.progress.total,
+        completed: this.progress.completed,
+        failed: this.progress.failed,
+        skipped: this.progress.skipped,
+        rollbacks: this.progress.rollbacks.length
+      },
+      migratedSpecialists: Array.from(this.migratedSpecialists.entries()).map(([path, data]) => ({
+        path,
+        type: data.type,
+        timestamp: new Date(data.timestamp).toISOString()
+      })),
+      backups: Array.from(this.backups.entries()).map(([original, backup]) => ({
+        original,
+        backup: backup.backupPath,
+        timestamp: new Date(backup.timestamp).toISOString()
+      })),
+      rollbacks: this.progress.rollbacks
+    };
+    
+    return report;
+  }
+  
+  /**
+   * Reset migration state
+   */
+  reset() {
+    this.migratedSpecialists.clear();
+    this.backups.clear();
+    this.progress = {
+      total: 0,
+      completed: 0,
+      failed: 0,
+      skipped: 0,
+      rollbacks: []
+    };
+  }
+  
+  /**
+   * Rollback all migrations
+   */
+  async rollbackAll() {
+    logger.info('↩️ Rolling back all migrations...');
+    
+    const rollbackResults = [];
+    for (const [filePath, backup] of this.backups.entries()) {
+      const success = await this.rollback(filePath);
+      rollbackResults.push({ filePath, success });
+    }
+    
+    return rollbackResults;
+  }
+  
+  /**
+   * Extract specialist type from filename
+   */
+  extractSpecialistType(fileName) {
+    // Remove .js extension
+    let type = fileName.replace('.js', '');
+    
+    // Convert camelCase to kebab-case
+    type = type.replace(/([A-Z])/g, '-$1').toLowerCase();
+    
+    // Remove leading dash if present
+    if (type.startsWith('-')) {
+      type = type.substring(1);
+    }
+    
+    // Ensure it ends with -specialist
+    if (!type.endsWith('-specialist')) {
+      type += '-specialist';
+    }
+    
+    return type;
+  }
+  
+  /**
+   * Get category from specialist type
+   */
+  getCategoryFromType(type) {
+    if (type.includes('data') || type.includes('ml') || type.includes('ai')) {
+      return 'data-ai';
+    }
+    if (type.includes('devops') || type.includes('cloud') || type.includes('docker')) {
+      return 'devops';
+    }
+    if (type.includes('database') || type.includes('sql') || type.includes('mongo')) {
+      return 'database';
+    }
+    if (type.includes('react') || type.includes('vue') || type.includes('angular') || type.includes('frontend')) {
+      return 'experience';
+    }
+    if (type.includes('business') || type.includes('product') || type.includes('market')) {
+      return 'strategic';
+    }
+    return 'technical';
+  }
+  
+  /**
+   * Convert type to class name
+   */
+  toClassName(type) {
+    return type
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join('');
+  }
+}
+
+// Export singleton instance
+const migrationTool = new SpecialistMigrationTool();
+
+module.exports = {
+  SpecialistMigrationTool,
+  migrationTool,
+  
+  // Convenience functions
+  migrate: (path, options) => migrationTool.migrateSpecialist(path, options),
+  batchMigrate: (paths, options) => migrationTool.batchMigrate(paths, options),
+  migrateDirectory: (dir, options) => migrationTool.migrateDirectory(dir, options),
+  rollback: (path) => migrationTool.rollback(path),
+  rollbackAll: () => migrationTool.rollbackAll(),
+  getReport: () => migrationTool.generateReport()
+};

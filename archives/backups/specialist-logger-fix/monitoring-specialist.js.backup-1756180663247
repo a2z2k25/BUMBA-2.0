@@ -1,0 +1,35 @@
+const UnifiedSpecialistBase = require('../../unified-specialist-base');
+const { logger } = require('../../../logging/bumba-logger');
+
+/**
+ * Monitoring Specialist
+ * Expertise: Monitoring, Observability, Alerting, Metrics
+ */
+class MonitoringSpecialist extends UnifiedSpecialistBase {
+  constructor(department, context = {}) {
+    super({
+      id: 'monitoring-specialist',
+      name: 'Monitoring Specialist',
+      type: 'monitoring-specialist',
+      category: 'technical',
+      department: department,
+      expertise: {
+        'monitoring': true,
+        'observability': true,
+        'alerting': true,
+        'metrics': true
+      },
+      capabilities: [
+        'Prometheus',
+        'Grafana',
+        'DataDog',
+        'New Relic',
+        'ELK Stack'
+      ],
+      ...context
+    });
+    this.displayName = 'Monitoring Specialist';
+  }
+}
+
+module.exports = MonitoringSpecialist;

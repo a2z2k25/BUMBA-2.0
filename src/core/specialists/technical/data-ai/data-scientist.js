@@ -1,0 +1,92 @@
+const UnifiedSpecialistBase = require('../../unified-specialist-base');
+/**
+ * Data Scientist Specialist
+ * Auto-restored from wshobson/agents repository structure
+ * Expertise: statistics, ML algorithms, Python, R
+ */
+
+const { logger } = require('../../../logging/bumba-logger');
+
+class DataScientistSpecialist extends UnifiedSpecialistBase {
+  constructor(department, context = {}) {
+    super('data-scientist', department, context);
+    this.displayName = 'Data Scientist';
+    this.initializeExpertise();
+  }
+  
+  initializeExpertise() {
+    this.expertise = {
+      'statistics': true,
+      'ml_algorithms': true,
+      'python': true,
+      'r': true
+    };
+    
+    this.capabilities = [
+      'statistics',
+      'ML algorithms',
+      'Python',
+      'R'
+    ];
+    
+    logger.info(`🟡 Data Scientist specialist initialized with ${this.capabilities.length} capabilities`);
+  }
+  
+  async processTask(task, context) {
+    logger.info(`🔧 Data Scientist processing task: ${task.type || 'general'}`);
+    
+    // Simulate processing based on expertise
+    const result = {
+      specialist: 'data-scientist',
+      displayName: 'Data Scientist',
+      taskProcessed: true,
+      expertise: this.expertise,
+      recommendations: this.generateRecommendations(task),
+      confidence: this.calculateConfidence(task)
+    };
+    
+    return result;
+  }
+  
+  generateRecommendations(task) {
+    // Generate recommendations based on expertise
+    const recommendations = [];
+    
+    if (task.type === 'review') {
+      recommendations.push(`Apply Data Scientist best practices`);
+    }
+    
+    if (task.type === 'implementation') {
+      recommendations.push(`Use ${this.capabilities[0]} for optimal results`);
+    }
+    
+    return recommendations;
+  }
+  
+  calculateConfidence(task) {
+    // Calculate confidence based on task alignment with expertise
+    let confidence = 0.7; // Base confidence
+    
+    if (task.domain === 'technical/data-ai') {
+      confidence += 0.2;
+    }
+    
+    if (task.complexity === 'high' && this.expertise.advanced) {
+      confidence += 0.1;
+    }
+    
+    return Math.min(confidence, 1.0);
+  }
+  
+  async collaborate(otherSpecialist, task) {
+    logger.info(`🤝 Data Scientist collaborating with ${otherSpecialist.displayName || otherSpecialist.type}`);
+    
+    return {
+      collaboration: true,
+      specialists: [this.type, otherSpecialist.type],
+      combinedExpertise: { ...this.expertise, ...otherSpecialist.expertise }
+    };
+  }
+}
+
+module.exports = DataScientistSpecialist;

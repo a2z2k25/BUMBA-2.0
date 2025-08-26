@@ -1,0 +1,17 @@
+
+=================================================
+       SPECIALIST MIGRATION REPORT
+=================================================
+
+Migration completed in 0.04 seconds
+
+✅ Successfully migrated: 103
+📌 Already migrated: 0
+➖ No changes needed: 0
+❌ Errors: 0
+
+
+
+Total specialists processed: 103
+
+=================================================

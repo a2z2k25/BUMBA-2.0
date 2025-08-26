@@ -1,0 +1,71 @@
+=== EMOJI AUDIT SUMMARY ===
+Date: Sun Aug 24 22:19:58 EDT 2025
+
+Authorized Emojis: 🟡 🟢 🔴 🟠 🏁
+
+Statistics:
+- Total files scanned: 1359
+- Files with emojis: 674
+- Violations found: 595
+
+Unauthorized emojis detected:
+
+  ♿ - 1 occurrences
+  ⚖ - 1 occurrences
+  ⚙ - 22 occurrences
+  ⚠ - 26 occurrences
+  ⚡ - 10 occurrences
+  ✅ - 293 occurrences
+  ✓ - 17 occurrences
+  ✗ - 2 occurrences
+  ✨ - 11 occurrences
+  ❌ - 50 occurrences
+  ❓ - 1 occurrences
+  🌉 - 1 occurrences
+  🌍 - 1 occurrences
+  🌟 - 1 occurrences
+  🎉 - 9 occurrences
+  🎛 - 2 occurrences
+  🎨 - 24 occurrences
+  🎭 - 2 occurrences
+  🎯 - 54 occurrences
+  🏃 - 3 occurrences
+  🏆 - 5 occurrences
+  🏗 - 12 occurrences
+  🏛 - 1 occurrences
+  🏢 - 1 occurrences
+  🏥 - 1 occurrences
+  😀 - 1 occurrences
+  😃 - 1 occurrences
+  😄 - 1 occurrences
+  😊 - 1 occurrences
+  😔 - 1 occurrences
+  😖 - 1 occurrences
+  😠 - 1 occurrences
+  😡 - 1 occurrences
+  😢 - 1 occurrences
+  😨 - 1 occurrences
+  😭 - 1 occurrences
+  😮 - 1 occurrences
+  😰 - 1 occurrences
+  😱 - 1 occurrences
+  😲 - 1 occurrences
+  🙏 - 1 occurrences
+  🚀 - 24 occurrences
+  🚧 - 2 occurrences
+  🚨 - 4 occurrences
+  🚫 - 1 occurrences
+  🛠 - 2 occurrences
+  🛡 - 3 occurrences
+
+Top 10 files with violations:
+  47 ./src/core/pooling-v2/SPRINT-5-COMPLETE.md
+  34 ./src/core/lite-mode/PERFORMANCE-REPORT.md
+  34 ./archived/integrations/notion-subpage-repository-structure.js
+  30 ./archived/integrations/notion-department-visibility-widgets.js
+  29 ./src/core/pooling-v2/PRODUCTION-DEPLOYMENT-GUIDE.md
+  26 ./verify-agent-collaboration.js
+  23 ./src/core/pooling-v2/SPRINT-2-COMPLETE.md
+  22 ./test-enhancement-system.js
+  20 ./test-memory-system.js
+  16 ./scripts/TEST_RESULTS_SPRINT1.md

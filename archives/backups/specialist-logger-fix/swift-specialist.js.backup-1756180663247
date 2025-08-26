@@ -1,0 +1,35 @@
+const UnifiedSpecialistBase = require('../../unified-specialist-base');
+const { logger } = require('../../../logging/bumba-logger');
+
+/**
+ * Swift Specialist
+ * Expertise: Swift, iOS, macOS, SwiftUI
+ */
+class SwiftSpecialist extends UnifiedSpecialistBase {
+  constructor(department, context = {}) {
+    super({
+      id: 'swift-specialist',
+      name: 'Swift Specialist',
+      type: 'swift-specialist',
+      category: 'technical',
+      department: department,
+      expertise: {
+        'swift': true,
+        'ios': true,
+        'macos': true,
+        'swiftui': true
+      },
+      capabilities: [
+        'Swift',
+        'iOS Development',
+        'macOS Development',
+        'SwiftUI',
+        'UIKit'
+      ],
+      ...context
+    });
+    this.displayName = 'Swift Specialist';
+  }
+}
+
+module.exports = SwiftSpecialist;

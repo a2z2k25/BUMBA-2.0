@@ -1,0 +1,83 @@
+{
+  "name": "bumba-deployment",
+  "version": "1.0.0",
+  "description": "BUMBA Production Deployment Package",
+  "scripts": {
+    "deploy": "node production-deployment.js",
+    "deploy:check": "node production-deployment.js --check-only",
+    "deploy:rollback": "node production-deployment.js --rollback",
+    "health": "node health-monitor.js",
+    "metrics": "node metrics-collector.js",
+    "backup": "node backup-system.js",
+    "migrate:lazy": "node migrate-to-lazy-departments.js",
+    "migrate:rollback": "node migrate-to-lazy-departments.js --rollback",
+    "test:failures": "node test-failure-scenarios.js",
+    "test:performance": "node performance-benchmark.js",
+    "monitor": "node system-monitor.js"
+  },
+  "deploymentStages": {
+    "development": {
+      "environment": "development",
+      "checks": ["dependencies", "tests"],
+      "features": ["all"]
+    },
+    "staging": {
+      "environment": "staging",
+      "checks": ["dependencies", "tests", "security", "performance"],
+      "features": ["lazyLoading", "unifiedDashboard", "failureManager"]
+    },
+    "production": {
+      "environment": "production",
+      "checks": ["all"],
+      "features": ["lazyLoading", "unifiedDashboard", "failureManager", "monitoring"],
+      "rollbackOnFailure": true
+    }
+  },
+  "healthChecks": [
+    {
+      "name": "Memory Usage",
+      "type": "threshold",
+      "metric": "memory.heapUsed",
+      "warning": 400,
+      "critical": 500,
+      "unit": "MB"
+    },
+    {
+      "name": "Response Time",
+      "type": "threshold",
+      "metric": "performance.responseTime",
+      "warning": 1000,
+      "critical": 3000,
+      "unit": "ms"
+    },
+    {
+      "name": "Failure Rate",
+      "type": "percentage",
+      "metric": "failures.rate",
+      "warning": 5,
+      "critical": 10,
+      "unit": "%"
+    }
+  ],
+  "monitoring": {
+    "endpoints": [
+      "/health",
+      "/metrics",
+      "/status"
+    ],
+    "alerts": {
+      "channels": ["console", "file", "email"],
+      "thresholds": {
+        "memory": 80,
+        "cpu": 90,
+        "failures": 10
+      }
+    }
+  },
+  "backup": {
+    "schedule": "0 2 * * *",
+    "retention": 30,
+    "locations": ["data", "logs", "config"],
+    "compression": true
+  }
+}

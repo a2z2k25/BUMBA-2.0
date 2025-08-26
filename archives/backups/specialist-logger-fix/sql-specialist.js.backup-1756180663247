@@ -1,0 +1,35 @@
+const UnifiedSpecialistBase = require('../../unified-specialist-base');
+const { logger } = require('../../../logging/bumba-logger');
+
+/**
+ * SQL Specialist
+ * Expertise: SQL, Database Design, Query Optimization
+ */
+class SqlSpecialist extends UnifiedSpecialistBase {
+  constructor(department, context = {}) {
+    super({
+      id: 'sql-specialist',
+      name: 'SQL Specialist',
+      type: 'sql-specialist',
+      category: 'technical',
+      department: department,
+      expertise: {
+        'sql': true,
+        'database_design': true,
+        'query_optimization': true,
+        'stored_procedures': true
+      },
+      capabilities: [
+        'SQL',
+        'Database Design',
+        'Query Optimization',
+        'Stored Procedures',
+        'Indexing'
+      ],
+      ...context
+    });
+    this.displayName = 'SQL Specialist';
+  }
+}
+
+module.exports = SqlSpecialist;

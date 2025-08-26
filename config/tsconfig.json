@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    // This is ONLY for type checking - NOT for compilation
+    "checkJs": false,           // Don't check JS files
+    "allowJs": false,           // Don't process JS files
+    "noEmit": true,            // Never emit any files
+    "declaration": false,       // Don't generate .d.ts files
+    "declarationMap": false,    // No source maps for declarations
+    
+    // Type checking options
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    
+    // Module resolution
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    
+    // Paths
+    "baseUrl": ".",
+    "paths": {
+      "bumba-claude": ["./types/index.d.ts"],
+      "bumba-claude/*": ["./types/index.d.ts"]
+    }
+  },
+  "include": [
+    "types/**/*.d.ts"  // ONLY include type definition files
+  ],
+  "exclude": [
+    "src/**/*",        // Exclude all source files
+    "tests/**/*",      // Exclude all test files
+    "node_modules",    // Exclude dependencies
+    "dist",            // Exclude build output
+    "coverage"         // Exclude test coverage
+  ]
+}

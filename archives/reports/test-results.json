@@ -1,0 +1,45 @@
+{
+  "timestamp": "2025-08-26T04:32:01.529Z",
+  "duration": "0s",
+  "summary": {
+    "total": 22,
+    "passed": 21,
+    "failed": 1,
+    "warnings": 0,
+    "passRate": "95%"
+  },
+  "details": {
+    "passed": [
+      "Backend: No pre-loading",
+      "Backend: Lazy loading works",
+      "Backend: Cache functioning",
+      "Design: Specialists registered",
+      "Product: Manager initialized",
+      "Dashboard: 15 sources connected",
+      "Dashboard: Data aggregation works",
+      "Failure Manager: Initialized",
+      "Failure Manager: Tracking works",
+      "Failure Manager: Recovery strategies",
+      "Failure Manager: Statistics tracking",
+      "Notifications: System working",
+      "Notion: Project detection works",
+      "Notion: Template system works",
+      "Notion: Context transfer works",
+      "Memory: 100.0% efficiency achieved",
+      "Memory: Specialist paths fixed",
+      "Production: Deployment script exists",
+      "Production: Health healthy",
+      "Production: Configuration present",
+      "Production: Directory structure ready"
+    ],
+    "failed": [
+      "Notion Dashboard: CRITICAL: Auto-creation not disabled!"
+    ],
+    "warnings": [],
+    "performance": {
+      "memoryEfficiency": "100.0%",
+      "memorySaved": "~20MB"
+    }
+  },
+  "status": "NEEDS_ATTENTION"
+}
