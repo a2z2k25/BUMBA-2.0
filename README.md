@@ -49,14 +49,12 @@ npm start
 - **Generic outputs** that need extensive customization for production use
 
 ### The BUMBA Solution
-- **🧠 Cognitive Architecture**: 26 specialized agents with unique personalities and expertise working as a team
+- **🧠 Cognitive Architecture**: 100+ specialized agents with unique personalities and expertise working as a team
 - **⚡ Parallel Execution**: Multiple agents work simultaneously in isolated environments without conflicts
 - **🛡️ Built-in Security**: Mandatory validation with 45+ extensibility hooks for enterprise compliance
 - **🎨 Designer-First**: Direct Figma integration, visual documentation tools, and UI generation
 - **📊 Production Ready**: Automatic testing, monitoring, deployment workflows, and rollback capability
 - **💾 Context Preservation**: Advanced memory system maintains knowledge across sessions
-
-*"What took our team 3 days now happens in 15 minutes with better quality." - Enterprise User*
 
 ## 🚀 How It Works
 
@@ -66,13 +64,56 @@ npm start
 
 Watch as BUMBA automatically orchestrates your development team:
 
-1. **🟡 Strategic Planning** - Product strategist defines requirements and architecture
-2. **🟢 Backend Development** - API endpoints, database schema, and business logic created
-3. **🔴 Frontend Design** - UI components, user flows, and interactions built
-4. **🟠 Quality Assurance** - Tests written, security validated, performance optimized
+1. **🟡 Product Strategy Department** - Product strategist defines requirements and architecture
+2. **🟢 Engineering Department** - API endpoints, database schema, and business logic created
+3. **🔴 Design Department** - UI components, user flows, and interactions built
+4. **🟠 Testing Q/A Department** - Tests written, security validated, performance optimized
 5. **🏁 Integration** - Everything merged, deployed, and monitored
 
 All happening **simultaneously**, not sequentially. Each agent works in parallel without stepping on each other.
+
+## 🎭 Agent Team Modalities
+
+BUMBA's 100+ specialist agents can be configured to match your working style and team needs:
+
+### 🚀 **Full Enterprise Mode** (Default)
+Access the complete roster of 100+ specialists across all departments. Perfect for complex projects requiring deep expertise in every domain. You literally have an entire enterprise at your disposal.
+
+### ⚡ **BUMBA Lite** (Streamlined)
+A curated selection of essential agents for rapid development:
+- **Core Team**: Product Strategist, Backend Engineer, Frontend Engineer, QA Engineer
+- **Optimized for**: Small to medium features, rapid prototyping, cost-conscious development
+- **Activation**: `/bumba:lite enable`
+
+### 🎨 **Custom Team Composition**
+Build your optimal team by selecting specific specialists:
+```bash
+/bumba:team configure --agents "backend-engineer,design-engineer,security-specialist"
+/bumba:team save "my-security-team"
+/bumba:team load "my-security-team"
+```
+
+### 📊 **Hierarchical Structure**
+The agent team follows a clear organizational hierarchy:
+
+```
+🏢 Executive Layer
+├── 🏁 Orchestrator (Strategic coordination)
+│
+🏭 Department Managers
+├── 🟡 Product Strategy Department Manager
+├── 🟢 Engineering Department Manager  
+├── 🔴 Design Department Manager
+└── 🟠 Testing Q/A Department Manager
+│
+👥 Specialist Teams (100+ agents)
+├── Strategic Specialists (Product, Business, Documentation)
+├── Engineering Specialists (Backend, Frontend, Database, Security, DevOps)
+├── Design Specialists (UI/UX, Visual, Interaction, Accessibility)
+└── Quality Specialists (Testing, Performance, Compliance)
+```
+
+**Flexibility First**: Start with BUMBA Lite for quick wins, scale to Full Enterprise for complex systems, or craft your perfect team composition. The framework adapts to your needs, not the other way around.
 
 ## 🎯 Get Started by Role
 
@@ -118,7 +159,7 @@ All happening **simultaneously**, not sequentially. Each agent works in parallel
 - **Dynamic Agent Lifecycle**: 6-state management (spawning → active → collaborating → validating → completing → deprecating)
 - **Intelligent Model Selection**: 30-40% cost savings through smart AI model routing based on task complexity
 - **Knowledge Transfer Protocol**: Agents learn from each other and preserve context across sessions
-- **Adaptive Team Composition**: Automatic specialist selection and team formation based on task requirements
+- **Adaptive Team Composition**: Automatic specialist selection from 100+ agents based on task requirements
 - **Conflict-Free Parallelism**: Territory management and file locking ensures agents never interfere
 
 ### Enterprise Security & Quality
@@ -311,7 +352,7 @@ module.exports = {
 - [System Architecture](docs/02-architecture/ARCHITECTURE.MD) - How BUMBA's intelligence works
 - [Multi-Agent Coordination](docs/07-system-guides/MULTI_AGENT_SYSTEM.MD) - Parallel execution details
 - [Security & Safety Systems](docs/07-system-guides/PARALLEL_SAFETY_SYSTEMS.MD) - Production safeguards
-- [Agent Registry](docs/08-reference/ALL_SPECIALISTS_LIST.md) - All 26 specialists detailed
+- [Agent Registry](docs/08-reference/ALL_SPECIALISTS_LIST.md) - All 100+ specialists detailed
 
 ### 🔧 **Integration & Customization**
 - [API Reference](docs/03-api-reference/API_REFERENCE.MD) - Complete programmatic interface
@@ -365,20 +406,6 @@ Time: 4 minutes 23 seconds
 Cost: $0.42 (optimized model routing)
 Quality Score: 98/100
 ```
-
-## 🏆 Trusted by Development Teams
-
-> *"BUMBA transformed our development workflow. What used to take 3-day sprints now happens in 15-minute sessions with better quality and testing."*  
-> — **Senior Engineering Manager, Fortune 500**
-
-> *"The parallel AI execution is game-changing. Multiple agents working simultaneously without stepping on each other - it's like having a senior team available 24/7."*  
-> — **CTO, Y Combinator Startup**
-
-> *"As a designer, the Figma integration and visual documentation features save me hours every day. It understands our design system and generates pixel-perfect components."*  
-> — **Head of Design, SaaS Platform**
-
-> *"The security validation and compliance features gave us confidence to use AI in production. BUMBA catches issues our human reviewers miss."*  
-> — **Security Architect, Financial Services**
 
 ## 🤝 Community & Support
 
