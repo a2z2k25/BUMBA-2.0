@@ -1,6 +1,6 @@
 {
   "name": "bumba-framework",
-  "version": "2.0.0",
+  "version": "2.0.3",
   "description": "BUMBA: Enterprise-grade AI orchestration framework with intelligent agent coordination, security validation, and production-ready workflows",
   "main": "src/index.js",
   "bin": {

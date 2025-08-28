@@ -3,7 +3,9 @@
  * Interactive tutorial for new users
  */
 
-const inquirer = require('inquirer');
+// Load inquirer (v9+ has different API)
+const inquirerModule = require('inquirer');
+const inquirer = inquirerModule.default || inquirerModule;
 const { colors, createBox } = require('./display');
 const ora = require('ora');
 

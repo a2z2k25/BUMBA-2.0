@@ -3,7 +3,9 @@
  * Progressive disclosure pattern for smooth onboarding
  */
 
-const inquirer = require('inquirer');
+// Load inquirer (v9+ has different API)
+const inquirerModule = require('inquirer');
+const inquirer = inquirerModule.default || inquirerModule;
 const { colors } = require('./display');
 
 /**

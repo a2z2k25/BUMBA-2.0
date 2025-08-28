@@ -11,6 +11,22 @@ const chalk = require('chalk');
 const ora = require('ora');
 const Table = require('cli-table3');
 
+// Load inquirer (v9+ has different API)
+let inquirer;
+try {
+  const inquirerModule = require('inquirer');
+  // Handle both old and new inquirer API
+  inquirer = inquirerModule.default || inquirerModule;
+  // Ensure prompt method exists
+  if (!inquirer.prompt) {
+    throw new Error('inquirer.prompt method not found');
+  }
+} catch (error) {
+  console.error(chalk.red('🔴 Failed to load inquirer module:'), error.message);
+  console.error(chalk.yellow('Please ensure bumba-framework is properly installed'));
+  process.exit(1);
+}
+
 // Import modules
 const {
   displayLogo,
@@ -232,7 +248,6 @@ async function install(options = {}) {
 
     // Ask if user wants onboarding
     if (!config.skipOnboarding) {
-      const inquirer = require('inquirer');
       const { wantOnboarding } = await inquirer.prompt([
         {
           type: 'confirm',
@@ -252,7 +267,6 @@ async function install(options = {}) {
 
     // Optional: Set up integrations
     if (!config.skipIntegrations) {
-      const inquirer = require('inquirer');
       const { wantIntegrations } = await inquirer.prompt([
         {
           type: 'confirm',
