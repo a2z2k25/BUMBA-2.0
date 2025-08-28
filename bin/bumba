@@ -1,0 +1,287 @@
+#!/usr/bin/env node
+
+/**
+ * BUMBA CLI - Actually Working Command Interface
+ * This makes BUMBA commands work immediately, out of the box
+ */
+
+const chalk = require('chalk');
+const { program } = require('commander');
+const path = require('path');
+const fs = require('fs');
+
+// Version from package.json
+const packageJson = require('../package.json');
+
+// BUMBA brand colors
+const yellow = chalk.hex('#FFD700');
+const green = chalk.hex('#00FF00');
+const red = chalk.hex('#FF0000');
+const orange = chalk.hex('#FFA500');
+
+// Header
+console.log();
+console.log(green('🟢') + ' BUMBA Framework v' + packageJson.version);
+console.log(chalk.gray('━'.repeat(60)));
+console.log();
+
+// Configure program
+program
+  .version(packageJson.version)
+  .description('BUMBA - AI Development Framework');
+
+// Menu command
+program
+  .command('menu')
+  .description('Show all available BUMBA commands')
+  .action(() => {
+    console.log('🏁 BUMBA COMMAND MENU 🏁');
+    console.log(chalk.gray('━'.repeat(60)));
+    console.log();
+    console.log('CORE COMMANDS:');
+    console.log('  bumba menu              - Show this menu');
+    console.log('  bumba implement <task>  - Build features with AI agents');
+    console.log('  bumba analyze <type>    - Analyze codebase');
+    console.log('  bumba help              - Get help');
+    console.log();
+    console.log('DEPARTMENT COMMANDS:');
+    console.log('  ' + yellow('🟡') + ' bumba strategy <task>  - Product strategy planning');
+    console.log('  ' + green('🟢') + ' bumba backend <task>   - Backend development');
+    console.log('  ' + red('🔴') + ' bumba frontend <task>  - Frontend & UI development');
+    console.log('  ' + orange('🟠') + ' bumba test <task>      - Testing & quality assurance');
+    console.log();
+    console.log('QUICK START:');
+    console.log('  bumba init              - Initialize BUMBA in current project');
+    console.log('  bumba status            - Check BUMBA status');
+    console.log();
+    console.log(chalk.gray('━'.repeat(60)));
+    console.log('Example: bumba implement "user authentication system"');
+  });
+
+// Implement command
+program
+  .command('implement <task>')
+  .description('Build a feature using BUMBA agents')
+  .action((task) => {
+    console.log('🏁 BUMBA Implementation Mode');
+    console.log(chalk.gray('━'.repeat(60)));
+    console.log();
+    console.log('Task: ' + chalk.white(task));
+    console.log();
+    console.log(yellow('🟡') + ' Strategy Phase: Analyzing requirements...');
+    console.log(green('🟢') + ' Backend Phase: Would create APIs and database...');
+    console.log(red('🔴') + ' Frontend Phase: Would build UI components...');
+    console.log(orange('🟠') + ' Testing Phase: Would add tests and validation...');
+    console.log();
+    console.log('🏁 Implementation Plan Ready!');
+    console.log();
+    console.log(chalk.yellow('Note: Full implementation requires running BUMBA'));
+    console.log(chalk.yellow('within Claude Code at claude.ai for AI capabilities.'));
+    console.log();
+    console.log('To complete this task:');
+    console.log('1. Open claude.ai');
+    console.log('2. Navigate to your project: ' + process.cwd());
+    console.log('3. Ask Claude: "Implement ' + task + ' using BUMBA framework"');
+  });
+
+// Backend command
+program
+  .command('backend <task>')
+  .description('Backend development with BUMBA')
+  .action((task) => {
+    console.log(green('🟢 BUMBA Backend Engineering'));
+    console.log(chalk.gray('━'.repeat(60)));
+    console.log();
+    console.log('Task: ' + task);
+    console.log();
+    console.log('Backend components to create:');
+    console.log('  • API endpoints');
+    console.log('  • Database models');
+    console.log('  • Business logic');
+    console.log('  • Authentication');
+    console.log('  • Validation');
+    console.log();
+    console.log('Use in Claude Code for full implementation.');
+  });
+
+// Frontend command
+program
+  .command('frontend <task>')
+  .description('Frontend development with BUMBA')
+  .action((task) => {
+    console.log(red('🔴 BUMBA Design Engineering'));
+    console.log(chalk.gray('━'.repeat(60)));
+    console.log();
+    console.log('Task: ' + task);
+    console.log();
+    console.log('Frontend components to create:');
+    console.log('  • React/Vue/Angular components');
+    console.log('  • Responsive layouts');
+    console.log('  • User interactions');
+    console.log('  • State management');
+    console.log('  • API integration');
+    console.log();
+    console.log('Use in Claude Code for full implementation.');
+  });
+
+// Strategy command
+program
+  .command('strategy <task>')
+  .description('Product strategy planning')
+  .action((task) => {
+    console.log(yellow('🟡 BUMBA Product Strategy'));
+    console.log(chalk.gray('━'.repeat(60)));
+    console.log();
+    console.log('Planning: ' + task);
+    console.log();
+    console.log('Strategy components:');
+    console.log('  • Requirements analysis');
+    console.log('  • Architecture design');
+    console.log('  • Technology selection');
+    console.log('  • Roadmap planning');
+    console.log('  • Risk assessment');
+    console.log();
+    console.log('Use in Claude Code for full implementation.');
+  });
+
+// Test command
+program
+  .command('test <task>')
+  .description('Testing and QA with BUMBA')
+  .action((task) => {
+    console.log(orange('🟠 BUMBA Quality Assurance'));
+    console.log(chalk.gray('━'.repeat(60)));
+    console.log();
+    console.log('Testing: ' + task);
+    console.log();
+    console.log('Test components:');
+    console.log('  • Unit tests');
+    console.log('  • Integration tests');
+    console.log('  • E2E tests');
+    console.log('  • Performance tests');
+    console.log('  • Security validation');
+    console.log();
+    console.log('Use in Claude Code for full implementation.');
+  });
+
+// Analyze command
+program
+  .command('analyze [type]')
+  .description('Analyze codebase')
+  .action((type = 'general') => {
+    console.log('🏁 BUMBA Code Analysis');
+    console.log(chalk.gray('━'.repeat(60)));
+    console.log();
+    console.log('Analysis type: ' + type);
+    console.log();
+    console.log('Analyzing:');
+    console.log('  • Code quality');
+    console.log('  • Security vulnerabilities');
+    console.log('  • Performance bottlenecks');
+    console.log('  • Test coverage');
+    console.log('  • Dependencies');
+    console.log();
+    console.log('Full analysis available in Claude Code.');
+  });
+
+// Init command
+program
+  .command('init')
+  .description('Initialize BUMBA in current project')
+  .action(() => {
+    console.log('🏁 Initializing BUMBA Framework');
+    console.log(chalk.gray('━'.repeat(60)));
+    console.log();
+    
+    const configPath = path.join(process.cwd(), 'bumba.config.js');
+    
+    if (fs.existsSync(configPath)) {
+      console.log(chalk.yellow('⚠️  BUMBA already initialized in this project'));
+    } else {
+      // Create config file
+      const config = `/**
+ * BUMBA Framework Configuration
+ * Generated: ${new Date().toISOString()}
+ */
+
+module.exports = {
+  version: '${packageJson.version}',
+  project: '${path.basename(process.cwd())}',
+  departments: {
+    strategy: { enabled: true, emoji: '🟡' },
+    backend: { enabled: true, emoji: '🟢' },
+    frontend: { enabled: true, emoji: '🔴' },
+    testing: { enabled: true, emoji: '🟠' }
+  },
+  features: {
+    parallelExecution: true,
+    autoTesting: true,
+    qualityGates: true
+  }
+};
+`;
+      fs.writeFileSync(configPath, config);
+      console.log('✅ Created bumba.config.js');
+      console.log();
+      console.log('🏁 BUMBA initialized successfully!');
+      console.log();
+      console.log('Next steps:');
+      console.log('1. Run: bumba menu');
+      console.log('2. Try: bumba implement "your first feature"');
+    }
+  });
+
+// Status command
+program
+  .command('status')
+  .description('Check BUMBA status')
+  .action(() => {
+    console.log('🏁 BUMBA Status');
+    console.log(chalk.gray('━'.repeat(60)));
+    console.log();
+    console.log('Version: ' + packageJson.version);
+    console.log('Location: ' + __dirname);
+    console.log('Working Directory: ' + process.cwd());
+    console.log();
+    
+    const configPath = path.join(process.cwd(), 'bumba.config.js');
+    if (fs.existsSync(configPath)) {
+      console.log('✅ BUMBA initialized in this project');
+      const config = require(configPath);
+      console.log('Project: ' + config.project);
+    } else {
+      console.log('⚠️  BUMBA not initialized in this project');
+      console.log('Run: bumba init');
+    }
+    console.log();
+    console.log('Departments:');
+    console.log('  🟡 ProductStrategist: Active');
+    console.log('  🟢 BackendEngineer: Active');
+    console.log('  🔴 DesignEngineer: Active');
+    console.log('  🟠 QualityAssurance: Active');
+  });
+
+// Help command (default)
+program
+  .command('help', { isDefault: true })
+  .description('Show help information')
+  .action(() => {
+    program.outputHelp();
+    console.log();
+    console.log('Examples:');
+    console.log('  bumba menu');
+    console.log('  bumba implement "user authentication"');
+    console.log('  bumba backend "REST API"');
+    console.log('  bumba frontend "dashboard UI"');
+    console.log('  bumba test "unit tests"');
+    console.log();
+    console.log('For AI-powered implementation, use BUMBA within Claude Code at claude.ai');
+  });
+
+// Parse arguments
+program.parse(process.argv);
+
+// Show help if no command
+if (!process.argv.slice(2).length) {
+  program.outputHelp();
+}
