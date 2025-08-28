@@ -1,0 +1,4504 @@
+{
+  "id": "task_1756369384201_1p1fnm",
+  "type": "implementation",
+  "description": "test authentication system",
+  "context": {
+    "type": "node",
+    "structure": {
+      "type": "directory",
+      "name": "BUMBA",
+      "children": [
+        {
+          "type": "file",
+          "name": "CHANGELOG.md",
+          "ext": ".md"
+        },
+        {
+          "type": "file",
+          "name": "DEPLOYMENT_GUIDE.md",
+          "ext": ".md"
+        },
+        {
+          "type": "file",
+          "name": "HYBRID_SPRINT_PLAN.md",
+          "ext": ".md"
+        },
+        {
+          "type": "file",
+          "name": "LICENSE",
+          "ext": ""
+        },
+        {
+          "type": "file",
+          "name": "NPM_PUBLICATION_READY.md",
+          "ext": ".md"
+        },
+        {
+          "type": "file",
+          "name": "README-v2.md",
+          "ext": ".md"
+        },
+        {
+          "type": "file",
+          "name": "README.md",
+          "ext": ".md"
+        },
+        {
+          "type": "file",
+          "name": "README.npm.md",
+          "ext": ".md"
+        },
+        {
+          "type": "file",
+          "name": "README_HYBRID.md",
+          "ext": ".md"
+        },
+        {
+          "type": "file",
+          "name": "RELEASE_NOTES.md",
+          "ext": ".md"
+        },
+        {
+          "type": "directory",
+          "name": "archives",
+          "children": [
+            {
+              "type": "file",
+              "name": "README.md",
+              "ext": ".md"
+            },
+            {
+              "type": "directory",
+              "name": "backups",
+              "children": [
+                {
+                  "type": "directory",
+                  "name": "department-managers",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "specialist-logger-fix",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                }
+              ],
+              "totalFiles": 0,
+              "totalDirs": 2
+            },
+            {
+              "type": "directory",
+              "name": "deprecated",
+              "children": [],
+              "totalFiles": 0,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "legacy",
+              "children": [],
+              "totalFiles": 0,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "reports",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "specialist-report.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "test-results.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "verified-specialists.json",
+                  "ext": ".json"
+                }
+              ],
+              "totalFiles": 3,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "sessions",
+              "children": [],
+              "totalFiles": 0,
+              "totalDirs": 0
+            }
+          ],
+          "totalFiles": 4,
+          "totalDirs": 5
+        },
+        {
+          "type": "directory",
+          "name": "assets",
+          "children": [
+            {
+              "type": "directory",
+              "name": "audio",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "bumba-horn.mp3",
+                  "ext": ".mp3"
+                }
+              ],
+              "totalFiles": 1,
+              "totalDirs": 0
+            }
+          ],
+          "totalFiles": 1,
+          "totalDirs": 1
+        },
+        {
+          "type": "directory",
+          "name": "audit",
+          "children": [
+            {
+              "type": "file",
+              "name": "sprint-41-security.md",
+              "ext": ".md"
+            }
+          ],
+          "totalFiles": 1,
+          "totalDirs": 0
+        },
+        {
+          "type": "directory",
+          "name": "bin",
+          "children": [
+            {
+              "type": "file",
+              "name": "bumba",
+              "ext": ""
+            }
+          ],
+          "totalFiles": 1,
+          "totalDirs": 0
+        },
+        {
+          "type": "file",
+          "name": "bumba.config.js",
+          "ext": ".js"
+        },
+        {
+          "type": "directory",
+          "name": "config",
+          "children": [
+            {
+              "type": "file",
+              "name": "README.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "ai.config.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "commands.config.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "departments.config.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "eslint.config.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "eslint.config.mjs",
+              "ext": ".mjs"
+            },
+            {
+              "type": "file",
+              "name": "hooks.config.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "integrations.config.js",
+              "ext": ".js"
+            },
+            {
+              "type": "directory",
+              "name": "jest",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "jest.config.optimized.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 1,
+              "totalDirs": 0
+            },
+            {
+              "type": "file",
+              "name": "jest.config.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "jest.integration.config.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "jsdoc.config.json",
+              "ext": ".json"
+            },
+            {
+              "type": "file",
+              "name": "modular-config.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "performance.config.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "security.config.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "tsconfig.json",
+              "ext": ".json"
+            },
+            {
+              "type": "file",
+              "name": "webpack.config.js",
+              "ext": ".js"
+            }
+          ],
+          "totalFiles": 17,
+          "totalDirs": 1
+        },
+        {
+          "type": "directory",
+          "name": "data",
+          "children": [],
+          "totalFiles": 0,
+          "totalDirs": 0
+        },
+        {
+          "type": "directory",
+          "name": "docs",
+          "children": [
+            {
+              "type": "directory",
+              "name": "01-getting-started",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "ADVANCED_HOOKS_SYSTEM.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "API_SETUP_GUIDE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "AUDIO_SYSTEM_GUIDE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "BUMBA_BRANDING_DEMO.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "DEPLOYMENT_GUIDE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "FRAMEWORK_GUIDE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "FRAMEWORK_SELECTION.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "IMPORT_GUIDELINES.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "KNOWLEDGE_SYSTEMS_GUIDE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "MIGRATION_GUIDE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "MIGRATION_GUIDE_V2.1.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "MODEL_SETUP_GUIDE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "QUICK_START.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "QUICK_START_GUIDE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "REFERENCE_ENHANCED.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "SPECIALIST_ECOSYSTEM_GUIDE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "STATUS_LINE_GUIDE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "WORKTREE_SETUP_GUIDE.MD",
+                  "ext": ".MD"
+                }
+              ],
+              "totalFiles": 18,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "02-architecture",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "ARCHITECTURE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "DEPENDENCY_MANAGEMENT_ARCHITECTURE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "SYSTEM_ARCHITECTURE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "architecture.html",
+                  "ext": ".html"
+                }
+              ],
+              "totalFiles": 4,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "03-api-reference",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "API_REFERENCE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "COMMAND_HANDLER.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "COMMAND_HANDLERS.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "COMMAND_REFERENCE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "INSTALLER.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "LEARNING_SYSTEMS_API.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "PARALLEL_SAFETY_API.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "PERFORMANCE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "README.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "ROUTING_SYSTEMS.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "SECURITY.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "UNIFIED_ROUTING_SYSTEM.MD",
+                  "ext": ".MD"
+                }
+              ],
+              "totalFiles": 12,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "04-integrations",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "AI_INTEGRATION_CLARIFICATION.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "FIGMA_CONTEXT_MCP.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "INTEGRATION_ACTIVATION_GUIDE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "INTEGRATION_SYSTEMS_GUIDE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "MCP_INTEGRATION_SUMMARY.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "MCP_SERVER_DIAGRAMS.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "N8N_MCP.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "NOTION_AGENT_IMPLEMENTATION_GUIDELINES.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "NOTION_DASHBOARD_ARCHITECTURE_DIAGRAM.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "NOTION_DASHBOARD_ENHANCED_METRICS.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "NOTION_DASHBOARD_GUIDE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "NOTION_DASHBOARD_SUCCESS_STRATEGY.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "NOTION_IMPLEMENTATION_SUMMARY.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "NOTION_ORCHESTRATION_REQUIREMENTS.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "NOTION_SYNC_ARCHITECTURE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "OPENROUTER_MCP.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "PINECONE_MCP.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "REFLEKTION_MCP.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "SERENA_MCP.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "SHADCN_UI_INTEGRATION.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "STRATEGIC_MCP_ENHANCEMENT.MD",
+                  "ext": ".MD"
+                }
+              ],
+              "totalFiles": 21,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "05-development",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "CONTRIBUTING.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "GIT_ORCHESTRATED_COLLABORATION.MD",
+                  "ext": ".MD"
+                }
+              ],
+              "totalFiles": 2,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "06-deployment",
+              "children": [],
+              "totalFiles": 0,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "07-system-guides",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "BUMBA_HOOK_SYSTEM_ENHANCEMENT_PLAN.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "DEEPSEEK_QWEN_PARALLELIZATION.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "FALLBACK_SYSTEMS.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "HOOKS.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "HOOK_SYSTEM_DOCUMENTATION.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "MANAGER_ROUTING_FIX_SUMMARY.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "MODEL_ASSIGNMENT_IMPLEMENTATION_SUMMARY.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "MODEL_ASSIGNMENT_STRATEGY.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "MULTI_AGENT_SYSTEM.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "PARALLEL_SAFETY_SYSTEMS.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "ROUTING_SYSTEM_DOCUMENTATION.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "SPECIALIST_PAIRING_SYSTEM_ENHANCEMENT_COMPLETE.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "TOOL_AWARENESS_SYSTEM.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "UNIVERSAL_HOOKS_IMPLEMENTATION_SUMMARY.MD",
+                  "ext": ".MD"
+                },
+                {
+                  "type": "file",
+                  "name": "widget-system-integration.md",
+                  "ext": ".md"
+                }
+              ],
+              "totalFiles": 15,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "08-reference",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "ALL_SPECIALISTS_LIST.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "BACKEND-ENGINEER.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "BUMBA_COMMANDS.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "DESIGN-ENGINEER.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "PRODUCT-STRATEGIST.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "REFERENCE.md",
+                  "ext": ".md"
+                }
+              ],
+              "totalFiles": 6,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "09-troubleshooting",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "TROUBLESHOOTING.md",
+                  "ext": ".md"
+                }
+              ],
+              "totalFiles": 1,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "10-archive",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "COMMUNICATION_IMPROVEMENT_PLAN.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "MODEL-ASSIGNMENT-AUDIT-REPORT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "MODEL-ASSIGNMENT-SPRINT-PLAN.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "PIPELINE-MANAGER-ENHANCEMENT-COMPLETE.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "RESOURCE-OPTIMIZATION-PRD.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "RESOURCE-OPTIMIZATION-SPRINT-PLAN.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "TTL-ROUTING-PLAN.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "directory",
+                  "name": "reports",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "setup-guides",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "status-files",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                }
+              ],
+              "totalFiles": 8,
+              "totalDirs": 3
+            },
+            {
+              "type": "file",
+              "name": "API_REFERENCE.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "CCPM_INTEGRATION_ANALYSIS.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "CHAMELEON_IMPACT_ANALYSIS.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "CONTEXT_PRESERVATION_GUIDE.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "DASHBOARD_UNIFICATION_100_COMPLETE.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "DEPLOYMENT.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "DIRECTORY_STRUCTURE.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "INDEX.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "NOTION_DASHBOARD_AGENT_GUIDE.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "NOTION_MCP_SETUP_FOR_ADOPTERS.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "QUICK_START.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "README.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "UNIFIED_DASHBOARD_DAY5_COMPLETE.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "UNIFIED_DASHBOARD_PLAN.md",
+              "ext": ".md"
+            },
+            {
+              "type": "directory",
+              "name": "api",
+              "children": [],
+              "totalFiles": 0,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "architecture",
+              "children": [],
+              "totalFiles": 0,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "archive",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "MYHEART.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "emoji_audit.txt",
+                  "ext": ".txt"
+                },
+                {
+                  "type": "file",
+                  "name": "emoji_summary.txt",
+                  "ext": ".txt"
+                },
+                {
+                  "type": "file",
+                  "name": "emoji_violations.txt",
+                  "ext": ".txt"
+                },
+                {
+                  "type": "file",
+                  "name": "specialist-migration-report-1755912067162.txt",
+                  "ext": ".txt"
+                }
+              ],
+              "totalFiles": 5,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "audit-reports",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "ARCHITECTURE_AUDIT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "COMMAND_ROUTING_ANALYSIS.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "DEPARTMENT_MANAGER_AUDIT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "DIRECTORY_ORGANIZATION_SUMMARY.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "MANAGER_BASE_CLASS_UNIFICATION_PLAN.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "REDUNDANCY_AUDIT_REPORT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "SAFE_TO_REMOVE_VERIFICATION.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "SPECIALIST_BASE_AUDIT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "SPECIALIST_BASE_CLEANUP_REPORT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "SPECIALIST_REGISTRY.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "SYSTEM_CONNECTION_MAP.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "SYSTEM_STATE_REPORT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "UNIFICATION_FINAL_REPORT.md",
+                  "ext": ".md"
+                }
+              ],
+              "totalFiles": 13,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "audits",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "FINAL_COMPREHENSIVE_AUDIT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "SPRINT_1_AUDIT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "ULTIMATE_FRAMEWORK_AUDIT.md",
+                  "ext": ".md"
+                }
+              ],
+              "totalFiles": 3,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "development-reports",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "DAY2_MEMORY_OPTIMIZATION_REPORT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "DAY3_OPTIMIZATION_REPORT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "DAY4_TEST_FIXES_REPORT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "TEST_RESULTS_SPRINT1.md",
+                  "ext": ".md"
+                }
+              ],
+              "totalFiles": 4,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "guides",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "TROUBLESHOOTING.md",
+                  "ext": ".md"
+                }
+              ],
+              "totalFiles": 1,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "planning",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "CHAMELEON_MANAGER_PROJECT_PLAN.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "IMPROVEMENT_ANALYSIS.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "IMPROVEMENT_SPRINT_PLAN.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "LAUNCH_READINESS.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "ORGANIZATION_PLAN.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "directory",
+                  "name": "prd",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "sprints",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                }
+              ],
+              "totalFiles": 5,
+              "totalDirs": 2
+            },
+            {
+              "type": "directory",
+              "name": "reports",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "AGENTS.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "BRAND.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "BRAND_CONSISTENCY_PLAN.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "CLAUDE_FLOW_GENIUS_INTEGRATION.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "COMPREHENSIVE_DOCS_AUDIT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "COMPREHENSIVE_EXECUTION_PLAN.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "DAY1_COMPLETION_REPORT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "DIRECTORY_ORGANIZATION_COMPLETE.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "DOCUMENTATION_UPDATE_REPORT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "EMOJI_VIOLATION_REPORT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "ENHANCEMENTS.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "FINAL_TEST_REPORT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "FINAL_VALIDATION_TEST_REPORT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "INTEGRATION_AUDIT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "META_VALIDATION_SUMMARY.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "NOTION_DASHBOARD_IMPLEMENTATION.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "NOTION_EXISTING_INFRASTRUCTURE_EVALUATION.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "NOTION_INTEGRATION_GUIDE.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "NOTION_MCP_VERIFICATION_AND_IMPROVEMENTS.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "OPERATIONAL_GUIDE.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "ORGANIZATION_COMPLETE.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "PRODUCTION_FIX_PLAN.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "PRODUCTION_READY_COMPLETE.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "PRODUCTION_READY_SPRINT_PLAN.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "REVISED_SPRINT_PLAN.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "SECURITY_AUDIT_REPORT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "SPRINT1_DAY1_SUMMARY.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "SPRINT_3_COMPLETION_REPORT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "STABILIZATION_STATUS.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "TERMINAL_DASHBOARD_SUMMARY.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "TEST_REPORT_UNIFICATION.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "VALIDATION_SYSTEM_SUMMARY.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "VALIDATION_TEST_REPORT.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "VERSION_STANDARDIZATION_REPORT.md",
+                  "ext": ".md"
+                }
+              ],
+              "totalFiles": 34,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "security",
+              "children": [],
+              "totalFiles": 0,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "sessions",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "SESSION_1_COMPLETE.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "SESSION_2_COMPLETE.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "SESSION_3_COMPLETE.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "SESSION_4_COMPLETE.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "SESSION_4_TESTING_VALIDATION.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "SESSION_5_COMPLETE.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "SESSION_5_DOCUMENTATION.md",
+                  "ext": ".md"
+                }
+              ],
+              "totalFiles": 7,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "setup",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "CONFIG_REFERENCE.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "SETUP_INSTRUCTIONS.md",
+                  "ext": ".md"
+                }
+              ],
+              "totalFiles": 2,
+              "totalDirs": 0
+            }
+          ],
+          "totalFiles": 175,
+          "totalDirs": 22
+        },
+        {
+          "type": "directory",
+          "name": "examples",
+          "children": [
+            {
+              "type": "file",
+              "name": "README.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "advanced-specialist.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "basic-usage.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "demo.js",
+              "ext": ".js"
+            },
+            {
+              "type": "directory",
+              "name": "demos",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "unified-dashboard-demo.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 1,
+              "totalDirs": 0
+            },
+            {
+              "type": "file",
+              "name": "performance-demo.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "test-chameleon-live.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "test-context-preservation.js",
+              "ext": ".js"
+            }
+          ],
+          "totalFiles": 8,
+          "totalDirs": 1
+        },
+        {
+          "type": "file",
+          "name": "install.js",
+          "ext": ".js"
+        },
+        {
+          "type": "file",
+          "name": "installer.js",
+          "ext": ".js"
+        },
+        {
+          "type": "directory",
+          "name": "knowledge",
+          "children": [],
+          "totalFiles": 0,
+          "totalDirs": 0
+        },
+        {
+          "type": "directory",
+          "name": "lib",
+          "children": [
+            {
+              "type": "file",
+              "name": "README.md",
+              "ext": ".md"
+            }
+          ],
+          "totalFiles": 1,
+          "totalDirs": 0
+        },
+        {
+          "type": "directory",
+          "name": "migrations",
+          "children": [
+            {
+              "type": "file",
+              "name": "create_users.sql",
+              "ext": ".sql"
+            }
+          ],
+          "totalFiles": 1,
+          "totalDirs": 0
+        },
+        {
+          "type": "directory",
+          "name": "models",
+          "children": [
+            {
+              "type": "file",
+              "name": "User.js",
+              "ext": ".js"
+            }
+          ],
+          "totalFiles": 1,
+          "totalDirs": 0
+        },
+        {
+          "type": "file",
+          "name": "package-lock.json",
+          "ext": ".json"
+        },
+        {
+          "type": "file",
+          "name": "package.json",
+          "ext": ".json"
+        },
+        {
+          "type": "directory",
+          "name": "scripts",
+          "children": [
+            {
+              "type": "file",
+              "name": "README.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "achieve-100-percent.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "add-new-mcp-servers.js",
+              "ext": ".js"
+            },
+            {
+              "type": "directory",
+              "name": "analysis",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "compare-benchmarks.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "memory-baseline.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "performance-benchmark.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "performance-profiler.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "simple-performance-test.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 5,
+              "totalDirs": 0
+            },
+            {
+              "type": "file",
+              "name": "best-practices-cleanup.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "check-naming-conventions.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "cleanup-redundant-files.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "code-quality-check.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "complete-framework.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "consistency-refinement.js",
+              "ext": ".js"
+            },
+            {
+              "type": "directory",
+              "name": "deployment",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "deploy-failure-manager.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "production-deployment.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 2,
+              "totalDirs": 0
+            },
+            {
+              "type": "file",
+              "name": "deployment-package.json",
+              "ext": ".json"
+            },
+            {
+              "type": "file",
+              "name": "emoji-replacement-map.json",
+              "ext": ".json"
+            },
+            {
+              "type": "file",
+              "name": "enhance-specialists.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "generate-docs.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "health-monitor.js",
+              "ext": ".js"
+            },
+            {
+              "type": "directory",
+              "name": "maintenance",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "consolidate-specialists.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "emoji-audit.sh",
+                  "ext": ".sh"
+                },
+                {
+                  "type": "file",
+                  "name": "fix-all-duplicates.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "fix-all-errors.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "fix-commands.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "fix-core-emojis.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "fix-critical-silent-failures.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "fix-database-specialists.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "fix-documentation-specialists.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "fix-hook-methods.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "fix-hook-registrations.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "fix-language-specialists.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "fix-remaining-emojis.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "fix-remaining-specialists.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "fix-specialist-logger-paths.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "fix-specialists.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "fix-tests.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "organize-non-operational.sh",
+                  "ext": ".sh"
+                },
+                {
+                  "type": "file",
+                  "name": "rollback-procedures.sh",
+                  "ext": ".sh"
+                },
+                {
+                  "type": "file",
+                  "name": "standardize-version.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "update-emojis.sh",
+                  "ext": ".sh"
+                },
+                {
+                  "type": "file",
+                  "name": "update-imports.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "update-spawn-messaging.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "verify-brand-consistency.sh",
+                  "ext": ".sh"
+                }
+              ],
+              "totalFiles": 24,
+              "totalDirs": 0
+            },
+            {
+              "type": "file",
+              "name": "memory-baseline.json",
+              "ext": ".json"
+            },
+            {
+              "type": "file",
+              "name": "migrate-naming-conventions.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "migrate-timers.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "migrate-to-lazy-departments.js",
+              "ext": ".js"
+            },
+            {
+              "type": "directory",
+              "name": "migration",
+              "children": [],
+              "totalFiles": 0,
+              "totalDirs": 0
+            },
+            {
+              "type": "file",
+              "name": "npm-publish.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "organize-directory-structure.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "organize-directory.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "parallel-development-demo.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "post-install.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "pre-publish-check.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "production-health-check.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "rapid-completion.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "readme-restructure.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "release-3.0.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "setup-notion.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "specialist-registry-display.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "sprint1-day1-fixes.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "surgical-precision-cleanup.js",
+              "ext": ".js"
+            },
+            {
+              "type": "directory",
+              "name": "testing",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "comprehensive-test-suite.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-coverage-report.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-day3-improvements.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-day4-validation.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-lazy-loading.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-lazy-managers.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-timer-cleanup.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 7,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "tests",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "fix-missing-imports.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "fix-specialist-imports-safe.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-ascii-library.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-complete-validation.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-component-library.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-enhancement-system.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-memory-system.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-meta-validation.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-validation-final.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-validation-simple.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-validation-system.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "verify-agent-collaboration.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "verify-widget-system.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 13,
+              "totalDirs": 0
+            },
+            {
+              "type": "file",
+              "name": "ultimate-framework-optimization.js",
+              "ext": ".js"
+            },
+            {
+              "type": "directory",
+              "name": "validation",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "detect-silent-failures.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "validate-setup.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "verify-critical-paths.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "verify-fixes.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "verify-framework.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "verify-notion-connection.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "verify-performance-system.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "verify-preservation.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 8,
+              "totalDirs": 0
+            }
+          ],
+          "totalFiles": 92,
+          "totalDirs": 7
+        },
+        {
+          "type": "directory",
+          "name": "security-audit",
+          "children": [
+            {
+              "type": "file",
+              "name": "COMPLETE_48_SPRINT_IMPLEMENTATION.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "FINAL_IMPLEMENTATION_REPORT.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "TEST_VALIDATION_COMPLETE.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "sprint-1-mapping.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "sprint-2-3-complete.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "sprint-4-env-migration.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "sprint-7-global-state-mapping.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "sprint-implementation-complete.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "sprints-11-12-complete.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "sprints-13-14-complete.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "sprints-15-16-complete.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "sprints-4-6-complete.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "sprints-7-8-complete.md",
+              "ext": ".md"
+            },
+            {
+              "type": "file",
+              "name": "sprints-9-10-complete.md",
+              "ext": ".md"
+            }
+          ],
+          "totalFiles": 14,
+          "totalDirs": 0
+        },
+        {
+          "type": "directory",
+          "name": "src",
+          "children": [
+            {
+              "type": "directory",
+              "name": "commands",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "api-log-viewer.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "devops.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "enhancements.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "export-widgets.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "metrics.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "mode-integration.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "notion-sync-commands.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "usage-dashboard.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 8,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "components",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "LoginForm.jsx",
+                  "ext": ".jsx"
+                }
+              ],
+              "totalFiles": 1,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "config",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "api-config.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "bumba-enhancements.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 2,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "consciousnessModality",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "README.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "directory",
+                  "name": "core",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "index.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "directory",
+                  "name": "reasoning",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                }
+              ],
+              "totalFiles": 2,
+              "totalDirs": 2
+            },
+            {
+              "type": "directory",
+              "name": "core",
+              "children": [
+                {
+                  "type": "directory",
+                  "name": "agents",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "alerting",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "analytics",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "api",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "architecture-design.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "audio-celebration.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "audio-fallback-system.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "audit-command-system.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "directory",
+                  "name": "auth",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "bumba-framework-2.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "bumba-lite.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "directory",
+                  "name": "cache",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "capabilities",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "chaining",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "chameleon",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "collaboration",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "command-handler.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "directory",
+                  "name": "command-handlers",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "command-implementations.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "command-router-integration.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "directory",
+                  "name": "commands",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "communication",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "config",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "configuration",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "consciousness",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "coordination",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "dashboard",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "database",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "debugging",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "decision",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "departments",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "dependencies",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "deployment",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "deprecation",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "development-mode",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "di-container.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "dynamic-agent-lifecycle-orchestrator.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "directory",
+                  "name": "ecosystem",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "enhancements",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "error-boundaries",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "error-handling",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "events",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "execution",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "executive",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "executive-mode.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "directory",
+                  "name": "failures",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "fast-start.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "framework-mode-manager.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "directory",
+                  "name": "guardians",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "hooks",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "hybrid",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "initialization",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "integration",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "integrations",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "intelligence",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "interactive-mode",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "interactive-mode.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "directory",
+                  "name": "knowledge",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "learning",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "lifecycle",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "lite-mode",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "logging",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "mcp",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "memory",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "metrics",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "modes",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "monitoring",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "notion",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "notion-integration",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "observability",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "optimization",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "orchestration",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "performance",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "persistence",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "persona",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "planning",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "plugins",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "pooling",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "pooling-v2",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "production-mode",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "quality",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "quick-start.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "directory",
+                  "name": "recovery",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "resilience",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "resource-management",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "routing",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "security",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "selection",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "setup",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "simple-command-handler.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "simple-framework.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "simple-router.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "simplified-integration.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "directory",
+                  "name": "spawning",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "specialists",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "standard-mode",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "startup",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "state",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "status",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "summarization",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "supervision",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "teams",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "testing",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "themes",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "tiered-installer.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "directory",
+                  "name": "timers",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "tools",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "tracing",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "unified-hook-system.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "unified-monitoring-system.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "unified-routing-system.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "directory",
+                  "name": "utils",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "validate-commands.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "directory",
+                  "name": "validation",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "version-manager.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "directory",
+                  "name": "vision",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "welcome-experience.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "directory",
+                  "name": "whispers",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "widgets",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "workflow",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                }
+              ],
+              "totalFiles": 27,
+              "totalDirs": 93
+            },
+            {
+              "type": "directory",
+              "name": "examples",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "enhanced-hooks-example.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 1,
+              "totalDirs": 0
+            },
+            {
+              "type": "file",
+              "name": "index.js",
+              "ext": ".js"
+            },
+            {
+              "type": "directory",
+              "name": "installer",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "display.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "feature-showcase.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "file-generator.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "framework-detector.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "hook-generator.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "index.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "interactive-wizard.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "mcp-installer.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "onboarding-guide.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "quality-tools.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 10,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "integration",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "capability-absorber.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 1,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "styles",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "login.css",
+                  "ext": ".css"
+                }
+              ],
+              "totalFiles": 1,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "templates",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "CLAUDE.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "directory",
+                  "name": "commands",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                }
+              ],
+              "totalFiles": 1,
+              "totalDirs": 1
+            },
+            {
+              "type": "directory",
+              "name": "tests",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "security-test-suite.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 1,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "unification",
+              "children": [
+                {
+                  "type": "directory",
+                  "name": "adapters",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "index.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "directory",
+                  "name": "integration",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "tests",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                }
+              ],
+              "totalFiles": 1,
+              "totalDirs": 3
+            },
+            {
+              "type": "directory",
+              "name": "utils",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "collaborationMetrics.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "commandOptimizer.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "interactiveMenu.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "networkResilience.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "teamMemory.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 5,
+              "totalDirs": 0
+            }
+          ],
+          "totalFiles": 62,
+          "totalDirs": 13
+        },
+        {
+          "type": "directory",
+          "name": "status",
+          "children": [
+            {
+              "type": "file",
+              "name": "failure-status.json",
+              "ext": ".json"
+            },
+            {
+              "type": "file",
+              "name": "health-history.json",
+              "ext": ".json"
+            },
+            {
+              "type": "file",
+              "name": "health.json",
+              "ext": ".json"
+            }
+          ],
+          "totalFiles": 3,
+          "totalDirs": 0
+        },
+        {
+          "type": "directory",
+          "name": "temp",
+          "children": [
+            {
+              "type": "file",
+              "name": "README.md",
+              "ext": ".md"
+            },
+            {
+              "type": "directory",
+              "name": "bumba-logs",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "api-calls-2025-08-24T08-54-15.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "api-calls-2025-08-24T08-58-29.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "api-calls-2025-08-24T09-16-11.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "api-calls-2025-08-24T09-27-33.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "api-calls-2025-08-24T09-34-57.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "api-calls-2025-08-24T09-39-05.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "api-calls-2025-08-24T09-41-58.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "api-calls-2025-08-24T09-45-48.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "api-calls-2025-08-24T20-18-19.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "api-calls-2025-08-25T03-34-22.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "api-calls-2025-08-25T04-19-59.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "api-calls-2025-08-25T05-06-57.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "api-calls-2025-08-25T05-07-15.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "api-calls-2025-08-25T05-24-15.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "api-calls-2025-08-25T05-27-45.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "api-calls-2025-08-25T05-37-21.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "api-calls-2025-08-25T07-23-15.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "api-calls-2025-08-26T05-26-25.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "api-calls-summary.txt",
+                  "ext": ".txt"
+                }
+              ],
+              "totalFiles": 19,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "logs",
+              "children": [
+                {
+                  "type": "directory",
+                  "name": "executive",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "failure-notifications.log",
+                  "ext": ".log"
+                },
+                {
+                  "type": "file",
+                  "name": "failures.json",
+                  "ext": ".json"
+                }
+              ],
+              "totalFiles": 2,
+              "totalDirs": 1
+            },
+            {
+              "type": "directory",
+              "name": "profiles",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "cpu-2025-08-20T06-29-31-703Z.json",
+                  "ext": ".json"
+                },
+                {
+                  "type": "file",
+                  "name": "profile-2025-08-20T06-29-31-703Z.json",
+                  "ext": ".json"
+                }
+              ],
+              "totalFiles": 2,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "test-results",
+              "children": [],
+              "totalFiles": 0,
+              "totalDirs": 0
+            }
+          ],
+          "totalFiles": 24,
+          "totalDirs": 4
+        },
+        {
+          "type": "directory",
+          "name": "test-repo",
+          "children": [],
+          "totalFiles": 0,
+          "totalDirs": 0
+        },
+        {
+          "type": "directory",
+          "name": "tests",
+          "children": [
+            {
+              "type": "file",
+              "name": "README.md",
+              "ext": ".md"
+            },
+            {
+              "type": "directory",
+              "name": "__mocks__",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "bumba-logger.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "llm-api.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "mcp-resilience-system.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "mcp-server.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "notion-api.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 5,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "archive",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "alerting-system-complete-test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "dashboard-complete-test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "department-complete-test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "framework-complete-test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "routing-complete-test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "routing-system-practical-test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "routing-system-unit-test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-integration-activation.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-integration-simple.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 9,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "dashboard",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "test-5-sources.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-all-16-sources.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-all-connections.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-health-endpoint.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-specialist-connection.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-timer-connection.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 6,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "dynamic-lifecycle",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "test-lifecycle-integration.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-lifecycle-unit.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 2,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "e2e",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "final-system-validation.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "framework-operability-test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "system-operability-test.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 3,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "fixtures",
+              "children": [
+                {
+                  "type": "directory",
+                  "name": "managers",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                }
+              ],
+              "totalFiles": 0,
+              "totalDirs": 1
+            },
+            {
+              "type": "directory",
+              "name": "helpers",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "test-utils.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 1,
+              "totalDirs": 0
+            },
+            {
+              "type": "file",
+              "name": "hybrid-mode.test.js",
+              "ext": ".js"
+            },
+            {
+              "type": "directory",
+              "name": "integration",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "bumba-integration.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "collaboration-enhancement-test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "collaboration-system.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "command-system-improvements.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "core-flows.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "core-framework-improvements.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "cross-domain-routing.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "department-coordination.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "domain-specific-routing.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "e2e-critical-paths.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "end-to-end-workflows.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "end-to-end.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "error-handling-integration.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "executive-systems.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "final-routing-integration.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "framework.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "git-orchestration-test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "hook-system-verification.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "hook-system.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "human-learning-sprint2.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "integrated-hooks-test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "integration-simple.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "integration-systems.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "intelligent-systems.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "lean-enhancements.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "learning-optimization.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "lifecycle-system.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "mcp-server-integration.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "model-assignment.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "notion-dashboard-enhanced.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "notion-dashboard.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "operational-efficiency-test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "pinecone-integration.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "resource-management.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "selection-matrix.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "serena-integration.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "simple-specialist-test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "simplified-routing-test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "specialist-routing-accuracy-test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "standard-mode-validation.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "team-hooks-integration.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-advanced-routing.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-complete-integration.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-department-coordination.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-department-orchestration.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-dependency-system.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-enhanced-hooks.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-enhanced-routing.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-git-orchestration-simple.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-orchestration-final.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-orchestration-operational.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-orchestration-simple.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-orchestration-system.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-ultra-precise-routing.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "validation-flow.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "whispers-chaining.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "worktree-collaboration.test.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 57,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "manual",
+              "children": [
+                {
+                  "type": "directory",
+                  "name": "demos",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "test-100-percent-operability.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-agent-operability.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-command-routing.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-core-functionality.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-everything.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-gemini.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-lean-enhancements-live.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-memory-context-system.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-memory-enhancements.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-parallel-safety-simple.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-parallel-safety.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-parallel-stress.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-performance.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-quick-validation.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-reality-check.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-security.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-session4-complete.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-specialist-loading.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-sprint-system.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-working-security.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 20,
+              "totalDirs": 1
+            },
+            {
+              "type": "directory",
+              "name": "performance",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "benchmark.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "efficiency-benchmark.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "performance-system.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "realistic-performance-test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-parallel-load.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 5,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "pooling",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "intelligent-pooling.test.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 1,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "reports",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "alerting-system-audit.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "collaboration-verification-report.md",
+                  "ext": ".md"
+                },
+                {
+                  "type": "file",
+                  "name": "dashboard-sprint1-verification.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "dashboard-sprint2-verification.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "dashboard-systems-audit.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "department-management-audit.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "executive-sprints-verification.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "framework-engine-audit.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "hooks-integration-verification.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "routing-architecture-audit.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "specialist-ecosystem-audit.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "verify-error-handling.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "verify-routing-features.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "verify-systems.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 14,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "security",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "final-security-test.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 1,
+              "totalDirs": 0
+            },
+            {
+              "type": "file",
+              "name": "setup-mocks.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "setup-tests.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "setup.js",
+              "ext": ".js"
+            },
+            {
+              "type": "file",
+              "name": "test-context-preservation.js",
+              "ext": ".js"
+            },
+            {
+              "type": "directory",
+              "name": "unification",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "adapters.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "context-broker.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "integration.test.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "unified-bus.test.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 4,
+              "totalDirs": 0
+            },
+            {
+              "type": "directory",
+              "name": "unit",
+              "children": [
+                {
+                  "type": "directory",
+                  "name": "agents",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "alerting",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "chameleon",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "collaboration",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "configuration",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "consciousness",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "core",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "departments",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "error-handling",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "framework",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "integrations",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "knowledge",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "learning",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "monitoring",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "performance",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "routing",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "security",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "spawning",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "specialists",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "file",
+                  "name": "test-context-metrics.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "directory",
+                  "name": "widgets",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                },
+                {
+                  "type": "directory",
+                  "name": "workflow",
+                  "children": [],
+                  "totalFiles": 0,
+                  "totalDirs": 0
+                }
+              ],
+              "totalFiles": 1,
+              "totalDirs": 21
+            },
+            {
+              "type": "directory",
+              "name": "verification",
+              "children": [
+                {
+                  "type": "file",
+                  "name": "fix-hooks-compat.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-model-integrations.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-status-line.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "test-updated-status.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "verify-hooks-simple.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "verify-hooks.js",
+                  "ext": ".js"
+                },
+                {
+                  "type": "file",
+                  "name": "verify-lean-enhancements.js",
+                  "ext": ".js"
+                }
+              ],
+              "totalFiles": 7,
+              "totalDirs": 0
+            }
+          ],
+          "totalFiles": 142,
+          "totalDirs": 16
+        },
+        {
+          "type": "directory",
+          "name": "tools",
+          "children": [
+            {
+              "type": "file",
+              "name": "README.md",
+              "ext": ".md"
+            }
+          ],
+          "totalFiles": 1,
+          "totalDirs": 0
+        },
+        {
+          "type": "directory",
+          "name": "types",
+          "children": [
+            {
+              "type": "file",
+              "name": "index.d.ts",
+              "ext": ".ts"
+            }
+          ],
+          "totalFiles": 1,
+          "totalDirs": 0
+        }
+      ],
+      "totalFiles": 564,
+      "totalDirs": 21
+    },
+    "patterns": [
+      "Component-based architecture",
+      "API endpoints",
+      "MVC pattern",
+      "Utility functions",
+      "Test structure",
+      "Documentation"
+    ],
+    "stack": [
+      "Jest"
+    ],
+    "health": {
+      "score": 90,
+      "issues": [
+        "Missing .gitignore",
+        "No linting configuration"
+      ],
+      "recommendations": [
+        "Add .gitignore file",
+        "Add code linting"
+      ]
+    },
+    "fileCount": 564,
+    "timestamp": 1756369384201
+  },
+  "timestamp": 1756369384201,
+  "requirements": {
+    "features": [
+      "Comprehensive testing"
+    ],
+    "constraints": [],
+    "technologies": [],
+    "priority": "normal"
+  },
+  "suggestedAgents": [
+    "ProductStrategist",
+    "BackendEngineer",
+    "SecuritySpecialist",
+    "QualityAssurance",
+    "TestEngineer"
+  ],
+  "createdAt": 1756369384201,
+  "mode": "terminal"
+}

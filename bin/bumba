@@ -25,8 +25,34 @@ const red = chalk.hex('#FF0000');
 const orange = chalk.hex('#FFA500');
 
 // Check if first run (show installer experience)
-const showInstaller = process.argv[2] === 'welcome' || process.argv[2] === undefined;
-if (showInstaller && process.argv.length <= 2) {
+// Show installer for: bumba (no args) or bumba welcome
+if (process.argv.length === 2) {
+  // Show installer then menu
+  require('../scripts/post-install-display.js');
+  // After installer, show the menu
+  console.log('🏁 BUMBA COMMAND MENU 🏁');
+  console.log(chalk.gray('━'.repeat(60)));
+  console.log();
+  console.log('CORE COMMANDS:');
+  console.log('  bumba menu              - Show this menu');
+  console.log('  bumba implement <task>  - Build features with AI agents');
+  console.log('  bumba analyze <type>    - Analyze codebase');
+  console.log('  bumba help              - Get help');
+  console.log();
+  console.log('DEPARTMENT COMMANDS:');
+  console.log('  ' + yellow('🟡') + ' bumba strategy <task>  - Product strategy planning');
+  console.log('  ' + green('🟢') + ' bumba backend <task>   - Backend development');
+  console.log('  ' + red('🔴') + ' bumba frontend <task>  - Frontend & UI development');
+  console.log('  ' + orange('🟠') + ' bumba test <task>      - Testing & quality assurance');
+  console.log();
+  console.log('QUICK START:');
+  console.log('  bumba init              - Initialize BUMBA in current project');
+  console.log('  bumba status            - Check BUMBA status');
+  console.log();
+  console.log(chalk.gray('━'.repeat(60)));
+  console.log('Example: bumba implement "user authentication system"');
+  process.exit(0);
+} else if (process.argv[2] === 'welcome') {
   require('../scripts/post-install.js');
   process.exit(0);
 }
@@ -319,8 +345,3 @@ program
 
 // Parse arguments
 program.parse(process.argv);
-
-// Show help if no command
-if (!process.argv.slice(2).length) {
-  program.outputHelp();
-}
