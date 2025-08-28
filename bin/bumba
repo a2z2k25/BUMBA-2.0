@@ -1,14 +1,19 @@
 #!/usr/bin/env node
 
 /**
- * BUMBA CLI - Actually Working Command Interface
- * This makes BUMBA commands work immediately, out of the box
+ * BUMBA CLI - Hybrid Intelligence Framework
+ * Bridge Mode: Terminal task preparation
+ * Enhancement Mode: Claude AI execution
  */
 
 const chalk = require('chalk');
 const { program } = require('commander');
 const path = require('path');
 const fs = require('fs');
+
+// Import hybrid mode components
+const ModeManager = require('../src/core/hybrid/mode-manager');
+const ConfigBridge = require('../src/core/hybrid/config-bridge');
 
 // Version from package.json
 const packageJson = require('../package.json');
@@ -26,9 +31,13 @@ if (showInstaller && process.argv.length <= 2) {
   process.exit(0);
 }
 
-// Header
+// Initialize mode manager
+const modeManager = new ModeManager();
+const currentMode = modeManager.getModeType();
+
+// Header with mode indicator
 console.log();
-console.log(green('🟢') + ' BUMBA Framework v' + packageJson.version);
+console.log(green('🟢') + ' BUMBA Framework v' + packageJson.version + ' [' + currentMode.toUpperCase() + ' MODE]');
 console.log(chalk.gray('━'.repeat(60)));
 console.log();
 
@@ -65,30 +74,25 @@ program
     console.log('Example: bumba implement "user authentication system"');
   });
 
-// Implement command
+// Implement command - Hybrid aware
 program
   .command('implement <task>')
   .description('Build a feature using BUMBA agents')
-  .action((task) => {
-    console.log('🏁 BUMBA Implementation Mode');
-    console.log(chalk.gray('━'.repeat(60)));
-    console.log();
-    console.log('Task: ' + chalk.white(task));
-    console.log();
-    console.log(yellow('🟡') + ' Strategy Phase: Analyzing requirements...');
-    console.log(green('🟢') + ' Backend Phase: Would create APIs and database...');
-    console.log(red('🔴') + ' Frontend Phase: Would build UI components...');
-    console.log(orange('🟠') + ' Testing Phase: Would add tests and validation...');
-    console.log();
-    console.log('🏁 Implementation Plan Ready!');
-    console.log();
-    console.log(chalk.yellow('Note: Full implementation requires running BUMBA'));
-    console.log(chalk.yellow('within Claude Code at claude.ai for AI capabilities.'));
-    console.log();
-    console.log('To complete this task:');
-    console.log('1. Open claude.ai');
-    console.log('2. Navigate to your project: ' + process.cwd());
-    console.log('3. Ask Claude: "Implement ' + task + ' using BUMBA framework"');
+  .action(async (task) => {
+    if (currentMode === 'terminal') {
+      // Bridge mode - prepare task
+      await modeManager.execute('prepare', task);
+    } else if (currentMode === 'claude') {
+      // Enhancement mode - direct implementation
+      await modeManager.execute('implement', task);
+    } else {
+      // Hybrid mode
+      console.log('🏁 BUMBA Hybrid Implementation');
+      console.log(chalk.gray('━'.repeat(60)));
+      console.log();
+      console.log('Preparing task for execution...');
+      await modeManager.execute('prepare', task);
+    }
   });
 
 // Backend command
@@ -171,25 +175,7 @@ program
     console.log('Use in Claude Code for full implementation.');
   });
 
-// Analyze command
-program
-  .command('analyze [type]')
-  .description('Analyze codebase')
-  .action((type = 'general') => {
-    console.log('🏁 BUMBA Code Analysis');
-    console.log(chalk.gray('━'.repeat(60)));
-    console.log();
-    console.log('Analysis type: ' + type);
-    console.log();
-    console.log('Analyzing:');
-    console.log('  • Code quality');
-    console.log('  • Security vulnerabilities');
-    console.log('  • Performance bottlenecks');
-    console.log('  • Test coverage');
-    console.log('  • Dependencies');
-    console.log();
-    console.log('Full analysis available in Claude Code.');
-  });
+// Removed duplicate analyze command - handled by hybrid mode above
 
 // Init command
 program
@@ -238,11 +224,57 @@ module.exports = {
     }
   });
 
-// Status command
+// Prepare command (Bridge mode)
+program
+  .command('prepare <description>')
+  .description('Prepare a task for Claude execution')
+  .action(async (description) => {
+    if (!modeManager.hasCapability('taskPreparation')) {
+      console.log('🔴 Task preparation not available in ' + currentMode + ' mode');
+      return;
+    }
+    await modeManager.execute('prepare', description);
+  });
+
+// Execute command (Enhancement mode)
+program
+  .command('execute <taskId>')
+  .description('Execute a prepared task (Claude mode)')
+  .action(async (taskId) => {
+    if (!modeManager.hasCapability('ai')) {
+      console.log('🔴 Task execution requires Claude environment');
+      console.log('Please run this command in Claude Code');
+      return;
+    }
+    await modeManager.execute('execute', taskId);
+  });
+
+// Analyze command (Bridge mode)
+program
+  .command('analyze [type]')
+  .description('Analyze project and gather context')
+  .action(async (type = 'project') => {
+    await modeManager.execute('analyze', type);
+  });
+
+// Vision command (Enhancement mode)
+program
+  .command('vision <imagePath>')
+  .description('Analyze image/screenshot with vision')
+  .action(async (imagePath) => {
+    if (!modeManager.hasCapability('vision')) {
+      console.log('🔴 Vision analysis requires Claude environment');
+      return;
+    }
+    await modeManager.execute('vision', imagePath);
+  });
+
+// Status command - Enhanced
 program
   .command('status')
-  .description('Check BUMBA status')
+  .description('Check BUMBA status and mode')
   .action(() => {
+    modeManager.displayStatus();
     console.log('🏁 BUMBA Status');
     console.log(chalk.gray('━'.repeat(60)));
     console.log();
