@@ -215,6 +215,7 @@ function generateSettings(version) {
       Start: [
         {
           matcher: '',
+          hooks: [
             {
               type: 'command',
               command: '~/.claude/hooks/context-bridge.sh sync'
