@@ -38,7 +38,7 @@ console.log('\n\n');
 console.log('┌──────────────────────────────────────────────┐');
 console.log('│ 🏁 BUMBA FRAMEWORK INSTALLER 🏁              │');
 console.log('│                                              │');
-console.log('│ Version 3.0.3                                │');
+console.log('│ Version 3.0.4                                │');
 console.log('│ ' + gray('By Professional Framework Team') + '               │');
 console.log('└──────────────────────────────────────────────┘');
 console.log();

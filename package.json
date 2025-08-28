@@ -83,6 +83,7 @@
     "README.md",
     "LICENSE",
     "scripts/post-install.js",
+    "scripts/post-install-display-full.js",
     "scripts/npm-publish.js"
   ],
   "publishConfig": {
