@@ -81,18 +81,19 @@ function displayLogo() {
 }
 
 /**
- * Display version and attribution
+ * Display version and attribution with brand-approved styling
  */
 function displayVersion(version) {
   const versionBox = createBox(
-    colors.yellow.bold('🟢 BUMBA FRAMEWORK INSTALLER 🟢') + '\n' +
+    '🏁 BUMBA FRAMEWORK INSTALLER 🏁' + '\n' +
     '\n' +
-    colors.white(`Version ${version}`) + '\n' +
+    `Version ${version}` + '\n' +
     colors.gray('By Professional Framework Team')
     , 48);
 
-  console.log('\n' + versionBox);
-  console.log('\n' + colors.yellow.bold('🏁 BUMBA INSTALLATION INITIATING 🏁\n'));
+  console.log('\n\n' + versionBox); // Extra padding
+  console.log('\n' + '🟢 BUMBA INSTALLATION INITIATING 🟢');
+  console.log(); // Add padding after
 }
 
 /**
@@ -130,28 +131,30 @@ function createProgressBar(percent, width = 50, label = '') {
 }
 
 /**
- * Display status message with icon
+ * Display status message with brand-approved emojis
  */
 function displayStatus(message, type = 'info') {
   const icons = {
-    info: colors.info('ℹ'), // Yellow-green
-    success: colors.success('🏁'), // Green
-    warning: colors.warning('🟢'), // Orange-yellow
-    error: colors.error('🟢'), // Red
-    working: colors.yellowGreen('🟢'), // Yellow-green
-    complete: colors.success('🟢') // Green
+    info: '🟡', // Yellow for info/strategy
+    success: '🏁', // Checkered flag for success
+    warning: '🟠', // Orange for warning/testing
+    error: '🔴', // Red for error
+    working: '🟢', // Green for working/backend
+    complete: '🏁' // Checkered flag for complete
   };
 
   const icon = icons[type] || icons.info;
-  console.log(`${icon} ${message}`);
+  console.log(`${icon}  ${message}`); // Extra space after icon
 }
 
 /**
- * Display phase separator
+ * Display phase separator with brand styling
  */
-function displayPhase(phase, icon = '🟢') {
-  console.log(colors.yellow(`\n${icon} ${phase}`));
-  console.log(colors.gray('─'.repeat(60)));
+function displayPhase(phase, icon = '🏁') {
+  console.log(); // Add padding before
+  console.log(`${icon}  ${phase.toUpperCase()}`); // No bold coloring, just uppercase
+  console.log(colors.gray('═'.repeat(60))); // Use double line
+  console.log(); // Add padding after
 }
 
 /**
@@ -196,31 +199,34 @@ function animatedProgress(label, duration = 3000) {
 }
 
 /**
- * Display INTERLOCKING GEARS ASCII art
+ * Display INTERLOCKING GEARS ASCII art with brand-approved visuals
  */
 function displayInterlockingGears() {
   const gears = [
-    { line: '🟢════🟢════🟢════🟢════🟢════🟢════🟢════🟢════🟢', color: 0 },
+    { line: '🟢════🟡════🔴════🟠════🏁════🟢════🟡════🔴════🟠', color: 0 },
     { line: '║    ║    ║    ║    ║    ║    ║    ║    ║', color: 1 },
-    { line: '🟢────🟢────🟢────🟢────🟢────🟢────🟢────🟢────🟢', color: 2 },
-    { line: '║ 🟢══🟢══🟢══🟢══🟢══🟢══🟢══🟢══🟢══🟢══🟢══🟢 ║', color: 3 },
+    { line: '🟡────🟢────🔴────🟠────🏁────🟡────🟢────🔴────🟠', color: 2 },
+    { line: '║ 🟢══🟡══🔴══🟠══🏁══🟢══🟡══🔴══🟠══🏁══🟢 ║', color: 3 },
     { line: '║ ║  ║  ║  ║  ║  ║  ║  ║  ║  ║  ║  ║ ║', color: 4 },
-    { line: '║ 🟢──🟢──🟢──🟢──🟢──🟢──🟢──🟢──🟢──🟢──🟢──🟢 ║', color: 5 },
+    { line: '║ 🟡──🔴──🟠──🏁──🟢──🟡──🔴──🟠──🏁──🟢──🟡──🔴 ║', color: 5 },
     { line: '║    ║    ║    ║    ║    ║    ║    ║    ║', color: 4 },
-    { line: '🟢════🟢════🟢════🟢════🟢════🟢════🟢════🟢════🟢', color: 3 }
+    { line: '🔴════🟠════🏁════🟢════🟡════🔴════🟠════🏁════🟢', color: 3 }
   ];
 
-  console.log('\n');
-  console.log(colors.yellow.bold('🟢  MECHANICAL PRECISION  🟢'));
+  console.log('\n\n'); // Add extra padding
+  console.log(colors.yellow.bold('🏁  MECHANICAL PRECISION  🏁'));
   console.log(colors.gray('─'.repeat(60)));
+  console.log(); // Add space after header
 
   gears.forEach(({ line, color }) => {
     const colorFunc = colors.gradient[color] || colors.gradient[0];
     console.log(colorFunc.bold(line));
   });
 
+  console.log();
   console.log(colors.gray('─'.repeat(60)));
-  console.log(colors.yellowGreen('Interlocking systems working in perfect harmony\n'));
+  console.log(colors.gray('Interlocking systems working in perfect harmony'));
+  console.log(); // Add padding after
 }
 
 /**

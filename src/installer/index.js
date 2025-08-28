@@ -161,8 +161,7 @@ async function install(options = {}) {
     // Show comparison table
     displayComparisonTable();
 
-    // Display interlocking gears showing mechanical precision
-    displayInterlockingGears();
+    // Removed interlocking gears section per brand update
 
     // Run interactive wizard if not in silent mode
     let config = options;

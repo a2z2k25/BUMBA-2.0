@@ -18,12 +18,12 @@ const INSTALLATION_PROFILES = {
     features: ['core', 'commands', 'agents', 'quality']
   },
   custom: {
-    name: '🟢  Custom',
+    name: '🟡 Custom',
     description: 'Choose exactly what you need',
     features: []
   },
   full: {
-    name: '🟢 Full Installation',
+    name: '🏁 Full Installation',
     description: 'Everything including all integrations',
     features: ['core', 'commands', 'agents', 'quality', 'mcp', 'notion', 'figma', 'github']
   }
@@ -39,7 +39,7 @@ const FEATURES = {
     required: true
   },
   commands: {
-    name: '🟢 58 Commands',
+    name: '🟡 58 Commands',
     description: 'Full command suite for development',
     required: true
   },
@@ -49,22 +49,22 @@ const FEATURES = {
     required: true
   },
   quality: {
-    name: '🏁 Quality Gates',
+    name: '🟠 Quality Gates',
     description: 'Automated testing and validation',
     default: true
   },
   mcp: {
-    name: '🟢 MCP Servers',
+    name: '🔴 MCP Servers',
     description: '25+ integration servers',
     default: false
   },
   notion: {
-    name: '🟢 Notion Integration',
+    name: '🟡 Notion Integration',
     description: 'Project management sync',
     default: false
   },
   figma: {
-    name: '🟢 Figma Integration',
+    name: '🔴 Figma Integration',
     description: 'Design-to-code workflows',
     default: false
   },
@@ -79,8 +79,9 @@ const FEATURES = {
  * Run the interactive installation wizard
  */
 async function runWizard() {
-  console.log('\n' + colors.yellow.bold('🟢 Welcome to BUMBA Interactive Setup'));
-  console.log(colors.gray('Let\'s customize your installation\n'));
+  console.log('\n\n' + '🏁 Welcome to BUMBA Interactive Setup');
+  console.log(colors.gray('Let\'s customize your installation'));
+  console.log(); // Add extra padding
 
   // Step 1: Installation profile
   const { profile } = await inquirer.prompt([
@@ -128,9 +129,9 @@ async function runWizard() {
       message: 'What\'s your primary development environment?',
       choices: [
         { name: '🟢 VS Code', value: 'vscode' },
-        { name: '🟢️  Terminal/CLI', value: 'terminal' },
-        { name: '🟢️  Cloud IDE', value: 'cloud' },
-        { name: '🟢 Other/Mixed', value: 'other' }
+        { name: '🟡 Terminal/CLI', value: 'terminal' },
+        { name: '🔴 Cloud IDE', value: 'cloud' },
+        { name: '🟠 Other/Mixed', value: 'other' }
       ],
       default: 'vscode'
     }
@@ -143,9 +144,9 @@ async function runWizard() {
       name: 'experience',
       message: 'How familiar are you with AI development tools?',
       choices: [
-        { name: '🟢 New to AI tools', value: 'beginner' },
+        { name: '🟡 New to AI tools', value: 'beginner' },
         { name: '🟢 Some experience', value: 'intermediate' },
-        { name: '🟢 Expert user', value: 'expert' }
+        { name: '🏁 Expert user', value: 'expert' }
       ],
       default: 'intermediate'
     }
@@ -180,22 +181,22 @@ async function runWizard() {
   }
 
   // Confirmation
-  console.log('\n' + colors.yellowGreen.bold('🟢 Installation Summary:'));
-  console.log(colors.white('━'.repeat(50)));
+  console.log('\n' + '🏁 Installation Summary:');
+  console.log(colors.gray('━'.repeat(50)));
   
-  console.log(colors.white('Profile:'), colors.yellow(INSTALLATION_PROFILES[profile].name));
-  console.log(colors.white('Environment:'), colors.yellow(environment));
-  console.log(colors.white('Experience:'), colors.yellow(experience));
+  console.log('Profile:', INSTALLATION_PROFILES[profile].name);
+  console.log('Environment:', environment);
+  console.log('Experience:', experience);
   
-  console.log(colors.white('\nFeatures to install:'));
+  console.log('\nFeatures to install:');
   selectedFeatures.forEach(feat => {
     const feature = FEATURES[feat];
     if (feature) {
-      console.log(colors.green('  🏁'), colors.white(feature.name));
+      console.log('  ', feature.name);
     }
   });
 
-  console.log(colors.white('━'.repeat(50)));
+  console.log(colors.gray('━'.repeat(50)));
 
   const { confirm } = await inquirer.prompt([
     {
@@ -207,7 +208,7 @@ async function runWizard() {
   ]);
 
   if (!confirm) {
-    console.log(colors.yellow('\n🟢 Installation cancelled'));
+    console.log('\n🟠 Installation cancelled');
     return null;
   }
 
