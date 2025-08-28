@@ -19,6 +19,13 @@ const green = chalk.hex('#00FF00');
 const red = chalk.hex('#FF0000');
 const orange = chalk.hex('#FFA500');
 
+// Check if first run (show installer experience)
+const showInstaller = process.argv[2] === 'welcome' || process.argv[2] === undefined;
+if (showInstaller && process.argv.length <= 2) {
+  require('../scripts/post-install.js');
+  process.exit(0);
+}
+
 // Header
 console.log();
 console.log(green('🟢') + ' BUMBA Framework v' + packageJson.version);
