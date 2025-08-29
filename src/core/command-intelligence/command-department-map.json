@@ -1,0 +1,98 @@
+{
+  "product": [
+    "prd",
+    "requirements", 
+    "roadmap",
+    "research-market",
+    "analyze-business",
+    "docs-business",
+    "improve-strategy",
+    "executive",
+    "leadership",
+    "strategy",
+    "milestone",
+    "checkpoint"
+  ],
+  "design": [
+    "design",
+    "figma",
+    "ui",
+    "visual",
+    "research-design",
+    "analyze-ux",
+    "docs-design",
+    "improve-design",
+    "accessibility",
+    "component",
+    "style",
+    "layout"
+  ],
+  "backend": [
+    "api",
+    "secure",
+    "scan",
+    "analyze",
+    "research-technical",
+    "docs-technical",
+    "improve-performance",
+    "database",
+    "devops",
+    "publish",
+    "deploy",
+    "infrastructure",
+    "migration",
+    "optimization"
+  ],
+  "collaboration": [
+    "implement",
+    "implement-agents",
+    "implement-strategy",
+    "implement-design",
+    "implement-technical",
+    "team",
+    "collaborate",
+    "chain",
+    "workflow",
+    "orchestrate",
+    "coordinate"
+  ],
+  "consciousness": [
+    "conscious-analyze",
+    "conscious-reason",
+    "conscious-wisdom",
+    "conscious-purpose",
+    "conscious-implement"
+  ],
+  "monitoring": [
+    "status",
+    "health",
+    "performance",
+    "resources",
+    "metrics",
+    "monitor",
+    "benchmark"
+  ],
+  "system": [
+    "help",
+    "menu",
+    "settings",
+    "mode",
+    "optimize",
+    "config",
+    "init"
+  ],
+  "lite": [
+    "lite",
+    "lite-analyze",
+    "lite-implement",
+    "lite-design",
+    "lite-test"
+  ],
+  "testing": [
+    "test",
+    "validate",
+    "verify",
+    "check",
+    "audit"
+  ]
+}

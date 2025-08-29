@@ -43,9 +43,14 @@ class CommandImplementations {
     const action = context.originalCommand || 'strategy';
     const specialist = this.getSpecialist('product-strategist', 'strategic');
     
-    // Handle specific product commands
+    // Use the intelligent router for proper agent coordination
+    const { getInstance: getRouter } = require('./command-intelligence/command-router');
+    const router = getRouter();
+    
+    // Handle specific product commands with actual agent intelligence
     if (action === 'prd') {
-      return await this.createPRD(args, context);
+      // Instead of just creating a template, engage the Product Manager
+      return await this.createIntelligentPRD(args, context, specialist);
     }
     
     const task = {
@@ -83,7 +88,148 @@ class CommandImplementations {
   }
   
   /**
-   * Create actual PRD document
+   * Create intelligent PRD using Product Manager and specialists
+   */
+  async createIntelligentPRD(args, context, specialist) {
+    const fs = require('fs').promises;
+    const path = require('path');
+    
+    const feature = args.join(' ') || 'new-feature';
+    
+    // Engage the specialist to analyze the request
+    const analysis = await specialist.processTask({
+      type: 'requirements-analysis',
+      description: feature,
+      context
+    }, context);
+    
+    // Build PRD based on specialist's analysis
+    const prdContent = this.buildPRDFromAnalysis(feature, analysis, context);
+    
+    // Save the PRD
+    const fileName = feature.replace(/\s+/g, '-').toLowerCase();
+    const docsDir = path.join(process.cwd(), 'docs');
+    const prdsDir = path.join(docsDir, 'PRDs');
+    
+    await fs.mkdir(docsDir, { recursive: true });
+    await fs.mkdir(prdsDir, { recursive: true });
+    
+    const filePath = path.join(prdsDir, `${fileName}-prd.md`);
+    await fs.writeFile(filePath, prdContent);
+    
+    logger.info(`✅ Intelligent PRD created: ${filePath}`);
+    
+    return {
+      type: 'product',
+      action: 'prd',
+      success: true,
+      file: filePath,
+      message: `PRD created for: ${feature}`,
+      files: [filePath],
+      analysis: analysis.result,
+      nextSteps: [
+        'Review PRD with stakeholders',
+        'Refine requirements based on feedback',
+        'Begin technical design phase'
+      ]
+    };
+  }
+  
+  /**
+   * Build PRD content from specialist analysis
+   */
+  buildPRDFromAnalysis(feature, analysis, context) {
+    const insights = analysis.result || {};
+    const requirements = insights.requirements || [];
+    const risks = insights.risks || [];
+    
+    return `# Product Requirements Document: ${feature}
+
+## Executive Summary
+${insights.summary || `This PRD defines the requirements for implementing ${feature}.`}
+
+## Problem Statement
+${insights.problemStatement || `Users need a solution for ${feature} to improve their workflow and productivity.`}
+
+## Objectives
+${this.formatList(insights.objectives || [
+  'Define clear product goals and success metrics',
+  'Establish technical requirements and constraints',
+  'Align stakeholder expectations and timelines'
+])}
+
+## User Stories
+${this.formatList(insights.userStories || [
+  `As a user, I want to ${feature} so that I can achieve better outcomes`,
+  `As an admin, I want to manage ${feature} to maintain system integrity`,
+  `As a developer, I want to extend ${feature} for future enhancements`
+])}
+
+## Functional Requirements
+${this.formatList(requirements.functional || [
+  `Core functionality must support ${feature}`,
+  'User interface must be intuitive and responsive',
+  'System must integrate with existing infrastructure'
+])}
+
+## Non-Functional Requirements
+${this.formatList(requirements.nonFunctional || [
+  '**Performance**: Response time < 200ms for 95% of requests',
+  '**Security**: OAuth 2.0 authentication, encrypted data at rest',
+  '**Scalability**: Support 10,000 concurrent users',
+  '**Availability**: 99.9% uptime SLA'
+])}
+
+## Technical Architecture
+${insights.architecture || `- Frontend: ${context.techStack?.frontend || 'React/TypeScript'}
+- Backend: ${context.techStack?.backend || 'Node.js/Express'}
+- Database: ${context.techStack?.database || 'PostgreSQL'}
+- Cache: Redis
+- Queue: RabbitMQ`}
+
+## Success Metrics
+${this.formatList(insights.metrics || [
+  'User adoption rate > 80% within 3 months',
+  'Error rate < 2%',
+  'Customer satisfaction (NPS) > 8',
+  'Performance targets met consistently'
+])}
+
+## Risks and Mitigations
+${risks.map(risk => `- **Risk**: ${risk.description || risk}
+  - **Mitigation**: ${risk.mitigation || 'To be determined'}`).join('\n') || '- To be identified'}
+
+## Timeline
+${insights.timeline || `- **Week 1-2**: Requirements gathering and design
+- **Week 3-6**: Development and testing
+- **Week 7-8**: UAT and deployment preparation
+- **Week 9**: Production deployment`}
+
+## Dependencies
+${this.formatList(insights.dependencies || [
+  'Design team approval',
+  'Infrastructure provisioning',
+  'Third-party API access',
+  'Security review completion'
+])}
+
+---
+*Generated by BUMBA Framework with intelligent analysis*
+*Date: ${new Date().toISOString()}*
+*Specialist: ${analysis.specialist || 'Product Strategist'}*
+`;
+  }
+  
+  /**
+   * Format a list for markdown
+   */
+  formatList(items) {
+    if (!items || items.length === 0) return '- To be defined';
+    return items.map(item => `- ${item}`).join('\n');
+  }
+  
+  /**
+   * Original PRD creation method (kept for backward compatibility)
    */
   async createPRD(args, context) {
     const fs = require('fs').promises;

@@ -527,27 +527,56 @@ class UnifiedErrorManager extends EventEmitter {
     logger.info('🔴 Initiating emergency recovery');
     
     try {
-      // Save state for debugging
-      const emergencyDump = {
-        error: {
-          message: error.message,
-          stack: error.stack,
-          name: error.name
-        },
-        context,
-        metrics: this.metrics,
-        timestamp: Date.now()
-      };
+      // Rate limit: Only create dump files for truly critical situations
+      const now = Date.now();
+      if (!this.lastDumpTime) this.lastDumpTime = 0;
       
-      // Try to save to file
-      const fs = require('fs').promises;
-      await fs.writeFile(
-        `emergency_dump_${Date.now()}.json`,
-        JSON.stringify(emergencyDump, null, 2)
-      );
+      // Only create a dump if more than 60 seconds have passed since last dump
+      const shouldCreateDump = (now - this.lastDumpTime) > 60000;
       
-      // Execute emergency hooks
-      await this.hooks.execute('error:emergency', emergencyDump);
+      if (shouldCreateDump && this.metrics.criticalErrors > 5) {
+        // Save state for debugging - but only for serious issues
+        const emergencyDump = {
+          error: {
+            message: error.message,
+            stack: error.stack,
+            name: error.name
+          },
+          context,
+          metrics: this.metrics,
+          timestamp: now
+        };
+        
+        // Try to save to file
+        const fs = require('fs').promises;
+        const path = require('path');
+        const dumpDir = path.join(process.cwd(), '.bumba-errors');
+        
+        // Create error directory if it doesn't exist
+        try {
+          await fs.mkdir(dumpDir, { recursive: true });
+        } catch (e) {
+          // Directory might already exist
+        }
+        
+        // Save dump in dedicated directory with limit
+        const dumpFile = path.join(dumpDir, `emergency_dump_${now}.json`);
+        await fs.writeFile(
+          dumpFile,
+          JSON.stringify(emergencyDump, null, 2)
+        );
+        
+        this.lastDumpTime = now;
+        logger.info(`📝 Emergency dump saved to: ${dumpFile}`);
+        
+        // Clean up old dumps (keep only last 10)
+        await this.cleanupOldDumps(dumpDir);
+      }
+      
+      // Execute emergency hooks (only if dump was created)
+      if (shouldCreateDump && this.metrics.criticalErrors > 5) {
+        await this.hooks.execute('error:emergency', { error, context });
+      }
       
       // Attempt graceful shutdown if too many critical errors
       if (this.metrics.criticalErrors > 10) {
@@ -816,6 +845,39 @@ class UnifiedErrorManager extends EventEmitter {
     }
     
     return fn;
+  }
+  
+  /**
+   * Clean up old dump files (keep only last 10)
+   */
+  async cleanupOldDumps(dumpDir) {
+    try {
+      const fs = require('fs').promises;
+      const path = require('path');
+      
+      // Read all dump files
+      const files = await fs.readdir(dumpDir);
+      const dumpFiles = files
+        .filter(f => f.startsWith('emergency_dump_'))
+        .map(f => ({
+          name: f,
+          path: path.join(dumpDir, f)
+        }));
+      
+      // Sort by timestamp (newest first)
+      dumpFiles.sort((a, b) => b.name.localeCompare(a.name));
+      
+      // Delete all but the 10 most recent
+      if (dumpFiles.length > 10) {
+        const toDelete = dumpFiles.slice(10);
+        for (const file of toDelete) {
+          await fs.unlink(file.path).catch(() => {});
+        }
+        logger.info(`🧹 Cleaned up ${toDelete.length} old dump files`);
+      }
+    } catch (error) {
+      // Ignore cleanup errors
+    }
   }
 }
 

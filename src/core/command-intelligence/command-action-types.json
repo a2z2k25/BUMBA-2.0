@@ -1,0 +1,68 @@
+{
+  "create": {
+    "description": "Commands that create new artifacts",
+    "commands": ["prd", "design", "ui", "api", "database", "roadmap", "requirements", "component", "workflow"],
+    "outputType": "artifact",
+    "requiresContext": true
+  },
+  "analyze": {
+    "description": "Commands that analyze existing code or systems",
+    "commands": ["analyze", "analyze-ux", "analyze-business", "scan", "audit", "benchmark", "research-market", "research-design", "research-technical"],
+    "outputType": "report",
+    "requiresContext": true
+  },
+  "implement": {
+    "description": "Commands that implement features end-to-end",
+    "commands": ["implement", "implement-agents", "implement-strategy", "implement-design", "implement-technical", "orchestrate"],
+    "outputType": "implementation",
+    "requiresContext": true
+  },
+  "improve": {
+    "description": "Commands that optimize or enhance existing code",
+    "commands": ["improve-strategy", "improve-design", "improve-performance", "optimize", "refactor", "enhance"],
+    "outputType": "enhancement",
+    "requiresContext": true
+  },
+  "document": {
+    "description": "Commands that generate documentation",
+    "commands": ["docs-business", "docs-design", "docs-technical", "prd", "requirements", "roadmap"],
+    "outputType": "document",
+    "requiresContext": true
+  },
+  "monitor": {
+    "description": "Commands that check system status",
+    "commands": ["status", "health", "performance", "resources", "metrics", "monitor"],
+    "outputType": "status",
+    "requiresContext": false
+  },
+  "collaborate": {
+    "description": "Commands that coordinate multiple agents",
+    "commands": ["team", "collaborate", "chain", "workflow", "coordinate"],
+    "outputType": "coordination",
+    "requiresContext": true
+  },
+  "configure": {
+    "description": "Commands that configure the system",
+    "commands": ["settings", "mode", "config", "init", "help", "menu"],
+    "outputType": "configuration",
+    "requiresContext": false
+  },
+  "test": {
+    "description": "Commands that test or validate",
+    "commands": ["test", "validate", "verify", "check", "audit"],
+    "outputType": "validation",
+    "requiresContext": true
+  },
+  "conscious": {
+    "description": "Commands that use consciousness framework",
+    "commands": ["conscious-analyze", "conscious-reason", "conscious-wisdom", "conscious-purpose", "conscious-implement"],
+    "outputType": "wisdom",
+    "requiresContext": true
+  },
+  "lite": {
+    "description": "Commands optimized for lite mode",
+    "commands": ["lite", "lite-analyze", "lite-implement", "lite-design", "lite-test"],
+    "outputType": "lite-response",
+    "requiresContext": true
+  }
+}

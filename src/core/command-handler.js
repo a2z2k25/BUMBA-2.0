@@ -24,7 +24,8 @@ class BumbaCommandHandler {
     this.testingEnabled = true;
     
     // Intelligent command routing
-    this.commandRouter = null;
+    const { getInstance: getCommandRouter } = require('./command-intelligence/command-router');
+    this.commandRouter = getCommandRouter();
 
     // CRITICAL: Coordination systems
     this.agentIdentity = getAgentIdentity();
@@ -168,6 +169,32 @@ class BumbaCommandHandler {
   async handleCommand(command, args = [], context = {}) {
     // ENHANCED: Store original goal for completeness validation
     const originalGoal = `${command} ${args.join(' ')}`.trim();
+
+    // Use intelligent command router for all commands
+    if (this.commandRouter) {
+      try {
+        logger.info(`🚀 Using intelligent command router for: ${command}`);
+        
+        // Initialize router if needed
+        if (!this.commandRouter.initialized) {
+          await this.commandRouter.initialize();
+        }
+        
+        const routerResult = await this.commandRouter.route(command, args, context);
+        
+        // Format result for consistency with existing system
+        return {
+          success: routerResult.success !== false,
+          command,
+          department: routerResult.department,
+          result: routerResult,
+          timestamp: new Date().toISOString()
+        };
+      } catch (routerError) {
+        logger.warn(`Router failed for ${command}, falling back to legacy handler:`, routerError);
+        // Continue with legacy handler below
+      }
+    }
 
     // CRITICAL: Create unique agent context for this command
     const commandAgentId = this.agentIdentity.generateAgentId('Command', command);
