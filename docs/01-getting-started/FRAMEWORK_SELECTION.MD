@@ -1,4 +1,4 @@
-# BUMBA Framework Selection Guide
+# BUMBA CLI Selection Guide
 
 BUMBA provides three framework implementations optimized for different use cases and resource constraints.
 

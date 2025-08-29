@@ -1,4 +1,4 @@
-# BUMBA Framework Directory Structure
+# BUMBA CLI Directory Structure
 Generated: 2025-08-25
 
 ## Professional Directory Organization

@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Market Research Specialist
+ * BUMBA CLI 1.0 Market Research Specialist
  * Strategic Department specialist for market analysis and competitive intelligence
  */
 

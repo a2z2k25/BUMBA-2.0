@@ -9,7 +9,7 @@ const fs = require('fs');
 const path = require('path');
 const chalk = require('chalk');
 
-console.log(chalk.cyan.bold('\n🔍 Running Pre-Publish Checks for BUMBA Framework\n'));
+console.log(chalk.cyan.bold('\n🔍 Running Pre-Publish Checks for BUMBA CLI\n'));
 
 const errors = [];
 const warnings = [];

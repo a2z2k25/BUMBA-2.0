@@ -1,12 +1,12 @@
 /**
- * BUMBA Framework Final System Validation
+ * BUMBA CLI Final System Validation
  * Complete operability and integration testing
  */
 
 const path = require('path');
 const fs = require('fs');
 
-console.log('🟢 BUMBA Framework Final System Validation');
+console.log('🟢 BUMBA CLI Final System Validation');
 console.log('=' .repeat(60));
 
 async function testAllSystems() {

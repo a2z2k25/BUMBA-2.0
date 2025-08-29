@@ -36,7 +36,7 @@ console.log(gray('    Designer-Optimized • Enterprise-Ready'));
 // Version Box
 console.log('\n\n');
 console.log('┌──────────────────────────────────────────────┐');
-console.log('│ 🏁 BUMBA FRAMEWORK INSTALLER 🏁              │');
+console.log('│ 🏁 BUMBA CLI INSTALLER 🏁              │');
 console.log('│                                              │');
 console.log('│ Version 3.0.4                                │');
 console.log('│ ' + gray('By Professional Framework Team') + '               │');
@@ -46,7 +46,7 @@ console.log('🟢 BUMBA INSTALLATION COMPLETE 🟢');
 
 // Feature Showcase
 console.log('\n\n');
-console.log('🏁 BUMBA Framework Capabilities 🏁');
+console.log('🏁 BUMBA CLI Capabilities 🏁');
 console.log(gray('━'.repeat(60)));
 console.log();
 
@@ -98,7 +98,7 @@ console.log(gray('━'.repeat(60)));
 console.log();
 console.log('🏁 INSTALLATION COMPLETE 🏁');
 console.log();
-console.log('🏁 INSTALLED   BUMBA Framework            Professional orchestration');
+console.log('🏁 INSTALLED   BUMBA CLI            Professional orchestration');
 console.log('🏁 INSTALLED   58 Commands                Full command suite');
 console.log('🏁 INSTALLED   Multi-Agent System         3 departments, 33 specialists');
 console.log('🏁 INSTALLED   Quality Gates              Automated validation');

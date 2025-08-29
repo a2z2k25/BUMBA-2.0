@@ -1,4 +1,4 @@
-# Contributing to BUMBA Framework
+# Contributing to BUMBA CLI
 
 Thank you for your interest in contributing to BUMBA! We welcome contributions from the community.
 

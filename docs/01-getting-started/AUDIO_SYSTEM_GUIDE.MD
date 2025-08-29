@@ -2,7 +2,7 @@
 
 ## Overview
 
-The BUMBA Framework includes a sophisticated Audio & Celebration System that provides auditory and visual feedback for achievements, milestones, and important events. The system features automatic fallback mechanisms, cross-platform support, and extensive configuration options.
+The BUMBA CLI includes a sophisticated Audio & Celebration System that provides auditory and visual feedback for achievements, milestones, and important events. The system features automatic fallback mechanisms, cross-platform support, and extensive configuration options.
 
 ## Features
 
@@ -325,4 +325,4 @@ To contribute to the audio system:
 
 ## License
 
-Part of the BUMBA Framework. See main LICENSE file.
+Part of the BUMBA CLI. See main LICENSE file.

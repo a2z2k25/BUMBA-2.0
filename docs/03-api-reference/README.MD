@@ -1,4 +1,4 @@
-# BUMBA Framework API Documentation
+# BUMBA CLI API Documentation
 
 ## Overview
 

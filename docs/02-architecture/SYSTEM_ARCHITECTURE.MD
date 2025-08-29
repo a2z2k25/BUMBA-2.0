@@ -1,4 +1,4 @@
-# BUMBA Framework Visual Architecture
+# BUMBA CLI Visual Architecture
 
 ## System Overview
 
@@ -234,7 +234,7 @@ stateDiagram-v2
 
 ```mermaid
 graph TB
-    subgraph "BUMBA Framework"
+    subgraph "BUMBA CLI"
         CMD[Commands]
         MCPR[MCP Resilience]
         CB[Circuit Breaker]

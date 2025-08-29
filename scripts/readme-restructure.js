@@ -16,7 +16,7 @@ console.log('╚═════════════════════�
 // Define the new documentation structure
 const NEW_STRUCTURE = {
   // New slim README (mission-critical only)
-  newReadme: `# BUMBA Framework
+  newReadme: `# BUMBA CLI
 
 Production-ready AI development platform with hierarchical multi-agent intelligence and parallel execution.
 
@@ -86,7 +86,7 @@ bumba:prd "mobile app expansion strategy"
 
 ## 🟢 License
 
-MIT © BUMBA Framework Contributors
+MIT © BUMBA CLI Contributors
 
 ## 🟢 Links
 
@@ -102,7 +102,7 @@ MIT © BUMBA Framework Contributors
   // Supporting documentation files to create
   supportingDocs: {
     'docs/README.md': {
-      title: 'BUMBA Framework Documentation',
+      title: 'BUMBA CLI Documentation',
       description: 'Complete documentation index and navigation'
     },
     'docs/GETTING_STARTED.md': {
@@ -185,9 +185,9 @@ function createSupportingDocs(extractedContent) {
   }
   
   // Create documentation index
-  const docsIndex = `# BUMBA Framework Documentation
+  const docsIndex = `# BUMBA CLI Documentation
 
-Welcome to the complete BUMBA Framework documentation. This directory contains comprehensive guides for all aspects of the framework.
+Welcome to the complete BUMBA CLI documentation. This directory contains comprehensive guides for all aspects of the framework.
 
 ## 🟢 Documentation Index
 
@@ -240,7 +240,7 @@ This documentation is actively maintained. Check the [CHANGELOG](../CHANGELOG.md
   console.log('  🏁 Created docs/README.md');
 
   // Create Getting Started guide
-  const gettingStarted = `# Getting Started with BUMBA Framework
+  const gettingStarted = `# Getting Started with BUMBA CLI
 
 This guide will get you up and running with BUMBA in minutes.
 

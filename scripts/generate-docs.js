@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Documentation generation script for BUMBA Framework
+ * Documentation generation script for BUMBA CLI
  * Generates API documentation in multiple formats
  */
 
@@ -99,7 +99,7 @@ modules.forEach(async module => {
 
 // Generate main API index
 console.log('\n🟢 Generating API index...');
-const indexContent = `# BUMBA Framework API Documentation
+const indexContent = `# BUMBA CLI API Documentation
 
 ## Overview
 

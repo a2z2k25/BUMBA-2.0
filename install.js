@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * BUMBA Framework Installer
+ * BUMBA CLI Installer
  * Transform Claude into a full development team
  */
 
@@ -22,7 +22,7 @@ const options = {};
 
 // Check for help
 if (args.includes('--help') || args.includes('-h')) {
-  console.log('\n' + yellow('BUMBA Framework Installer'));
+  console.log('\n' + yellow('BUMBA CLI Installer'));
   console.log(gray('Transform Claude into a full development team\n'));
   console.log('Usage: node install.js [options]\n');
   console.log('Options:');

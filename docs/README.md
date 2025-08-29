@@ -1,4 +1,4 @@
-# BUMBA Framework Documentation
+# BUMBA CLI Documentation
 
 ## 🟢 Quick Navigation
 
@@ -39,4 +39,4 @@ Current roadmap and improvement plans are in [docs/specifications/](specificatio
 
 ---
 
-*This documentation reflects BUMBA Framework v1.1 - Production-Ready AI Development Platform*
+*This documentation reflects BUMBA CLI v1.1 - Production-Ready AI Development Platform*

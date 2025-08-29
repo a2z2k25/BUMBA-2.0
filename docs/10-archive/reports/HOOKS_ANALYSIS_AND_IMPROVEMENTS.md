@@ -1,4 +1,4 @@
-# BUMBA Framework Hooks Layer Analysis & Improvement Plan
+# BUMBA CLI Hooks Layer Analysis & Improvement Plan
 
 ## Executive Summary
 

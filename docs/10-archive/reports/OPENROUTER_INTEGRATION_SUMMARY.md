@@ -247,4 +247,4 @@ OpenRouter integration significantly enhances BUMBA's capabilities by providing:
 The integration is fully operational and ready for use in production environments.
 
 ---
-*OpenRouter MCP Integration v1.0 - Successfully integrated into BUMBA Framework v1.1.0*
+*OpenRouter MCP Integration v1.0 - Successfully integrated into BUMBA CLI v1.1.0*

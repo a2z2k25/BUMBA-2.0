@@ -1,5 +1,5 @@
 /**
- * BUMBA Framework Mode Manager
+ * BUMBA CLI Mode Manager
  * Handles switching between different framework modes
  */
 

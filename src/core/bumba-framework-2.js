@@ -1,5 +1,5 @@
 /**
- * BUMBA Framework 2.0 - Production Framework
+ * BUMBA CLI 2.0 - Production Framework
  *
  * PRIMARY FRAMEWORK: Full-featured production-ready framework
  *
@@ -176,7 +176,7 @@ class BumbaFramework2 extends EventEmitter {
       logger.warn('Some components failed to initialize:', error.message);
     }
 
-    logger.info('🏁 BUMBA 2.0 Framework initialized with hierarchical agent system, ecosystem auto-integration, and lean enhancements');
+    logger.info('🏁 BUMBA CLI 1.0 Framework initialized with hierarchical agent system, ecosystem auto-integration, and lean enhancements');
     logger.info('🟢 BUMBA-CLAUDE with token tracking');
 
     // Set global reference for metrics collection
@@ -677,7 +677,7 @@ class BumbaFramework2 extends EventEmitter {
   }
 
   async initialize() {
-    logger.info('🟢 Initializing BUMBA Framework components...');
+    logger.info('🟢 Initializing BUMBA CLI components...');
 
     // Initialize Guardian Integration (MYHEART.md & AGENTS.md)
     await this.initializeGuardians();
@@ -700,7 +700,7 @@ class BumbaFramework2 extends EventEmitter {
     // Initialize orchestration if available
     await this.initializeOrchestration();
 
-    logger.info('🏁 BUMBA Framework initialization complete');
+    logger.info('🏁 BUMBA CLI initialization complete');
     
     // Mark as operational
     this.isOperational = true;
@@ -1010,7 +1010,7 @@ class BumbaFramework2 extends EventEmitter {
   }
 
   async processCommand(command, args = [], context = {}) {
-    logger.info(`🏁 BUMBA 2.0 processing command: ${command}`);
+    logger.info(`🏁 BUMBA CLI 1.0 processing command: ${command}`);
 
     // Emit activity event for operability hooks
     this.emit('activity');
@@ -1245,7 +1245,7 @@ class BumbaFramework2 extends EventEmitter {
   }
 
   async activateExecutiveMode(initiative, context = {}) {
-    logger.info('🏁 BUMBA 2.0: Activating Executive Mode for organizational leadership');
+    logger.info('🏁 BUMBA CLI 1.0: Activating Executive Mode for organizational leadership');
 
     const strategicDept = this.departments.get('strategic');
 
@@ -1272,7 +1272,7 @@ class BumbaFramework2 extends EventEmitter {
   }
 
   async spawnSpecialist(department, specialistType, context = {}) {
-    logger.info(`🏁 BUMBA 2.0: Spawning ${specialistType} specialist for ${department}`);
+    logger.info(`🏁 BUMBA CLI 1.0: Spawning ${specialistType} specialist for ${department}`);
 
     const dept = this.departments.get(department);
     if (!dept) {
@@ -1537,7 +1537,7 @@ class BumbaFramework2 extends EventEmitter {
   }
 
   async shutdown() {
-    logger.info('🏁 BUMBA 2.0 Framework shutting down...');
+    logger.info('🏁 BUMBA CLI 1.0 Framework shutting down...');
 
     try {
       // Stop health monitoring
@@ -1585,7 +1585,7 @@ class BumbaFramework2 extends EventEmitter {
         new Promise(resolve => setTimeout(resolve, 500))
       ]);
 
-      logger.info('🏁 BUMBA 2.0 Framework shutdown complete');
+      logger.info('🏁 BUMBA CLI 1.0 Framework shutdown complete');
     } catch (error) {
       logger.error(`Error during shutdown: ${error.message}`);
     }

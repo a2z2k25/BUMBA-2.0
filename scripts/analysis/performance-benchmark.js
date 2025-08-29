@@ -8,7 +8,7 @@
 const { performance } = require('perf_hooks');
 const v8 = require('v8');
 
-console.log('🏁 BUMBA Framework Performance Benchmark\n');
+console.log('🏁 BUMBA CLI Performance Benchmark\n');
 console.log('═'.repeat(50));
 
 async function benchmark() {

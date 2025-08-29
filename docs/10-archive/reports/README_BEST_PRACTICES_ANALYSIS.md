@@ -94,7 +94,7 @@ README.md                    # Mission-critical only (~100 lines)
 ## 🏁 New README Structure Preview
 
 ```markdown
-# BUMBA Framework
+# BUMBA CLI
 
 Production-ready AI development platform with hierarchical multi-agent intelligence.
 

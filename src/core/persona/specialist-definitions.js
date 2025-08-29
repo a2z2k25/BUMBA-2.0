@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Specialist Definitions
+ * BUMBA CLI 1.0 Specialist Definitions
  * Comprehensive specialist implementations with authentic personas
  */
 

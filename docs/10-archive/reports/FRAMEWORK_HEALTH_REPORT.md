@@ -1,4 +1,4 @@
-# BUMBA Framework Health Report
+# BUMBA CLI Health Report
 
 ## Executive Summary
 **Framework Version**: 1.1.0  

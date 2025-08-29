@@ -25,7 +25,7 @@ class ModularConfig {
   assembleConfig(customConfig) {
     return {
       // Basic settings
-      name: customConfig.name || 'BUMBA Framework',
+      name: customConfig.name || 'BUMBA CLI',
       version: customConfig.version || '2.0',
       environment: process.env.NODE_ENV || 'development',
       

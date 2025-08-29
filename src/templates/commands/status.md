@@ -1,4 +1,4 @@
-# 🏁 BUMBA Framework Status Command
+# 🏁 BUMBA CLI Status Command
 
 You are providing comprehensive status information about the BUMBA framework installation and health.
 
@@ -42,7 +42,7 @@ You are providing comprehensive status information about the BUMBA framework ins
 ### Framework Overview
 
 ```
-🏁 BUMBA Framework Status Report
+🏁 BUMBA CLI Status Report
 
 Version: 0.1.0
 Installation: 🏁 Healthy

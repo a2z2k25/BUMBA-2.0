@@ -1,8 +1,8 @@
-# BUMBA Framework Fallback Systems Documentation
+# BUMBA CLI Fallback Systems Documentation
 
 ## Overview
 
-The BUMBA Framework is designed with comprehensive fallback mechanisms that ensure the system remains operational even when external dependencies are unavailable. This document details all fallback systems and how they work.
+The BUMBA CLI is designed with comprehensive fallback mechanisms that ensure the system remains operational even when external dependencies are unavailable. This document details all fallback systems and how they work.
 
 ## Core Philosophy
 
@@ -243,7 +243,7 @@ BUMBA_DEBUG_FALLBACK=true bumba
 
 ## Conclusion
 
-The BUMBA Framework's comprehensive fallback system ensures that users can always work productively, regardless of external service availability. By following the principle of graceful degradation, BUMBA provides a resilient and reliable development environment.
+The BUMBA CLI's comprehensive fallback system ensures that users can always work productively, regardless of external service availability. By following the principle of graceful degradation, BUMBA provides a resilient and reliable development environment.
 
 ### Key Takeaways
 - Every external dependency has a fallback

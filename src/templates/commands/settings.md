@@ -1,4 +1,4 @@
-# 🏁 BUMBA Framework Settings Command
+# 🏁 BUMBA CLI Settings Command
 
 You are managing BUMBA framework configuration and settings.
 

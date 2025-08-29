@@ -191,7 +191,7 @@ class HealthCheckSystem extends EventEmitter {
     
     return {
       report: {
-        title: 'BUMBA Framework Health Report',
+        title: 'BUMBA CLI Health Report',
         generated: new Date().toISOString(),
         system: {
           hostname: os.hostname(),

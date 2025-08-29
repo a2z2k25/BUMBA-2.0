@@ -163,7 +163,7 @@ class BumbaVersionManager {
    * Display version information
    */
   displayVersionInfo() {
-    logger.info('🏁 BUMBA Framework Version Information:');
+    logger.info('🏁 BUMBA CLI Version Information:');
     logger.info(`   Framework: ${this.BUMBA_VERSION.framework}`);
     logger.info(`   Config: ${this.BUMBA_VERSION.config}`);
     logger.info(`   API: ${this.BUMBA_VERSION.api}`);

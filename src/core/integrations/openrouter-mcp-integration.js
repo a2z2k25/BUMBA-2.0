@@ -64,7 +64,7 @@ class OpenRouterMCPIntegration {
         '   OPENROUTER_API_KEY=your-api-key-here',
         '4. (Optional) Set site URL and name:',
         '   OPENROUTER_SITE_URL=http://localhost:3000',
-        '   OPENROUTER_SITE_NAME=BUMBA Framework'
+        '   OPENROUTER_SITE_NAME=BUMBA CLI'
       ],
       mcp: [
         '1. Install OpenRouter MCP server:',
@@ -96,7 +96,7 @@ class OpenRouterMCPIntegration {
   async initialize(config = {}) {
     this.apiKey = config.apiKey || process.env.OPENROUTER_API_KEY;
     this.siteUrl = config.siteUrl || process.env.OPENROUTER_SITE_URL || 'http://localhost:3000';
-    this.siteName = config.siteName || process.env.OPENROUTER_SITE_NAME || 'BUMBA Framework';
+    this.siteName = config.siteName || process.env.OPENROUTER_SITE_NAME || 'BUMBA CLI';
     
     if (!this.apiKey) {
       console.warn('🟡 OpenRouter API key not configured. Please set OPENROUTER_API_KEY in .env');

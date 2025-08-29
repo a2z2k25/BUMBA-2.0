@@ -126,7 +126,7 @@ const reranked = await pineconeIntegration.rerankDocuments(
 );
 ```
 
-## Integration with BUMBA Framework
+## Integration with BUMBA CLI
 
 ### Automatic Fallback
 
@@ -252,12 +252,12 @@ await pineconeIntegration.upsertRecords('custom-index', [{
 
 - [Pinecone Documentation](https://docs.pinecone.io)
 - [MCP Protocol Spec](https://modelcontextprotocol.org)
-- [BUMBA Framework Docs](../README.md)
+- [BUMBA CLI Docs](../README.md)
 - [Vector Database Best Practices](https://www.pinecone.io/learn/)
 
 ## Support
 
 For issues or questions:
-- BUMBA Framework: [GitHub Issues](https://github.com/your-org/bumba/issues)
+- BUMBA CLI: [GitHub Issues](https://github.com/your-org/bumba/issues)
 - Pinecone MCP: [GitHub Issues](https://github.com/pinecone-io/pinecone-mcp/issues)
 - Pinecone Support: support@pinecone.io

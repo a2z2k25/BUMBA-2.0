@@ -1,5 +1,5 @@
 /**
- * BUMBA Framework Quick Start Module
+ * BUMBA CLI Quick Start Module
  * Zero-configuration initialization for new users
  */
 

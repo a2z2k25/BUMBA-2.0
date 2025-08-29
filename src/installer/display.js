@@ -85,7 +85,7 @@ function displayLogo() {
  */
 function displayVersion(version) {
   const versionBox = createBox(
-    '🏁 BUMBA FRAMEWORK INSTALLER 🏁' + '\n' +
+    '🏁 BUMBA CLI INSTALLER 🏁' + '\n' +
     '\n' +
     `Version ${version}` + '\n' +
     colors.gray('By Professional Framework Team')

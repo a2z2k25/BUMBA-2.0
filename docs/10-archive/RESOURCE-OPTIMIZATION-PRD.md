@@ -1,4 +1,4 @@
-# BUMBA Framework Resource Optimization
+# BUMBA CLI Resource Optimization
 ## Product Requirements Document (PRD)
 
 **Version:** 1.0  
@@ -10,7 +10,7 @@
 
 ## Executive Summary
 
-This PRD outlines critical improvements to the BUMBA Framework's resource management and routing systems. Based on architectural analysis, we've identified four key areas requiring enhancement to achieve optimal performance and resource utilization.
+This PRD outlines critical improvements to the BUMBA CLI's resource management and routing systems. Based on architectural analysis, we've identified four key areas requiring enhancement to achieve optimal performance and resource utilization.
 
 ---
 
@@ -282,7 +282,7 @@ class SpecialistStateMachine {
 
 ### C. Dependencies
 - Node.js 18+
-- Current BUMBA Framework v1.0
+- Current BUMBA CLI 1.0
 - No external service dependencies
 
 ---

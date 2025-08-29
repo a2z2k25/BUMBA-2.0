@@ -88,7 +88,7 @@ function displayInstallationSummary(config = {}) {
   displayPhase('INSTALLATION COMPLETE', '🟢');
 
   const components = [
-    { name: 'BUMBA Framework', status: '🏁 INSTALLED', desc: 'Professional orchestration' },
+    { name: 'BUMBA CLI', status: '🏁 INSTALLED', desc: 'Professional orchestration' },
     { name: '58 Commands', status: '🏁 INSTALLED', desc: 'Full command suite' },
     { name: 'Multi-Agent System', status: '🏁 INSTALLED', desc: '3 departments, 33 specialists' },
     { name: 'Quality Gates', status: '🏁 INSTALLED', desc: 'Automated validation' },
@@ -113,7 +113,7 @@ function displayInstallationSummary(config = {}) {
 
   // Success box with benefits
   const successBox = createBox(
-    colors.success.bold('🏁  BUMBA FRAMEWORK INSTALLED!  🏁') + '\n' +
+    colors.success.bold('🏁  BUMBA CLI INSTALLED!  🏁') + '\n' +
     '\n' +
     colors.white('🟢 3-5x faster development') + '\n' +
     colors.white('🟢 33 AI specialists ready') + '\n' +
@@ -139,7 +139,7 @@ function displayInstallationSummary(config = {}) {
   const finalBox = createBox(
     colors.yellow.bold('🟢  SUCCESS!  🟢') + '\n' +
     '\n' +
-    colors.white('BUMBA Framework Ready!') + '\n' +
+    colors.white('BUMBA CLI Ready!') + '\n' +
     colors.white('Your Professional Development Platform Awaits')
     , 60);
 

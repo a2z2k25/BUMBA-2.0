@@ -349,7 +349,7 @@ class NotificationSystem extends EventEmitter {
         inline: true
       })) : [],
       timestamp: notification.timestamp,
-      footer: { text: 'BUMBA Framework' }
+      footer: { text: 'BUMBA CLI' }
     };
     
     const response = await fetch(this.config.discordWebhook, {

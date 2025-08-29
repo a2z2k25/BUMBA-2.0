@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Enhanced Feedback Loops
+ * BUMBA CLI 1.0 Enhanced Feedback Loops
  * Continuous micro-feedback system for collaboration improvement
  */
 

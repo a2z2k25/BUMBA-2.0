@@ -1,7 +1,7 @@
 # Directory Organization Complete
 
 ## Summary
-The BUMBA Framework directory has been professionally organized according to Node.js best practices.
+The BUMBA CLI directory has been professionally organized according to Node.js best practices.
 
 ## Final Root Directory Contents (19 files)
 
@@ -168,7 +168,7 @@ Runtime configuration and session files
 
 ## Conclusion
 
-The BUMBA Framework now has a **professional, organized directory structure** that:
+The BUMBA CLI now has a **professional, organized directory structure** that:
 - Makes the project easy to navigate
 - Follows industry best practices
 - Is ready for publication

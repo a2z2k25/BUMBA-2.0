@@ -2,7 +2,7 @@
 
 ## Overview
 
-The BUMBA Framework provides **59+ integration files** across multiple categories, enabling seamless connectivity with external services, databases, DevOps tools, and communication platforms.
+The BUMBA CLI provides **59+ integration files** across multiple categories, enabling seamless connectivity with external services, databases, DevOps tools, and communication platforms.
 
 ## Table of Contents
 1. [Quick Start](#quick-start)

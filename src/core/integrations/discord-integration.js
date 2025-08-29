@@ -23,7 +23,7 @@ class DiscordIntegration extends EventEmitter {
       bot: {
         prefix: config.prefix || '!',
         status: config.status || 'online',
-        activity: config.activity || 'with BUMBA Framework'
+        activity: config.activity || 'with BUMBA CLI'
       },
       
       // Features
@@ -241,7 +241,7 @@ class DiscordIntegration extends EventEmitter {
       fields: options.fields || [],
       thumbnail: options.thumbnail,
       image: options.image,
-      footer: options.footer || { text: 'BUMBA Framework' },
+      footer: options.footer || { text: 'BUMBA CLI' },
       timestamp: new Date().toISOString()
     };
   }

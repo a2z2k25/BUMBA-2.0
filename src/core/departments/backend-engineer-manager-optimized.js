@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Backend-Engineer Department Manager - OPTIMIZED
+ * BUMBA CLI 1.0 Backend-Engineer Department Manager - OPTIMIZED
  * Lazy loading, reduced logging, faster startup
  */
 

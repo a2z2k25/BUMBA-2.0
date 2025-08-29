@@ -1,4 +1,4 @@
-# BUMBA Framework Technical Reference
+# BUMBA CLI Technical Reference
 
 ## Table of Contents
 - [Quick Reference](#quick-reference)
@@ -1656,4 +1656,4 @@ $HOME/.claude/metrics/
   --config "slack-webhook=$SLACK_WEBHOOK,channels=#dev-team"
 ```
 
-This completes the comprehensive BUMBA Framework Technical Reference, providing detailed specifications for all aspects of the framework including commands, integrations, protocols, and advanced usage patterns.
+This completes the comprehensive BUMBA CLI Technical Reference, providing detailed specifications for all aspects of the framework including commands, integrations, protocols, and advanced usage patterns.

@@ -1,5 +1,5 @@
 # Sprint System Operational Report
-## BUMBA Framework - 10-Minute Sprint Methodology
+## BUMBA CLI - 10-Minute Sprint Methodology
 
 **Date**: August 11, 2025  
 **Version**: 1.1.0  
@@ -9,7 +9,7 @@
 
 ## Executive Summary
 
-The Sprint Decomposition System has been successfully implemented and integrated into the BUMBA Framework. All tests pass, and the system is ready for production use. The implementation prevents context rot by ensuring no AI agent works on a task for more than 10 minutes without creating clear checkpoints.
+The Sprint Decomposition System has been successfully implemented and integrated into the BUMBA CLI. All tests pass, and the system is ready for production use. The implementation prevents context rot by ensuring no AI agent works on a task for more than 10 minutes without creating clear checkpoints.
 
 ---
 
@@ -230,5 +230,5 @@ The Sprint Decomposition System is **FULLY OPERATIONAL** and ready for immediate
 
 ---
 
-*Sprint System Operational Report - BUMBA Framework v1.1.0*  
+*Sprint System Operational Report - BUMBA CLI v1.1.0*  
 *Building the future of AI development, one sprint at a time* 🟢‍🟢️

@@ -188,7 +188,7 @@ async function runLiveTest() {
   
   console.log('\n' + '=' .repeat(60));
   console.log('\n🏁 ALL LEAN ENHANCEMENTS VERIFIED AND WORKING!\n');
-  console.log('The BUMBA Framework now has:');
+  console.log('The BUMBA CLI now has:');
   console.log('  🏁 Deep context streaming between agents');
   console.log('  🏁 Complete context inheritance during handoffs');
   console.log('  🏁 Parallel sprint execution with smart grouping');

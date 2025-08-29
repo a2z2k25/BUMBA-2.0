@@ -1,4 +1,4 @@
-# BUMBA Framework Test Suite
+# BUMBA CLI Test Suite
 
 This directory contains all test files for the BUMBA framework, organized by test type and scope.
 

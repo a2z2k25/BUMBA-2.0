@@ -1,4 +1,4 @@
-# BUMBA Framework Security Audit Report - Password & Credential Exposure
+# BUMBA CLI Security Audit Report - Password & Credential Exposure
 
 ## Executive Summary
 
@@ -119,7 +119,7 @@ secrets.json
 
 ## 🏁 Security Best Practices Confirmed
 
-### 🏁 What BUMBA Framework Does Right
+### 🏁 What BUMBA CLI Does Right
 
 1. **Environment Variables**: All credentials use `process.env.*`
 2. **Template Files**: Only example values in repository
@@ -195,5 +195,5 @@ This audit confirms the framework is **production-ready** from a security perspe
 ---
 
 *Generated: August 11, 2025*  
-*BUMBA Framework v1.0 - Security Audit Report*  
+*BUMBA CLI 1.0 - Security Audit Report*  
 *Audit Scope: Complete framework (414 files)*

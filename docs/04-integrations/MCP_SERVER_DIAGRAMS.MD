@@ -1,12 +1,12 @@
-# BUMBA Framework MCP Server Diagrams
+# BUMBA CLI MCP Server Diagrams
 
-This file contains the mermaid diagram source code for visualizing the BUMBA Framework's MCP server ecosystem. You can use these with any mermaid renderer or the mcp-mermaid tool.
+This file contains the mermaid diagram source code for visualizing the BUMBA CLI's MCP server ecosystem. You can use these with any mermaid renderer or the mcp-mermaid tool.
 
 ## 1. Overall Ecosystem Structure
 
 ```mermaid
 graph TB
-    subgraph "BUMBA Framework MCP Ecosystem"
+    subgraph "BUMBA CLI MCP Ecosystem"
         subgraph "🟢 No Setup Required"
             subgraph "Core System"
                 Memory["🟢 Memory<br/>Context Preservation"]

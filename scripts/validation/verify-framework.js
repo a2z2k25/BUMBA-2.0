@@ -10,7 +10,7 @@ const fs = require('fs');
 const path = require('path');
 
 console.log('\n========================================');
-console.log('BUMBA FRAMEWORK VERIFICATION');
+console.log('BUMBA CLI VERIFICATION');
 console.log('Sprint 17-20: Final Integration');
 console.log('========================================\n');
 

@@ -10,7 +10,7 @@ const { runSetupWizard } = require('../src/core/setup/notion-setup-wizard');
 console.log(`
 ╔════════════════════════════════════════════════╗
 ║                                                ║
-║     BUMBA Framework - Notion Setup            ║
+║     BUMBA CLI - Notion Setup            ║
 ║     Configure Your Notion Integration         ║
 ║                                                ║
 ╚════════════════════════════════════════════════╝

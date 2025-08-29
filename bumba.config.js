@@ -1,7 +1,7 @@
 /**
- * BUMBA Framework Configuration
+ * BUMBA CLI Configuration
  * 
- * This file defines the default configuration for the BUMBA Framework.
+ * This file defines the default configuration for the BUMBA CLI.
  * Users can override these settings through environment variables or
  * local configuration files.
  */
@@ -9,9 +9,9 @@
 module.exports = {
   // Framework Information
   framework: {
-    name: 'BUMBA Claude Framework',
+    name: 'BUMBA CLI',
     version: '1.0.0',
-    description: 'BUMBA 1.0: Revolutionary consciousness-driven AI framework with hierarchical multi-agent system, predictive orchestration, and ecosystem auto-integration'
+    description: 'BUMBA CLI 1.0: Revolutionary consciousness-driven AI framework with hierarchical multi-agent system, predictive orchestration, and ecosystem auto-integration'
   },
 
   // Installation Configuration

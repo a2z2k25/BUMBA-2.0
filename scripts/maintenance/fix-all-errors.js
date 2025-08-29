@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * BUMBA Framework Comprehensive Error Fix Script
+ * BUMBA CLI Comprehensive Error Fix Script
  * Fixes all remaining errors to achieve 100% operability
  */
 

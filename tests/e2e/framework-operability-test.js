@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * BUMBA Framework Operability Test Suite
+ * BUMBA CLI Operability Test Suite
  * Comprehensive testing of all framework commands and systems
  */
 
@@ -146,7 +146,7 @@ async function runTests() {
   const tester = new FrameworkTester();
   
   console.log(`
-║         BUMBA FRAMEWORK OPERABILITY TEST SUITE          ║
+║         BUMBA CLI OPERABILITY TEST SUITE          ║
 ║                    Version 2.0.0                         ║
 `);
   
@@ -399,7 +399,7 @@ async function runTests() {
   const success = tester.printSummary();
   
   if (success) {
-    console.log('\n🏁 All tests passed! BUMBA Framework is fully operational.\n');
+    console.log('\n🏁 All tests passed! BUMBA CLI is fully operational.\n');
     process.exit(0);
   } else {
     console.log('\n🔴 Some tests failed. Please review and fix the issues.\n');

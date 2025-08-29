@@ -1,6 +1,6 @@
 # BUMBA Widget System
 
-Terminal-style dashboard widgets inspired by sampler, built into the BUMBA Framework.
+Terminal-style dashboard widgets inspired by sampler, built into the BUMBA CLI.
 
 ## Architecture
 
@@ -203,4 +203,4 @@ Sampler colors for data visualization:
 
 ## License
 
-Part of the BUMBA Framework - MIT License
+Part of the BUMBA CLI - MIT License

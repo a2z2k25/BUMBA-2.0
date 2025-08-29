@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Agent Lifecycle Manager
+ * BUMBA CLI 1.0 Agent Lifecycle Manager
  * Manages spawning, coordination, and dissolution of specialist agents
  */
 

@@ -1,4 +1,4 @@
-# 📚 BUMBA Framework - Complete Specialist/Agent Directory
+# 📚 BUMBA CLI - Complete Specialist/Agent Directory
 
 ## 📊 Summary Statistics
 - **Total Specialists**: 78+ agents
@@ -242,5 +242,5 @@ const specialists = bumba.registry.getSpecialistsByCategory('technical');
 ---
 
 *Last Updated: December 2024*
-*BUMBA Framework Version: 1.0*
+*BUMBA CLI Version: 1.0*
 *Total Specialists: 78+ (and growing)*

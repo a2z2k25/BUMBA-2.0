@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Anticipatory Collaboration System
+ * BUMBA CLI 1.0 Anticipatory Collaboration System
  * Proactive preparation and coordination before formal requests
  */
 

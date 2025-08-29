@@ -28,7 +28,7 @@ async function profileStartup() {
   const startTime = performance.now();
   
   // Load the framework
-  console.log(chalk.blue('\n📦 Loading BUMBA Framework...'));
+  console.log(chalk.blue('\n📦 Loading BUMBA CLI...'));
   
   try {
     // Load core framework

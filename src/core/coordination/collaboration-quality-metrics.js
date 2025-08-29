@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Enhanced Collaboration Quality Metrics
+ * BUMBA CLI 1.0 Enhanced Collaboration Quality Metrics
  * Comprehensive tracking with predictive quality and ML optimization
  * Priority: Real APIs → Intelligent Fallbacks → Basic Fallbacks
  */

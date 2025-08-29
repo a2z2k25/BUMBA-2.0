@@ -1,8 +1,8 @@
-# 🏁 BUMBA 3.0: Hybrid Intelligence Framework
+# 🏁 BUMBA CLI 1.0: Hybrid Intelligence Framework
 
 ## Revolutionary AI Development, Anywhere You Work
 
-BUMBA 3.0 transforms how developers work with AI, creating a seamless bridge between terminal preparation and Claude's powerful execution capabilities.
+BUMBA CLI 1.0 transforms how developers work with AI, creating a seamless bridge between terminal preparation and Claude's powerful execution capabilities.
 
 ---
 
@@ -345,4 +345,4 @@ bumba menu  # See all commands
 bumba help  # Get assistance
 ```
 
-**Transform your development workflow with BUMBA 3.0's Hybrid Intelligence Framework!**
+**Transform your development workflow with BUMBA CLI 1.0's Hybrid Intelligence Framework!**

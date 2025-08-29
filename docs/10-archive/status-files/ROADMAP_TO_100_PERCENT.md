@@ -1,4 +1,4 @@
-# BUMBA Framework - Roadmap to 100% Completion
+# BUMBA CLI - Roadmap to 100% Completion
 ## Closing the Final 10-12% Gap
 
 ### Current Status: 88-90% Complete

@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Ecosystem Auto-Integration System
+ * BUMBA CLI 1.0 Ecosystem Auto-Integration System
  * Autonomous integration with external tools, services, and MCP systems
  */
 

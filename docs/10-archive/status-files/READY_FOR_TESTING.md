@@ -1,4 +1,4 @@
-# BUMBA Framework v1.1.0 - Ready for Testing 🏁
+# BUMBA CLI v1.1.0 - Ready for Testing 🏁
 
 ## Pre-Test Verification Complete
 

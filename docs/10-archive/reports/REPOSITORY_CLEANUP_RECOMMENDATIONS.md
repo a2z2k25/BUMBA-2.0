@@ -129,4 +129,4 @@ The BUMBA framework is functionally complete at 100%, but contains **38 redundan
 ---
 
 *Generated: August 11, 2025*
-*BUMBA Framework v1.0 - Repository Cleanup Recommendations*
+*BUMBA CLI 1.0 - Repository Cleanup Recommendations*

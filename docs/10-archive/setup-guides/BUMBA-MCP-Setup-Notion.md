@@ -129,7 +129,7 @@ Test your setup:
 ## 🟢 Resources
 
 - [MCP Documentation](https://modelcontextprotocol.io/docs)
-- [BUMBA Framework](https://github.com/a2z2k25/bumba)
+- [BUMBA CLI](https://github.com/a2z2k25/bumba)
 - [Claude Desktop Help](https://claude.ai/help)
 
 ---

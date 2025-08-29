@@ -1,4 +1,4 @@
-# BUMBA 3.0.0 Release Notes
+# BUMBA CLI 1.0.0 Release Notes
 
 ## 🏁 Hybrid Intelligence Framework
 
@@ -86,4 +86,4 @@ Thanks to all contributors and users who made this release possible!
 
 ---
 
-**Start building with BUMBA 3.0's revolutionary hybrid intelligence!**
+**Start building with BUMBA CLI 1.0's revolutionary hybrid intelligence!**

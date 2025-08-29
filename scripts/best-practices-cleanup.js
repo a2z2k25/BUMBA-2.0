@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * BUMBA Framework Best Practices Cleanup Script
+ * BUMBA CLI Best Practices Cleanup Script
  * Reorganizes repository to follow framework development best practices
  */
 

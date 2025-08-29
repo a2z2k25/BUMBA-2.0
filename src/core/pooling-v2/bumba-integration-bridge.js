@@ -20,7 +20,7 @@ const IntegrationMode = {
 };
 
 /**
- * BUMBA Framework Integration Status
+ * BUMBA CLI Integration Status
  */
 const IntegrationStatus = {
   INITIALIZING: 'initializing',

@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Performance Integration Layer
+ * BUMBA CLI 1.0 Performance Integration Layer
  * Seamlessly integrates performance tracking into agent operations
  */
 

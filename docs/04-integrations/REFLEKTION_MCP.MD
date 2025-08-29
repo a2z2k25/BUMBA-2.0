@@ -1,7 +1,7 @@
 # Reflektion MCP Integration
 
 ## Overview
-Reflektion MCP provides advanced reflection and introspection capabilities for enhanced AI agent reasoning and self-improvement within the BUMBA Framework.
+Reflektion MCP provides advanced reflection and introspection capabilities for enhanced AI agent reasoning and self-improvement within the BUMBA CLI.
 
 ## Purpose
 - **Deep Code Understanding**: Analyze and understand code structure at multiple levels
@@ -167,4 +167,4 @@ Use Reflektion for:
 
 ## Conclusion
 
-Reflektion MCP enhances the BUMBA Framework with powerful introspection capabilities, enabling agents to continuously improve their performance and decision-making. By providing deep code understanding and self-improvement mechanisms, it helps create more intelligent and adaptive development workflows.
+Reflektion MCP enhances the BUMBA CLI with powerful introspection capabilities, enabling agents to continuously improve their performance and decision-making. By providing deep code understanding and self-improvement mechanisms, it helps create more intelligent and adaptive development workflows.

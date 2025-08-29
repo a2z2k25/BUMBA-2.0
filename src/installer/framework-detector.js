@@ -1,5 +1,5 @@
 /**
- * BUMBA Framework Detection Module
+ * BUMBA CLI Detection Module
  * Analyzes existing Claude configurations and frameworks
  */
 

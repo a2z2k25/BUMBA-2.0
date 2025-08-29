@@ -1,4 +1,4 @@
-# BUMBA Framework Comprehensive Execution Plan
+# BUMBA CLI Comprehensive Execution Plan
 
 **Generated:** August 23, 2025  
 **Based on:** Full Audit Report Analysis  

@@ -1,10 +1,10 @@
 /**
- * End-to-End Integration Tests for BUMBA Framework
+ * End-to-End Integration Tests for BUMBA CLI
  */
 
 const { createBumbaFramework } = require('../../src/core/bumba-framework-2');
 
-describe('BUMBA Framework E2E Tests', () => {
+describe('BUMBA CLI E2E Tests', () => {
   afterEach(() => {
     jest.clearAllMocks();
     jest.clearAllTimers();

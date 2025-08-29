@@ -1,7 +1,7 @@
-# Security Audit Report - BUMBA Framework
+# Security Audit Report - BUMBA CLI
 
 ## Executive Summary
-A comprehensive security audit has been conducted on the BUMBA Framework to ensure no sensitive information, API keys, or personal data are exposed before publication.
+A comprehensive security audit has been conducted on the BUMBA CLI to ensure no sensitive information, API keys, or personal data are exposed before publication.
 
 ## Audit Date
 Sprint 1, Day 4
@@ -146,7 +146,7 @@ git status --ignored
 
 ## Conclusion
 
-The BUMBA Framework is **SECURE for publication** with only minor updates needed:
+The BUMBA CLI is **SECURE for publication** with only minor updates needed:
 
 1. Update repository URLs in package.json
 2. Update author information in package.json

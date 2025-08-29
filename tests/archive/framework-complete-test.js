@@ -1,12 +1,12 @@
 /**
- * BUMBA Framework Engine Complete Test
+ * BUMBA CLI Engine Complete Test
  * Verify all framework components are 100% operational
  */
 
 const chalk = require('chalk');
 const path = require('path');
 
-console.log(chalk.bold.cyan('🧪 BUMBA Framework Engine Complete Test'));
+console.log(chalk.bold.cyan('🧪 BUMBA CLI Engine Complete Test'));
 console.log(chalk.cyan('═'.repeat(60)));
 
 async function testFrameworkEngine() {

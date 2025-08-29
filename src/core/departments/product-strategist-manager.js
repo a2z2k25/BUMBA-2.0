@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Product-Strategist Department Manager
+ * BUMBA CLI 1.0 Product-Strategist Department Manager
  * Enhanced with model assignment capabilities
  * Manager uses Claude Max (especially as Executive), specialists use free tier models
  */

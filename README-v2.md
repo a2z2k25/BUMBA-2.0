@@ -1,4 +1,4 @@
-# BUMBA Framework v2.0
+# BUMBA CLI 1.0
 
 ```
     ██████╗ ██╗   ██╗███╗   ███╗██████╗  █████╗
@@ -117,7 +117,7 @@ const bumba = require('bumba-framework');
 
 ```
 ┌─────────────────────────────────────┐
-│         BUMBA Framework             │
+│         BUMBA CLI             │
 │          (19ms startup)             │
 ├─────────────────────────────────────┤
 │     Command Cache (99.93% hits)     │

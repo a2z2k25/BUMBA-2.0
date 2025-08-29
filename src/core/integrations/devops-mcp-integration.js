@@ -1,5 +1,5 @@
 /**
- * BUMBA Framework - DevOps MCP Integration Layer
+ * BUMBA CLI - DevOps MCP Integration Layer
  * Integrates Docker, Oracle, and DigitalOcean MCP servers for DevOps operations
  * @module src/core/integrations/devops-mcp-integration
  * @version 2.0.0

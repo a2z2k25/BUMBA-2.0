@@ -1,4 +1,4 @@
-# BUMBA Claude Code Mastery Framework
+# BUMBA CLI Mastery System
 
 ## 🏁🏁 Mission Statement
 
@@ -209,4 +209,4 @@ def process_user_data(data: dict) -> Result:
 
 ---
 
-_BUMBA Framework v1.0 - Intelligence • Quality • Security • Design_
+_BUMBA CLI 1.0 - Intelligence • Quality • Security • Design_

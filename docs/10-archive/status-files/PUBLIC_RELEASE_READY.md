@@ -1,4 +1,4 @@
-# BUMBA Framework - Public Release Ready 🏁
+# BUMBA CLI - Public Release Ready 🏁
 
 ## Security & Privacy Audit Complete
 
@@ -87,7 +87,7 @@ bumba-claude/
 
 2. **Create GitHub Release**
    - Tag: v1.0.0
-   - Title: BUMBA Framework 1.0 - Production Ready
+   - Title: BUMBA CLI 1.0 - Production Ready
    - Add comprehensive release notes
 
 3. **NPM Publishing**
@@ -104,7 +104,7 @@ bumba-claude/
 
 ## Summary
 
-The BUMBA Framework is now:
+The BUMBA CLI is now:
 - 🏁 **Secure** - No private information or vulnerabilities
 - 🏁 **Clean** - All development artifacts removed
 - 🏁 **Professional** - Ready for public consumption

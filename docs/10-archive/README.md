@@ -1,4 +1,4 @@
-# BUMBA Framework Archive
+# BUMBA CLI Archive
 
 This directory contains archived documentation files that were removed from the root directory during repository cleanup to improve organization and reduce bloat.
 

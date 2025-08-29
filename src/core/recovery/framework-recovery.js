@@ -1,5 +1,5 @@
 /**
- * BUMBA Framework Recovery System
+ * BUMBA CLI Recovery System
  * Comprehensive error recovery and self-healing capabilities
  */
 

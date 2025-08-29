@@ -366,7 +366,7 @@ const config = {
 await initializeCollaboration(config);
 ```
 
-## Integration with BUMBA Framework
+## Integration with BUMBA CLI
 
 The collaboration system integrates seamlessly with the broader BUMBA framework:
 

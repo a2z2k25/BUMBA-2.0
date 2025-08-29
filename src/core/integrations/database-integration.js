@@ -1,7 +1,7 @@
 const { logger } = require('../logging/bumba-logger');
 
 /**
- * BUMBA 2.0 Database Integration Module
+ * BUMBA CLI 1.0 Database Integration Module
  * Comprehensive database integration for MongoDB and Supabase MCP servers
  */
 

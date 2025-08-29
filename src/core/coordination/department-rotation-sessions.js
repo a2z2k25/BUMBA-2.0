@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Department Rotation Sessions
+ * BUMBA CLI 1.0 Department Rotation Sessions
  * Cross-training opportunities to build empathy and understanding
  * Enhanced to 90% operational with advanced scheduling and analytics
  */

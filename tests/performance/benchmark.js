@@ -1,5 +1,5 @@
 /**
- * BUMBA Framework Performance Benchmarks
+ * BUMBA CLI Performance Benchmarks
  * Automated performance testing and regression detection
  */
 

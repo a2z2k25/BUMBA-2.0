@@ -67,7 +67,7 @@ class EnvironmentHelper {
    * Create minimal .env file
    */
   async createMinimalEnv() {
-    const minimal = `# BUMBA Framework Configuration
+    const minimal = `# BUMBA CLI Configuration
 # Generated automatically - customize as needed
 
 # Core Settings
@@ -208,7 +208,7 @@ BUMBA_MAX_AGENTS=5
       ]
     };
     
-    let output = '# BUMBA Framework Configuration\n';
+    let output = '# BUMBA CLI Configuration\n';
     output += `# Generated: ${new Date().toISOString()}\n\n`;
     
     for (const [section, keys] of Object.entries(sections)) {

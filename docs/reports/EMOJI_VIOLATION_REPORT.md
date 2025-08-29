@@ -1,4 +1,4 @@
-# BUMBA Framework - Emoji Violation Report
+# BUMBA CLI - Emoji Violation Report
 
 **Report Date:** December 24, 2024  
 **Sprint:** 1 - Emoji Audit & Documentation  
@@ -8,7 +8,7 @@
 
 ## Executive Summary
 
-A comprehensive emoji audit has been conducted across the BUMBA Framework codebase. The audit revealed **4,285 violations** across **832 files** where unauthorized emojis are being used instead of the approved 5-emoji set.
+A comprehensive emoji audit has been conducted across the BUMBA CLI codebase. The audit revealed **4,285 violations** across **832 files** where unauthorized emojis are being used instead of the approved 5-emoji set.
 
 ### Approved Emoji Set
 - 🟡 **Strategy** (ProductStrategist Department)  

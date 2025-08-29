@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Add Figma Context MCP and N8N MCP Servers to BUMBA Framework
+ * Add Figma Context MCP and N8N MCP Servers to BUMBA CLI
  * This script updates all necessary files to integrate the new MCP servers
  */
 

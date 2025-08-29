@@ -1,4 +1,4 @@
-# BUMBA Framework - Comprehensive System Documentation
+# BUMBA CLI - Comprehensive System Documentation
 
 ## Executive Summary
 BUMBA v1.1.0 is a production-ready AI framework featuring **REAL parallel agent execution**, not simulated concurrency. The system orchestrates multiple AI models (Claude, GPT-4, Gemini) simultaneously through actual API calls, enabling true multi-agent collaboration with sophisticated supervision, knowledge transfer, and hierarchical management capabilities.

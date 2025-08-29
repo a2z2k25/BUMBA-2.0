@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Security Specialist
+ * BUMBA CLI 1.0 Security Specialist
  * Technical Department specialist for comprehensive security engineering
  */
 

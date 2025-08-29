@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Validation Flow Integration Tests
+ * BUMBA CLI 1.0 Validation Flow Integration Tests
  * Tests the complete validation workflow across all department managers
  */
 

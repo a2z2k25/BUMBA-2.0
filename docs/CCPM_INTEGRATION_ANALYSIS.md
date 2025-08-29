@@ -1,4 +1,4 @@
-# CCPM Integration Analysis for BUMBA Framework
+# CCPM Integration Analysis for BUMBA CLI
 
 ## Executive Summary
 

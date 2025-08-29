@@ -1,5 +1,5 @@
 /**
- * Dependency Communication Protocol for BUMBA Framework
+ * Dependency Communication Protocol for BUMBA CLI
  * Enables sophisticated inter-agent communication for dependency management
  */
 

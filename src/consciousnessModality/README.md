@@ -98,7 +98,7 @@ console.log('Generated Solutions:', sessionFlow.solutions);
 console.log('Consensus:', sessionFlow.consensus);
 ```
 
-## Integration with BUMBA Framework
+## Integration with BUMBA CLI
 
 The Consciousness Modality seamlessly integrates with the existing BUMBA Claude Code Framework:
 

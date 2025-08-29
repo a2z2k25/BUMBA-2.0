@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Department Coordination Protocols
+ * BUMBA CLI 1.0 Department Coordination Protocols
  * Advanced inter-department coordination with consciousness-driven collaboration
  */
 

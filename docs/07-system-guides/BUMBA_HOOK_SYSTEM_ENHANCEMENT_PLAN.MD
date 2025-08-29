@@ -1,4 +1,4 @@
-# BUMBA Framework Hook System Enhancement Plan
+# BUMBA CLI Hook System Enhancement Plan
 
 ## Executive Vision
 Transform BUMBA into a self-managing, self-optimizing framework through strategic hook implementations that create intelligent connections between all system components.

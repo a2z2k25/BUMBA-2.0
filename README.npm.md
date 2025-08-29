@@ -1,4 +1,4 @@
-# BUMBA Framework
+# BUMBA CLI
 
 [![NPM Version](https://img.shields.io/npm/v/bumba-framework.svg)](https://www.npmjs.com/package/bumba-framework)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -151,7 +151,7 @@ bumba-framework/
 
 ## Security
 
-BUMBA Framework implements comprehensive security measures:
+BUMBA CLI implements comprehensive security measures:
 
 - **Input Validation**: Detects and prevents XSS, SQL injection, command injection
 - **Safe Code Execution**: VM sandboxing replaces dangerous eval()

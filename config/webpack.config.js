@@ -76,7 +76,7 @@ module.exports = (env, argv) => {
       }),
       
       new webpack.BannerPlugin({
-        banner: `BUMBA Framework v${require('./package.json').version}
+        banner: `BUMBA CLI v${require('./package.json').version}
 Build: ${new Date().toISOString()}
 Mode: ${argv.mode}
 (c) 2025 BUMBA Team`,

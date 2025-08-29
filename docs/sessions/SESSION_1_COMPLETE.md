@@ -85,7 +85,7 @@ SESSION_1_COMPLETE.md                             (this file)
 
 ```bash
 ✅ node src/index.js --version
-   BUMBA Framework v2.0
+   BUMBA CLI 1.0
 
 ✅ npm run demo (partial)
    - Specialists load: YES

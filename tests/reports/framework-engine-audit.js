@@ -1,5 +1,5 @@
 /**
- * BUMBA Framework Engine Core Audit
+ * BUMBA CLI Engine Core Audit
  * Comprehensive testing of the core framework components
  */
 
@@ -7,7 +7,7 @@ const path = require('path');
 const fs = require('fs');
 const chalk = require('chalk');
 
-console.log(chalk.bold.cyan('🔍 BUMBA Framework Engine Core Audit'));
+console.log(chalk.bold.cyan('🔍 BUMBA CLI Engine Core Audit'));
 console.log(chalk.cyan('=' .repeat(60)));
 
 async function auditFrameworkEngine() {

@@ -1,8 +1,8 @@
-# BUMBA Framework Naming Conventions
+# BUMBA CLI Naming Conventions
 
 ## Overview
 
-This document defines the standardized naming conventions for the BUMBA Framework to ensure consistency, readability, and maintainability across the codebase.
+This document defines the standardized naming conventions for the BUMBA CLI to ensure consistency, readability, and maintainability across the codebase.
 
 ## General Principles
 

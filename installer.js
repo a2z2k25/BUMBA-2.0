@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
 /**
- * BUMBA Framework Installer
- * Standalone installer script for setting up BUMBA Framework
+ * BUMBA CLI Installer
+ * Standalone installer script for setting up BUMBA CLI
  */
 
 const { install } = require('./src/installer');

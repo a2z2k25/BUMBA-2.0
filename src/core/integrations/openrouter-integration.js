@@ -311,7 +311,7 @@ class OpenRouterIntegration extends EventEmitter {
         'Authorization': `Bearer ${this.config.apiKey}`,
         'Content-Type': 'application/json',
         'HTTP-Referer': 'https://github.com/bumba-ai/bumba-framework',
-        'X-Title': 'BUMBA Framework'
+        'X-Title': 'BUMBA CLI'
       },
       body: JSON.stringify(body),
       signal: AbortSignal.timeout(this.config.timeout)

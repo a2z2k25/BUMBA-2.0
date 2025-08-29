@@ -1,4 +1,4 @@
-# BUMBA Framework - Quick Start Guide
+# BUMBA CLI - Quick Start Guide
 
 ## Installation
 

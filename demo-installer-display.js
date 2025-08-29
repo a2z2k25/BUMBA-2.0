@@ -35,7 +35,7 @@ console.log();
 
 // Version Box
 console.log('┌──────────────────────────────────────────────┐');
-console.log('│ 🏁 BUMBA FRAMEWORK v3.0.4 🏁                 │');
+console.log('│ 🏁 BUMBA CLI 1.0 🏁                 │');
 console.log('│                                              │');
 console.log('│ Features in minutes, not days                │');
 console.log('│ ' + gray('100+ AI specialists working in parallel') + '      │');

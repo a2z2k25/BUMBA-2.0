@@ -35,7 +35,7 @@ async function initialize(options = {}) {
   
   // Display initialization message
   const env = EnvironmentDetector.detect();
-  console.log('🏁 BUMBA 3.0 Hybrid Intelligence Framework');
+  console.log('🏁 BUMBA CLI 1.0 Hybrid Intelligence Framework');
   console.log('━'.repeat(60));
   console.log();
   console.log(`Mode: ${env.mode.toUpperCase()}`);

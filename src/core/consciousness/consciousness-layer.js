@@ -1,7 +1,7 @@
 const { logger } = require('../logging/bumba-logger');
 
 /**
- * BUMBA 2.0 Consciousness Layer
+ * BUMBA CLI 1.0 Consciousness Layer
  * Core consciousness integration for all agents and operations
  */
 

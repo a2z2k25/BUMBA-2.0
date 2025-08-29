@@ -11,7 +11,7 @@ const { logger } = require('../core/logging/bumba-logger');
  * Generate CLAUDE.md content
  */
 function generateClaudeMd(version) {
-  return `# BUMBA Claude Code Mastery Framework
+  return `# BUMBA CLI Mastery System
 
 ## Mission Statement
 Professional Claude Code enhancement framework combining intelligent orchestration with mandatory quality enforcement for production-ready development workflows.
@@ -175,7 +175,7 @@ def process_user_data(data: dict) -> Result:
 - **Consistency validation** - Check against earlier work
 
 ---
-*BUMBA Framework v${version} - Intelligence • Quality • Security • Design*`;
+*BUMBA CLI v${version} - Intelligence • Quality • Security • Design*`;
 }
 
 /**
@@ -302,7 +302,7 @@ function generateSettings(version) {
  * Generate framework files
  */
 async function generateFrameworkFiles(installDir, version) {
-  const spinner = require('ora')('Generating BUMBA Framework Files...').start();
+  const spinner = require('ora')('Generating BUMBA CLI Files...').start();
 
   // Ensure directories exist
   const dirs = [

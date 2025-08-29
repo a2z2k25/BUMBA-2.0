@@ -12,7 +12,7 @@ const VisionAnalyzer = require('../src/core/vision/vision-analyzer');
 const fs = require('fs').promises;
 const path = require('path');
 
-describe('BUMBA 3.0 Hybrid Mode', () => {
+describe('BUMBA CLI 1.0 Hybrid Mode', () => {
   let modeManager;
   let configBridge;
 

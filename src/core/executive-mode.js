@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Executive Mode Implementation
+ * BUMBA CLI 1.0 Executive Mode Implementation
  * Product-Strategist CEO capabilities for organizational leadership
  */
 

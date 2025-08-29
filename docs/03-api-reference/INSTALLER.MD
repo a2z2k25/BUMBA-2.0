@@ -12,7 +12,7 @@ Orchestrates the installation process using modular components</p>
 Handles all visual output and UI elements</p>
 </dd>
 <dt><a href="#fs">fs</a></dt>
-<dd><p>BUMBA Framework Detection Module
+<dd><p>BUMBA CLI Detection Module
 Analyzes existing Claude configurations and frameworks</p>
 </dd>
 <dt><a href="#ora">ora</a></dt>
@@ -112,7 +112,7 @@ Handles all visual output and UI elements
 <a name="fs"></a>
 
 ## fs
-BUMBA Framework Detection Module
+BUMBA CLI Detection Module
 Analyzes existing Claude configurations and frameworks
 
 **Kind**: global constant  

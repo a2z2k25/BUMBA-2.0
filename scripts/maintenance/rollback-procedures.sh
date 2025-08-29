@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# BUMBA Framework Sprint 1 Rollback Procedures
+# BUMBA CLI Sprint 1 Rollback Procedures
 # Use this script to rollback any or all optimizations from Sprint 1
 
-echo "🔄 BUMBA Framework Rollback Utility"
+echo "🔄 BUMBA CLI Rollback Utility"
 echo "===================================="
 echo ""
 echo "This script allows you to rollback Sprint 1 optimizations"

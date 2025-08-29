@@ -1,5 +1,5 @@
 /**
- * BUMBA Framework Core Tests
+ * BUMBA CLI Core Tests
  */
 
 const { BumbaFramework2 } = require('../../../src/core/bumba-framework-2');

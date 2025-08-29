@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Design-Engineer Department Manager - WITH VALIDATION
+ * BUMBA CLI 1.0 Design-Engineer Department Manager - WITH VALIDATION
  * Enhanced with mandatory manager validation using Claude Max
  * Focuses on UX, accessibility, and design quality validation
  */

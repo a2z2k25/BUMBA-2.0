@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * NPM Publication Script for BUMBA Framework
+ * NPM Publication Script for BUMBA CLI
  * This script handles the publication process to NPM
  */
 
@@ -11,7 +11,7 @@ const { execSync } = require('child_process');
 const chalk = require('chalk');
 const ora = require('ora');
 
-console.log(chalk.cyan.bold('\n📦 BUMBA Framework - NPM Publication Script\n'));
+console.log(chalk.cyan.bold('\n📦 BUMBA CLI - NPM Publication Script\n'));
 
 // Validation steps
 const validations = [

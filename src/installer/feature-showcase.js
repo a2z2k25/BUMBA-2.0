@@ -11,7 +11,7 @@ const Table = require('cli-table3');
  */
 function displayFeatureShowcase() {
   console.log('\n\n'); // Add extra padding
-  console.log('🏁 BUMBA Framework Capabilities 🏁');
+  console.log('🏁 BUMBA CLI Capabilities 🏁');
   console.log(colors.gray('━'.repeat(60)));
 
   // Core capabilities with brand-approved emojis only

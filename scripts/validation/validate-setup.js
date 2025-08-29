@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * BUMBA Framework Setup Validation Script
+ * BUMBA CLI Setup Validation Script
  * Validates environment, dependencies, and configuration
  */
 
@@ -133,7 +133,7 @@ class SetupValidator {
 
   // Run all validations
   async validate() {
-    console.log(chalk.bold.blue('\n🔍 BUMBA Framework Setup Validation\n'));
+    console.log(chalk.bold.blue('\n🔍 BUMBA CLI Setup Validation\n'));
     console.log(chalk.gray('─'.repeat(50)));
 
     // Core files

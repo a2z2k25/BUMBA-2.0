@@ -1,5 +1,5 @@
 /**
- * BUMBA Framework - DevOps Command Handler
+ * BUMBA CLI - DevOps Command Handler
  * Handles DevOps operations through integrated MCP servers
  * @module src/core/command-handlers/devops-handler
  * @version 2.0.0

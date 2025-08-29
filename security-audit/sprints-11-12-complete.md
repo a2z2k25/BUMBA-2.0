@@ -185,7 +185,7 @@ async function executeCommand(command, userId) {
 }
 ```
 
-### Integration with BUMBA Framework
+### Integration with BUMBA CLI
 
 ```javascript
 // In department managers

@@ -1,8 +1,8 @@
-# BUMBA Framework API Setup Guide
+# BUMBA CLI API Setup Guide
 
 ## Quick Start (Free Tier)
 
-The BUMBA Framework is designed to work primarily with **FREE AI models**. You can run the entire system without spending any money!
+The BUMBA CLI is designed to work primarily with **FREE AI models**. You can run the entire system without spending any money!
 
 ### Step 1: Get Your Free API Keys
 
@@ -86,7 +86,7 @@ export OPENAI_API_KEY="sk-..."
 ### Step 1: Create Notion Integration
 1. Go to https://www.notion.so/my-integrations
 2. Click "New integration"
-3. Name it "BUMBA Framework"
+3. Name it "BUMBA CLI"
 4. Copy the API key
 
 ### Step 2: Share Database
@@ -192,7 +192,7 @@ node -e "console.log('Usage reset')"
 1. 🏁 Get free API keys (5 minutes)
 2. 🏁 Configure .env file (2 minutes)
 3. 🏁 Run tests (1 minute)
-4. 🟢 Start using BUMBA Framework!
+4. 🟢 Start using BUMBA CLI!
 
 ## Support
 

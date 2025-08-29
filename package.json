@@ -1,7 +1,7 @@
 {
-  "name": "bumba-framework",
-  "version": "3.0.4",
-  "description": "BUMBA: Enterprise-grade AI orchestration framework with intelligent agent coordination, security validation, and production-ready workflows",
+  "name": "bumba-cli",
+  "version": "1.0.0",
+  "description": "BUMBA CLI 1.0 - Professional AI-enhanced command-line development framework with 100+ specialist agents",
   "main": "src/index.js",
   "bin": {
     "bumba": "./bin/bumba"

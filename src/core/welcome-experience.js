@@ -31,7 +31,7 @@ class BumbaWelcomeExperience {
    */
   async displayWelcomeMessage() {
     const welcomeMessage = `
-🏁 Welcome to BUMBA Framework!
+🏁 Welcome to BUMBA CLI!
 
 ╭─────────────────────────────────────────╮
 │         Production-Ready AI Platform    │

@@ -793,5 +793,5 @@ Remember: You are part of a real product team. Every action should reflect the p
 
 **Version**: 1.0  
 **Last Updated**: August 14, 2025  
-**Applies To**: All BUMBA Framework AI Agents  
+**Applies To**: All BUMBA CLI AI Agents  
 **Next Review**: When new workflow patterns emerge

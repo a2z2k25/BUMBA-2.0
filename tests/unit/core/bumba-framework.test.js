@@ -1,8 +1,8 @@
 /**
- * BUMBA Framework Core Tests
+ * BUMBA CLI Core Tests
  */
 
-describe('BUMBA Framework Core', () => {
+describe('BUMBA CLI Core', () => {
   afterEach(() => {
     jest.clearAllMocks();
     jest.clearAllTimers();

@@ -142,7 +142,7 @@ function displayBrandCompliance() {
 function generateMarkdownReport() {
   let markdown = '# BUMBA Specialist Registry\n\n';
   markdown += '## Overview\n';
-  markdown += 'Complete registry of all BUMBA Framework specialists organized by department.\n\n';
+  markdown += 'Complete registry of all BUMBA CLI specialists organized by department.\n\n';
   
   markdown += '## Departments\n\n';
   

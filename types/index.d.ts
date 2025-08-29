@@ -1,5 +1,5 @@
 /**
- * BUMBA Framework TypeScript Definitions
+ * BUMBA CLI TypeScript Definitions
  * Optional TypeScript support for better IDE experience
  * 
  * NOTE: This is a declaration file only (.d.ts) - no actual TypeScript code

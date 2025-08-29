@@ -1,5 +1,5 @@
 # Notion Orchestration System Requirements
-## BUMBA Framework - Intelligent Project Management
+## BUMBA CLI - Intelligent Project Management
 
 ### Core Requirements
 

@@ -1,5 +1,5 @@
 /**
- * BUMBA Framework - Tiered Installation System
+ * BUMBA CLI - Tiered Installation System
  * Progressive enhancement installer with fallback capabilities
  * @module src/core/tiered-installer
  * @version 2.0.0

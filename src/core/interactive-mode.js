@@ -1,5 +1,5 @@
 /**
- * BUMBA Framework Interactive Mode
+ * BUMBA CLI Interactive Mode
  * Handles CLI interaction and command processing
  */
 
@@ -114,7 +114,7 @@ class InteractiveMode {
   }
 
   async showHelp() {
-    console.log(chalk.green.bold('\n🟢 BUMBA Framework Commands\n'));
+    console.log(chalk.green.bold('\n🟢 BUMBA CLI Commands\n'));
     
     const commands = await this.framework.getAvailableCommands();
     
@@ -151,7 +151,7 @@ class InteractiveMode {
   async showStatus() {
     const status = await this.framework.getFrameworkStatus();
     
-    console.log(chalk.green.bold('\n🟢 BUMBA Framework Status\n'));
+    console.log(chalk.green.bold('\n🟢 BUMBA CLI Status\n'));
     console.log(`Version: ${status.version}`);
     console.log(`Architecture: ${status.architecture}`);
     console.log(`Consciousness: ${status.consciousness_enabled ? 'Enabled' : 'Disabled'}`);
@@ -216,11 +216,11 @@ class InteractiveMode {
   async shutdown() {
     if (!this.running) {return;}
     
-    console.log(chalk.yellow('\n🟡 Shutting down BUMBA Framework...'));
+    console.log(chalk.yellow('\n🟡 Shutting down BUMBA CLI...'));
     
     try {
       await this.framework.shutdown();
-      console.log(chalk.green('🏁 BUMBA Framework shutdown complete'));
+      console.log(chalk.green('🏁 BUMBA CLI shutdown complete'));
     } catch (error) {
       console.error(chalk.red('🔴 Shutdown error:'), error.message);
     }

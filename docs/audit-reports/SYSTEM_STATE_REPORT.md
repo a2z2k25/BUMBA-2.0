@@ -1,4 +1,4 @@
-# BUMBA Framework System State Report
+# BUMBA CLI System State Report
 Generated: 2025-08-25
 
 ## Executive Summary

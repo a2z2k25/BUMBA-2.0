@@ -1,7 +1,7 @@
 const { logger } = require('../core/logging/bumba-logger');
 
 /**
- * BUMBA 2.0 Capability Absorption System
+ * BUMBA CLI 1.0 Capability Absorption System
  * Absorbs external framework capabilities while maintaining BUMBA identity
  */
 

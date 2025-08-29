@@ -1,5 +1,5 @@
 /**
- * BUMBA Framework System Operability Test
+ * BUMBA CLI System Operability Test
  * Comprehensive testing of Audio, Knowledge, and Workflow Systems
  */
 
@@ -340,7 +340,7 @@ async function testWorkflowSystem() {
 
 // Main test runner
 async function runSystemTests() {
-  console.log('🟢 BUMBA Framework System Operability Test');
+  console.log('🟢 BUMBA CLI System Operability Test');
   console.log('=' .repeat(50));
   
   try {

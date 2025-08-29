@@ -23,7 +23,7 @@ class HonestStartup {
    * Display banner
    */
   displayBanner() {
-    console.log(chalk.cyan(figlet.textSync('BUMBA 2.0', {
+    console.log(chalk.cyan(figlet.textSync('BUMBA CLI 1.0', {
       font: 'Standard',
       horizontalLayout: 'default',
       verticalLayout: 'default'

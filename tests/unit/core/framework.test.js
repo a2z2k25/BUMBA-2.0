@@ -16,7 +16,7 @@ describe('BUMBA Core Framework', () => {
       expect(config).toHaveProperty('framework');
       expect(config).toHaveProperty('installation');
       expect(config).toHaveProperty('commands');
-      expect(config.framework.name).toBe('BUMBA Claude Framework');
+      expect(config.framework.name).toBe('BUMBA CLI');
     });
   });
 

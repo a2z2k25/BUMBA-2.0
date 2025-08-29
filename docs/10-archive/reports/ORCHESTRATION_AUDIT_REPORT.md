@@ -199,5 +199,5 @@ The orchestration feature has successfully achieved its goal of permeating every
 
 ---
 *Audit conducted on August 12, 2025*
-*BUMBA Framework Version: 2.0*
+*BUMBA CLI Version: 2.0*
 *Orchestration System Version: 1.0.0*

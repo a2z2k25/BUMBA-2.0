@@ -331,7 +331,7 @@ class ReferenceSystem extends EventEmitter {
   async generateDocumentation(options = {}) {
     try {
       const docs = {
-        title: options.title || 'BUMBA Framework Reference',
+        title: options.title || 'BUMBA CLI Reference',
         version: options.version || '1.0.0',
         generated: new Date().toISOString(),
         sections: []

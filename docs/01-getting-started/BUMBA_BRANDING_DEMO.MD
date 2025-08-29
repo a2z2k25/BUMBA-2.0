@@ -1,4 +1,4 @@
-# BUMBA Claude Framework - Installation Demo Preview
+# BUMBA CLI - Installation Demo Preview
 
 ## 🏁 **Branded Installation Experience**
 
@@ -70,12 +70,12 @@ Development Tools:
 🏁 BUMBA framework files generated
 🏁 BUMBA quality enforcement hooks generated
 
-🏁 BUMBA FRAMEWORK INSTALLATION COMPLETE! 🏁
+🏁 BUMBA CLI INSTALLATION COMPLETE! 🏁
 
 ┌─────────────────────┬─────────┬──────────────────────────────────────────────┐
 │ Component           │ Status  │ Description                                  │
 ├─────────────────────┼─────────┼──────────────────────────────────────────────┤
-│ BUMBA Framework     │ 🏁 READY │ Professional orchestration with quality ... │
+│ BUMBA CLI     │ 🏁 READY │ Professional orchestration with quality ... │
 │ MCP Ecosystem       │ 🏁 READY │ 14 verified servers including designer t... │
 │ Quality System      │ 🏁 READY │ Pre/post execution validation                │
 │ Cognitive Safeguards│ 🏁 READY │ Verification and memory management           │

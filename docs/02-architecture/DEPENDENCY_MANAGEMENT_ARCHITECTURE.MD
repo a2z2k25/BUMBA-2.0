@@ -1,8 +1,8 @@
-# BUMBA Framework - Advanced Dependency Management Architecture
+# BUMBA CLI - Advanced Dependency Management Architecture
 
 ## Executive Summary
 
-This document outlines the comprehensive dependency management system for BUMBA Framework's multi-agent orchestration, enabling intelligent task interdependency handling, parallel execution optimization, and cross-agent communication.
+This document outlines the comprehensive dependency management system for BUMBA CLI's multi-agent orchestration, enabling intelligent task interdependency handling, parallel execution optimization, and cross-agent communication.
 
 ---
 
@@ -521,7 +521,7 @@ class DynamicDependencyDiscovery {
 
 ## 10. Conclusion
 
-This comprehensive dependency management system will transform BUMBA Framework from parallel execution to **intelligent orchestration**. By understanding and managing task interdependencies, the framework can:
+This comprehensive dependency management system will transform BUMBA CLI from parallel execution to **intelligent orchestration**. By understanding and managing task interdependencies, the framework can:
 
 1. **Optimize execution order** for fastest completion
 2. **Prevent conflicts** and impossible states

@@ -1,5 +1,5 @@
 /**
- * BUMBA Framework Integration Layer
+ * BUMBA CLI Integration Layer
  * Connects all Phase 0 and Phase 1 improvements into a unified system
  */
 
@@ -51,7 +51,7 @@ class BumbaFrameworkIntegration {
    */
   async initialize(options = {}) {
     const startTime = Date.now();
-    logger.info('🟢 Initializing BUMBA Framework Integration...');
+    logger.info('🟢 Initializing BUMBA CLI Integration...');
     
     try {
       // Merge configuration options
@@ -86,7 +86,7 @@ class BumbaFrameworkIntegration {
         startup_time: duration
       };
       
-      logger.info(`🏁 BUMBA Framework Integration completed in ${duration}ms`);
+      logger.info(`🏁 BUMBA CLI Integration completed in ${duration}ms`);
       return true;
       
     } catch (error) {
@@ -385,7 +385,7 @@ class BumbaFrameworkIntegration {
    * Graceful shutdown
    */
   async shutdown() {
-    logger.info('🟢 Shutting down BUMBA Framework Integration...');
+    logger.info('🟢 Shutting down BUMBA CLI Integration...');
     
     try {
       // Shutdown resource manager

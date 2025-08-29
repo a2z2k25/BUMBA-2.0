@@ -319,7 +319,7 @@ class OperabilityTracker extends EventEmitter {
     
     // Special message for 100%
     if (this.operabilityScore === 100) {
-      logger.info(chalk.cyan.bold('🏁 Congratulations! Your BUMBA Framework is FULLY OPERATIONAL! 🏁'));
+      logger.info(chalk.cyan.bold('🏁 Congratulations! Your BUMBA CLI is FULLY OPERATIONAL! 🏁'));
       logger.info(chalk.cyan('All systems are go. You have achieved maximum integration.'));
       this.stopReminderSystem(); // Stop reminders at 100%
     }

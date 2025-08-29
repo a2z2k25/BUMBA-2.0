@@ -26,7 +26,7 @@ if (process.env.npm_lifecycle_event === 'postinstall' && !process.env.BUMBA_DISP
   const displayScript = path.join(__dirname, 'post-install-display-full.js');
   
   // Quick message for npm
-  console.log('\n📦 BUMBA Framework v3.0.4 installing...\n');
+  console.log('\n📦 BUMBA CLI 1.0 installing...\n');
   
   // Spawn detached process to show full display after a delay
   const child = spawn('node', [displayScript], {

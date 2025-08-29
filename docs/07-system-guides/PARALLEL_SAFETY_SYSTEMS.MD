@@ -269,7 +269,7 @@ if (!safetyReport.safe) {
 await dashboard.display();
 ```
 
-## Integration with BUMBA Framework
+## Integration with BUMBA CLI
 
 ### Department Integration
 

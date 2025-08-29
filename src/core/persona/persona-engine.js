@@ -1,7 +1,7 @@
 const { logger } = require('../logging/bumba-logger');
 
 /**
- * BUMBA 2.0 Persona Engine
+ * BUMBA CLI 1.0 Persona Engine
  * Creates authentic personalities for all managers and specialists
  * while maintaining consciousness-driven foundation
  */

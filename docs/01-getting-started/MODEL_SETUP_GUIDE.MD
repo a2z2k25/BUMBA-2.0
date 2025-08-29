@@ -37,7 +37,7 @@ This guide will help you set up OpenRouter and Kimi K2 models for the BUMBA fram
 ### Step 2: Get Your API Key
 1. Navigate to [https://openrouter.ai/keys](https://openrouter.ai/keys)
 2. Click "Create Key"
-3. Name it "BUMBA Framework"
+3. Name it "BUMBA CLI"
 4. Copy the key (starts with `sk-or-...`)
 
 ### Step 3: Configure OpenRouter
@@ -46,7 +46,7 @@ Add to your `.env` file:
 # OpenRouter Configuration
 OPENROUTER_API_KEY=sk-or-your-key-here
 OPENROUTER_SITE_URL=http://localhost:3000
-OPENROUTER_SITE_NAME=BUMBA Framework
+OPENROUTER_SITE_NAME=BUMBA CLI
 ```
 
 ### Step 4: Install MCP Server (Optional)
@@ -101,7 +101,7 @@ Create or update your `.env` file in the BUMBA root directory:
 # OpenRouter - Access to 200+ Models
 OPENROUTER_API_KEY=sk-or-your-key-here
 OPENROUTER_SITE_URL=http://localhost:3000
-OPENROUTER_SITE_NAME=BUMBA Framework
+OPENROUTER_SITE_NAME=BUMBA CLI
 
 # Kimi K2 - 200K Context Window (Optional if using OpenRouter)
 # KIMI_API_KEY=your-kimi-key-here

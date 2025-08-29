@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * BUMBA 2.0 - 30 Second Demo
+ * BUMBA CLI 1.0 - 30 Second Demo
  * Shows the magic without needing API keys
  */
 
@@ -11,7 +11,7 @@ const ora = require('ora');
 console.log(chalk.cyan.bold(`
 ╔══════════════════════════════════════════════════════╗
 ║                                                      ║
-║                    BUMBA 2.0                         ║
+║                    BUMBA CLI 1.0                         ║
 ║         Intelligent AI Agent Orchestration           ║
 ║                                                      ║
 ╚══════════════════════════════════════════════════════╝

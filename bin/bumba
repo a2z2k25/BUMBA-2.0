@@ -63,7 +63,7 @@ const currentMode = modeManager.getModeType();
 
 // Header with mode indicator
 console.log();
-console.log(green('🟢') + ' BUMBA Framework v' + packageJson.version + ' [' + currentMode.toUpperCase() + ' MODE]');
+console.log(green('🟢') + ' BUMBA CLI v' + packageJson.version + ' [' + currentMode.toUpperCase() + ' MODE]');
 console.log(chalk.gray('━'.repeat(60)));
 console.log();
 
@@ -78,7 +78,7 @@ program
   .description('Show complete BUMBA command library (60+ commands)')
   .action(() => {
     console.log();
-    console.log('🏁 BUMBA FRAMEWORK v3.0.4 - COMPLETE COMMAND LIBRARY (60+ Commands) 🏁');
+    console.log('🏁 BUMBA CLI 1.0 - COMPLETE COMMAND LIBRARY (60+ Commands) 🏁');
     console.log(chalk.gray('━'.repeat(70)));
     console.log();
     
@@ -314,7 +314,7 @@ program
   .command('init')
   .description('Initialize BUMBA in current project')
   .action(() => {
-    console.log('🏁 Initializing BUMBA Framework');
+    console.log('🏁 Initializing BUMBA CLI');
     console.log(chalk.gray('━'.repeat(60)));
     console.log();
     
@@ -325,7 +325,7 @@ program
     } else {
       // Create config file
       const config = `/**
- * BUMBA Framework Configuration
+ * BUMBA CLI Configuration
  * Generated: ${new Date().toISOString()}
  */
 

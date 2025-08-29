@@ -161,7 +161,7 @@ Test the status line with sample data:
 node src/core/status test
 ```
 
-## 🤝 Integration with BUMBA Framework
+## 🤝 Integration with BUMBA CLI
 
 The status line integrates automatically with the BUMBA framework:
 

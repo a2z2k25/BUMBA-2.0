@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Backend-Engineer Department Manager - WITH VALIDATION
+ * BUMBA CLI 1.0 Backend-Engineer Department Manager - WITH VALIDATION
  * Enhanced with mandatory manager validation using Claude Max
  * All specialist work must be reviewed before acceptance
  */

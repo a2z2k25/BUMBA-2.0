@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * Test Coverage Report Generator for BUMBA Framework
+ * Test Coverage Report Generator for BUMBA CLI
  */
 
 const fs = require('fs');
@@ -9,7 +9,7 @@ const path = require('path');
 const chalk = require('chalk');
 
 async function generateCoverageReport() {
-  console.log(chalk.green.bold('\n🟢 BUMBA Framework Test Coverage Report\n'));
+  console.log(chalk.green.bold('\n🟢 BUMBA CLI Test Coverage Report\n'));
   console.log(chalk.gray('=' .repeat(60)));
   
   // Count test files

@@ -1,4 +1,4 @@
-# BUMBA Framework Audit Report
+# BUMBA CLI Audit Report
 Date: 2025-08-09
 
 ## Executive Summary

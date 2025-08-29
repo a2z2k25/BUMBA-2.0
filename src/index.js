@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 /**
- * BUMBA Framework 2.0 - Main Entry Point
+ * BUMBA CLI 2.0 - Main Entry Point
  * 
- * This is the primary entry point for the BUMBA Framework.
+ * This is the primary entry point for the BUMBA CLI.
  * For installation, use: npm run install or node installer.js
  */
 
@@ -28,7 +28,7 @@ function checkInstallation() {
   const envPath = path.join(process.cwd(), '.env');
   
   if (!fs.existsSync(configPath) && !fs.existsSync(envPath)) {
-    console.log(chalk.yellow('🟡 BUMBA Framework not configured.'));
+    console.log(chalk.yellow('🟡 BUMBA CLI not configured.'));
     console.log(chalk.yellow('Please run: npm run install'));
     console.log(chalk.gray('Or: node installer.js'));
     return false;
@@ -54,7 +54,7 @@ async function initializeFramework() {
     // Load the main framework
     const { createBumbaFramework } = require('./core/bumba-framework-2');
     
-    console.log(chalk.green('🟢 Initializing BUMBA Framework 2.0...'));
+    console.log(chalk.green('🟢 Initializing BUMBA CLI 2.0...'));
     
     // Validate APIs before framework initialization
     console.log(chalk.blue('🔍 Validating API configurations...'));
@@ -172,7 +172,7 @@ async function initializeFramework() {
     if (isCliMode) {
       const { startInteractiveMode } = require('./core/interactive-mode');
       
-      console.log(chalk.green('🏁 BUMBA Framework Ready!'));
+      console.log(chalk.green('🏁 BUMBA CLI Ready!'));
       console.log(chalk.gray('Type /bumba:help for available commands'));
       console.log(chalk.gray('Type /bumba:menu for interactive menu'));
       console.log();
@@ -202,7 +202,7 @@ if (isCliMode) {
   const args = process.argv.slice(2);
   
   if (args.includes('--help') || args.includes('-h')) {
-    console.log(chalk.green.bold('\n🟢 BUMBA Framework 2.0\n'));
+    console.log(chalk.green.bold('\n🟢 BUMBA CLI 2.0\n'));
     console.log('Usage: bumba [options] [command]');
     console.log('\nOptions:');
     console.log('  --help, -h     Show this help message');
@@ -222,7 +222,7 @@ if (isCliMode) {
   
   if (args.includes('--version') || args.includes('-v')) {
     const package = require('../package.json');
-    console.log(`BUMBA Framework v${package.version}`);
+    console.log(`BUMBA CLI v${package.version}`);
     process.exit(0);
   }
   

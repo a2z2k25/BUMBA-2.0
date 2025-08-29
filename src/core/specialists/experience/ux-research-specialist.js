@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 UX Research Specialist
+ * BUMBA CLI 1.0 UX Research Specialist
  * Experience Department specialist for user experience research and validation
  */
 

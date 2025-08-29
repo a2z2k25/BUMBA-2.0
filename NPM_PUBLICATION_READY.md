@@ -1,4 +1,4 @@
-# 🚀 BUMBA Framework - Ready for NPM Publication
+# 🚀 BUMBA CLI - Ready for NPM Publication
 
 ## ✅ Publication Checklist Complete
 
@@ -73,7 +73,7 @@ npm publish
 
 ## 🎯 Post-Publication
 
-After successful publication, users will be able to install BUMBA Framework with:
+After successful publication, users will be able to install BUMBA CLI with:
 
 ```bash
 npm install bumba-framework
@@ -112,7 +112,7 @@ The package has been secured with:
 
 ## 📝 Final Notes
 
-The BUMBA Framework is ready for NPM publication. All security enhancements have been implemented and tested, achieving an 85/100 security score.
+The BUMBA CLI is ready for NPM publication. All security enhancements have been implemented and tested, achieving an 85/100 security score.
 
 **Remember to:**
 1. Be logged into NPM (`npm login`)

@@ -352,7 +352,7 @@ rbacManager.createPermission('office:access', {
 
 ---
 
-## Integration with BUMBA Framework
+## Integration with BUMBA CLI
 
 ```javascript
 // In Department Managers

@@ -1,5 +1,5 @@
 /**
- * Intelligent Agent System Initializer for BUMBA Framework
+ * Intelligent Agent System Initializer for BUMBA CLI
  * Integrates Intelligent Pooling, TTL Routing, Selection Matrix, and Lifecycle Management
  */
 

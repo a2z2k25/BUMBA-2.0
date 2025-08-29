@@ -212,7 +212,7 @@ The Universal Hook System transforms BUMBA from a capable framework into a truly
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│                   BUMBA Framework                        │
+│                   BUMBA CLI                        │
 ├─────────────────────────────────────────────────────────┤
 │                                                          │
 │  ┌──────────────┐  Triggers   ┌──────────────────────┐ │

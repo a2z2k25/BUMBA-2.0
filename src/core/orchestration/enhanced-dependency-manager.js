@@ -1,5 +1,5 @@
 /**
- * Enhanced Dependency Management System for BUMBA Framework
+ * Enhanced Dependency Management System for BUMBA CLI
  * Handles complex task interdependencies, resource conflicts, and parallel optimization
  */
 

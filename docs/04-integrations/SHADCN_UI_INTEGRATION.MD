@@ -2,7 +2,7 @@
 
 ## Overview
 
-The BUMBA Framework now includes **native ShadCN/UI support** through an intelligent MCP Server integration. ShadCN/UI is available by default for all projects, providing instant access to 40+ accessible, customizable components built on Radix UI primitives.
+The BUMBA CLI now includes **native ShadCN/UI support** through an intelligent MCP Server integration. ShadCN/UI is available by default for all projects, providing instant access to 40+ accessible, customizable components built on Radix UI primitives.
 
 ## Key Features
 
@@ -29,7 +29,7 @@ The BUMBA Framework now includes **native ShadCN/UI support** through an intelli
 
 ```
 ┌─────────────────────────────────────┐
-│     BUMBA Framework Core            │
+│     BUMBA CLI Core            │
 ├─────────────────────────────────────┤
 │   ShadCN MCP Integration Module     │
 │   • Component Registry              │
@@ -470,4 +470,4 @@ The ShadCN UI integration makes BUMBA the most designer-friendly and developer-e
 
 ---
 
-*ShadCN UI Integration v1.0.0 - Part of BUMBA Framework*
+*ShadCN UI Integration v1.0.0 - Part of BUMBA CLI*

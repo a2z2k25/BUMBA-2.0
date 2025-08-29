@@ -99,7 +99,7 @@ if [ "$SETUP_REPO" = true ]; then
     REPO_NAME=$(basename "$PWD")
 
     echo "🏁 Creating repository: $REPO_NAME"
-    gh repo create "$REPO_NAME" --public --description "Professional project built with BUMBA Framework" || {
+    gh repo create "$REPO_NAME" --public --description "Professional project built with BUMBA CLI" || {
         echo "🏁 Failed to create GitHub repository"
         exit 1
     }
@@ -165,7 +165,7 @@ echo "🏁 Team publishing context updated"
 if [ -f "README.md" ]; then
     echo "🏁 Enhancing README for professional presentation..."
 
-    # Add BUMBA Framework badge if not present
+    # Add BUMBA CLI badge if not present
     if ! grep -q "Built with BUMBA" README.md; then
         # Create backup
         cp README.md README.md.backup
@@ -174,7 +174,7 @@ if [ -f "README.md" ]; then
         cat > README.md.temp << 'EOF'
 # Project Title
 
-[![Built with BUMBA Framework](https://img.shields.io/badge/Built%20with-BUMBA%20Framework-success)](https://github.com/your-org/bumba-claude)
+[![Built with BUMBA CLI](https://img.shields.io/badge/Built%20with-BUMBA%20Framework-success)](https://github.com/your-org/bumba-claude)
 
 EOF
 
@@ -231,7 +231,7 @@ if [ -n "$RELEASE_TAG" ]; then
 
         gh release create "$RELEASE_TAG" \
             --title "Release $RELEASE_TAG" \
-            --notes "Release created by BUMBA Framework
+            --notes "Release created by BUMBA CLI
 
 Recent changes:
 $RELEASE_NOTES
@@ -262,7 +262,7 @@ echo "🏁 Latest commit: $(git log -1 --oneline)"
 if [ -n "$RELEASE_TAG" ]; then
     echo "🏁 Release: $RELEASE_TAG"
 fi
-echo "🏁 Quality validated: BUMBA Framework standards"
+echo "🏁 Quality validated: BUMBA CLI standards"
 echo ""
 echo "🏁 Your project is now live on GitHub!"
 echo "🏁 Share with: git clone $REMOTE_URL"

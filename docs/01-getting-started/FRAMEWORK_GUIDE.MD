@@ -1,4 +1,4 @@
-# BUMBA Framework Comprehensive Guide
+# BUMBA CLI Comprehensive Guide
 
 ## Table of Contents
 1. [Overview](#overview)
@@ -26,7 +26,7 @@ BUMBA is a professional AI development framework that combines intelligent orche
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    BUMBA Framework 2.0                       │
+│                    BUMBA CLI 2.0                       │
 ├─────────────────────────────────────────────────────────────┤
 │                    Command Interface                         │
 ├─────────────────────────────────────────────────────────────┤
@@ -409,4 +409,4 @@ MIT License - see LICENSE file for details
 
 ---
 
-*BUMBA Framework v1.0 - Built with intelligence, security, and scale in mind*
+*BUMBA CLI 1.0 - Built with intelligence, security, and scale in mind*

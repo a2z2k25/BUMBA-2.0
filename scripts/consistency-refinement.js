@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 /**
- * BUMBA Framework Consistency Refinement Script
+ * BUMBA CLI Consistency Refinement Script
  * Ensures complete consistency across all framework files
  */
 
@@ -16,7 +16,7 @@ console.log('╚═════════════════════�
 const CONSISTENCY_STANDARDS = {
   // File header template
   fileHeader: `/**
- * BUMBA Framework - [MODULE_NAME]
+ * BUMBA CLI - [MODULE_NAME]
  * [DESCRIPTION]
  * @module [MODULE_PATH]
  */\n\n`,

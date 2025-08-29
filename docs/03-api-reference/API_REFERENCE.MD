@@ -1,4 +1,4 @@
-# BUMBA Framework API Reference
+# BUMBA CLI API Reference
 
 ## Table of Contents
 1. [Commands](#commands)
@@ -11,7 +11,7 @@
 
 ## Commands
 
-The BUMBA Framework provides 61 commands across 9 categories:
+The BUMBA CLI provides 61 commands across 9 categories:
 
 ### Product Strategy Commands (8)
 - `/bumba:implement-strategy [feature]` - Strategic implementation

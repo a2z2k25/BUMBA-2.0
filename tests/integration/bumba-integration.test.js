@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 /**
- * BUMBA Framework Integration Test for Intelligent Agent Systems
+ * BUMBA CLI Integration Test for Intelligent Agent Systems
  * Tests the complete integration with the actual BUMBA framework
  */
 
 const path = require('path');
 
-console.log('🧪 Testing BUMBA Framework Integration...\n');
+console.log('🧪 Testing BUMBA CLI Integration...\n');
 
 // Try to load BUMBA framework
 let BumbaFramework;
@@ -23,7 +23,7 @@ try {
     }
   }
 } catch (error) {
-  console.error('🔴 Could not load BUMBA Framework:', error.message);
+  console.error('🔴 Could not load BUMBA CLI:', error.message);
   console.log('\nSearching for framework files...');
   const { execSync } = require('child_process');
   const files = execSync('find /Users/az/Code/bumba/src -name "*framework*.js" | head -10', { encoding: 'utf8' });
@@ -35,7 +35,7 @@ try {
 const { IntelligentAgentInitializer } = require('../src/core/initialization/intelligent-agent-initializer');
 
 async function testIntegration() {
-  console.log('1. Creating BUMBA Framework instance...');
+  console.log('1. Creating BUMBA CLI instance...');
   
   let bumba;
   try {
@@ -78,7 +78,7 @@ async function testIntegration() {
     };
   }
   
-  console.log('   🏁 BUMBA Framework instance created\n');
+  console.log('   🏁 BUMBA CLI instance created\n');
   
   console.log('2. Initializing Intelligent Agent Systems...');
   

@@ -1,4 +1,4 @@
-# BUMBA Framework Brand Guidelines
+# BUMBA CLI Brand Guidelines
 
 **Document Version: 2.0  
 **Created:** December 24, 2024  
@@ -157,7 +157,7 @@ The color and emoji system allows users to visually track:
 
 ### Example Output:
 ```javascript
-console.log('BUMBA Framework v2.0');                    // White
+console.log('BUMBA CLI 1.0');                    // White
 console.log(chalk.grey('Initializing...'));              // Grey
 console.log(chalk.yellow('🟡 ProductStrategist ready')); // Yellow
 console.log(chalk.green('🟢 BackendEngineer ready'));    // Green  

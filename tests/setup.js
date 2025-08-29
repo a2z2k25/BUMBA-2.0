@@ -1,5 +1,5 @@
 
-// Test setup for BUMBA Framework
+// Test setup for BUMBA CLI
 const { TextEncoder, TextDecoder } = require('util');
 
 global.TextEncoder = TextEncoder;

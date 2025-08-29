@@ -1,5 +1,5 @@
 /**
- * BUMBA Framework - Sprint Decomposition System
+ * BUMBA CLI - Sprint Decomposition System
  * Breaks down large tasks into 10-minute executable sprints to prevent context rot
  * @module src/core/planning/sprint-decomposition-system
  * @version 2.0.0

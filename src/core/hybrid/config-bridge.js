@@ -256,7 +256,7 @@ class ConfigBridge {
    */
   generateJSConfig(config) {
     return `/**
- * BUMBA Framework Configuration
+ * BUMBA CLI Configuration
  * Generated: ${new Date().toISOString()}
  * Version: ${config.version || '3.0.0'}
  */

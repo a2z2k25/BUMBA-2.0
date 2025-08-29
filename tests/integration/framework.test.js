@@ -1,5 +1,5 @@
 
-describe('BUMBA Framework Integration', () => {
+describe('BUMBA CLI Integration', () => {
   afterEach(() => {
     jest.clearAllMocks();
     jest.clearAllTimers();

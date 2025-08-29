@@ -1,8 +1,8 @@
-# BUMBA Framework Migration Guide: v1.0 to v2.0
+# BUMBA CLI Migration Guide: v1.0 to v2.0
 
 ## Overview
 
-This guide helps you migrate from BUMBA Framework v2.0 to v2.0. The major changes include:
+This guide helps you migrate from BUMBA CLI 1.0 to v2.0. The major changes include:
 
 - **TypeScript Removal**: Framework is now pure JavaScript
 - **Unified Routing**: Consolidated routing system with intelligent router as alias
@@ -307,4 +307,4 @@ For migration assistance:
 
 ---
 
-*This guide covers the major changes in BUMBA Framework v2.0. For detailed API documentation, see the API Reference.*
+*This guide covers the major changes in BUMBA CLI 1.0. For detailed API documentation, see the API Reference.*

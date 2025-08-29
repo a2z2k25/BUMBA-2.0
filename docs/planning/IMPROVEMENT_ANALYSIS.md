@@ -1,4 +1,4 @@
-# BUMBA Framework - Deep Improvement Analysis
+# BUMBA CLI - Deep Improvement Analysis
 
 ## What Actually Perplexes Me (The Real Issues)
 

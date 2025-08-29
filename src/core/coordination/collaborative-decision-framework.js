@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Collaborative Decision Framework
+ * BUMBA CLI 1.0 Collaborative Decision Framework
  * Parallel input gathering and synthesis for better decisions
  */
 

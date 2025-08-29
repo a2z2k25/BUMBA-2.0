@@ -200,7 +200,7 @@ function showMenu() {
       return {
         type: 'menu',
         content: menuContent,
-        message: 'BUMBA Framework Complete Command Reference (60+ commands)'
+        message: 'BUMBA CLI Complete Command Reference (60+ commands)'
       };
     }
     
@@ -257,7 +257,7 @@ function showMenu() {
         ]
       },
       totalCommands: '60+ comprehensive commands',
-      message: 'Complete BUMBA Framework Command Library - Use /bumba:help [command] for details'
+      message: 'Complete BUMBA CLI Command Library - Use /bumba:help [command] for details'
     };
   } catch (error) {
     logger.error('Error loading menu:', error);
@@ -276,7 +276,7 @@ function getStatus() {
   const routerStats = simpleRouter.getStats();
 
   return {
-    framework: 'BUMBA 2.0.0',
+    framework: 'BUMBA CLI 1.0',
     status: 'operational',
     routing: {
       totalRoutes: routerStats.totalRoutes,

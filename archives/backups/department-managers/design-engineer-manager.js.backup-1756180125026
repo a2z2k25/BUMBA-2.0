@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Design-Engineer Department Manager
+ * BUMBA CLI 1.0 Design-Engineer Department Manager
  * Enhanced with model assignment capabilities
  * Manager uses Claude Max, specialists use free tier models
  */

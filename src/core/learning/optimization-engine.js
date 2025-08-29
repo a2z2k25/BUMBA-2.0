@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Learning and Optimization Engine
+ * BUMBA CLI 1.0 Learning and Optimization Engine
  * Continuous learning system for framework improvement and adaptation
  */
 

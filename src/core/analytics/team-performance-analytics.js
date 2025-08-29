@@ -1,7 +1,7 @@
 const { logger } = require('../logging/bumba-logger');
 
 /**
- * BUMBA 2.0 Team Performance Analytics Engine
+ * BUMBA CLI 1.0 Team Performance Analytics Engine
  * Comprehensive performance tracking and optimization for agent teams
  */
 

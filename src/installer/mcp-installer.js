@@ -1,5 +1,5 @@
 /**
- * BUMBA Framework - MCP Server Installation Module
+ * BUMBA CLI - MCP Server Installation Module
  * Manages MCP server discovery and documentation
  * @module src/installer/mcp-installer
  * @version 2.0

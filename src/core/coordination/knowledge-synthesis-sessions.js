@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Knowledge Synthesis Sessions
+ * BUMBA CLI 1.0 Knowledge Synthesis Sessions
  * Collective intelligence building through shared insights
  */
 

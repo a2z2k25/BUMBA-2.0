@@ -1,5 +1,5 @@
 /**
- * BUMBA Framework - Comprehensive Integration Tests
+ * BUMBA CLI - Comprehensive Integration Tests
  * Tests core flows end-to-end without external API dependencies
  */
 
@@ -9,7 +9,7 @@ const { UnifiedIntegrationManager } = require('../../src/core/integrations/unifi
 const { CommandImplementations } = require('../../src/core/command-implementations');
 const UnifiedSpecialistBase = require('../../src/core/specialists/unified-specialist-base');
 
-describe('BUMBA Framework Core Flows', () => {
+describe('BUMBA CLI Core Flows', () => {
   let framework;
   let errorManager;
   let integrationManager;
@@ -377,7 +377,7 @@ describe('BUMBA Framework Core Flows', () => {
   });
 });
 
-describe('BUMBA Framework Performance Tests', () => {
+describe('BUMBA CLI Performance Tests', () => {
   let framework;
 
   beforeAll(async () => {
@@ -425,7 +425,7 @@ describe('BUMBA Framework Performance Tests', () => {
   });
 });
 
-describe('BUMBA Framework Edge Cases', () => {
+describe('BUMBA CLI Edge Cases', () => {
   test('should handle null inputs gracefully', async () => {
     const implementations = new CommandImplementations();
     

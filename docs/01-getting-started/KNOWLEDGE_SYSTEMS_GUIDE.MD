@@ -499,4 +499,4 @@ To contribute to the Knowledge Systems:
 
 ## License
 
-Part of the BUMBA Framework. See main LICENSE file.
+Part of the BUMBA CLI. See main LICENSE file.

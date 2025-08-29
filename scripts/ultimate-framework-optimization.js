@@ -121,7 +121,7 @@ const ULTIMATE_STRUCTURE = {
   // Enhanced .gitignore patterns
   gitignoreEnhancements: [
     '',
-    '# BUMBA Framework - Generated files',
+    '# BUMBA CLI - Generated files',
     'bumba-logs/',
     'dist/',
     'build/',
@@ -234,7 +234,7 @@ function enhanceGitignore() {
 }
 
 function createSlimReadme() {
-  const slimReadme = `# BUMBA Framework
+  const slimReadme = `# BUMBA CLI
 
 Production-ready AI development platform with hierarchical multi-agent intelligence.
 
@@ -280,7 +280,7 @@ bumba:implement-agents "e-commerce platform"
 
 ## License
 
-MIT © BUMBA Framework Contributors
+MIT © BUMBA CLI Contributors
 
 ---
 

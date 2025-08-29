@@ -1,10 +1,10 @@
 #!/bin/bash
 
-# BUMBA Framework - Safe Organization of Non-Operational Files
+# BUMBA CLI - Safe Organization of Non-Operational Files
 # This script moves documentation and reports to organized folders
 # WITHOUT touching any operational files or breaking file paths
 
-echo "🧹 BUMBA Framework - Organizing Non-Operational Files"
+echo "🧹 BUMBA CLI - Organizing Non-Operational Files"
 echo "======================================================="
 echo "This will organize reports and documentation WITHOUT breaking anything"
 echo ""

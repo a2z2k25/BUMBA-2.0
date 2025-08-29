@@ -1,5 +1,5 @@
 /**
- * BUMBA 2.0 Specialist Pairing System
+ * BUMBA CLI 1.0 Specialist Pairing System
  * Strategic pairing of specialists for enhanced collaboration
  */
 

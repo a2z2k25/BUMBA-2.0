@@ -19,7 +19,7 @@ The BUMBA Notion Project Dashboard feature enables the Product Strategist to cre
 ## Installation & Setup
 
 ### Prerequisites
-1. BUMBA Framework installed and configured
+1. BUMBA CLI installed and configured
 2. Notion MCP Server configured (optional - will work without it)
 3. Notion workspace access (for actual Notion integration)
 

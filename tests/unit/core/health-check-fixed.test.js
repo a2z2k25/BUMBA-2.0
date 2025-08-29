@@ -264,7 +264,7 @@ describe('HealthCheckSystem', () => {
       const report = await healthCheck.createHealthReport();
       
       expect(report.report).toBeDefined();
-      expect(report.report.title).toBe('BUMBA Framework Health Report');
+      expect(report.report.title).toBe('BUMBA CLI Health Report');
       expect(report.report.generated).toBeDefined();
       expect(report.report.system).toBeDefined();
       expect(report.report.health).toBeDefined();

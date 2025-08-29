@@ -1,4 +1,4 @@
-# BUMBA Framework Operational Guide
+# BUMBA CLI Operational Guide
 
 ## Quick Start
 
@@ -150,7 +150,7 @@ node scripts/detect-silent-failures.js
 ## Architecture Overview
 
 ```
-BUMBA Framework
+BUMBA CLI
 ├── Core Systems
 │   ├── Configuration Manager (EventEmitter-based)
 │   ├── Unified Error Manager (Singleton with recovery)

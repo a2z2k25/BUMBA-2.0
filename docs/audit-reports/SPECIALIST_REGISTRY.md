@@ -1,7 +1,7 @@
 # BUMBA Specialist Registry
 
 ## Overview
-Complete registry of all BUMBA Framework specialists organized by department.
+Complete registry of all BUMBA CLI specialists organized by department.
 
 ## Departments
 

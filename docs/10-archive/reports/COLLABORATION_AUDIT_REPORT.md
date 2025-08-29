@@ -1,4 +1,4 @@
-# BUMBA Framework Collaboration Audit Report
+# BUMBA CLI Collaboration Audit Report
 ## Preventing File Conflicts & Maximizing Parallel Efficiency
 
 ---
