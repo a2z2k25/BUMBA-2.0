@@ -13,7 +13,10 @@
     "./widgets": "./src/core/widgets/index.js"
   },
   "scripts": {
-    "demo": "node examples/demo.js",
+    "demo": "node demo-agents.js",
+    "demo:multi": "node demo-agents.js",
+    "demo:visual": "node demo/multi-agent-simulation.js",
+    "demo:realtime": "node demo/realtime-agent-demo.js",
     "start": "node src/index.js",
     "test": "jest --config config/jest.config.js",
     "test:coverage": "jest --config config/jest.config.js --coverage",
