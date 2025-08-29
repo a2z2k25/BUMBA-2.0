@@ -5,7 +5,7 @@
  * Allows running /bumba: commands from terminal
  */
 
-const { bumbaCommand } = require('./src/core/bumba-claude-integration');
+const { bumbaCommand } = require('../src/core/bumba-claude-integration');
 const chalk = require('chalk');
 
 async function main() {

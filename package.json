@@ -5,8 +5,8 @@
   "main": "src/index.js",
   "bin": {
     "bumba": "./bin/bumba",
-    "bumba-mode": "./bumba-mode",
-    "bumba-slash": "./bumba-slash"
+    "bumba-mode": "./bin/bumba-mode",
+    "bumba-slash": "./bin/bumba-slash"
   },
   "exports": {
     ".": "./src/index.js",

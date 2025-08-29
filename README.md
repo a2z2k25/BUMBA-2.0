@@ -11,16 +11,17 @@
 
 **Transform Claude into an intelligent development team that builds production-ready features in minutes.**
 
-[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/a2z2k25/bumba-claude)
+[![Version](https://img.shields.io/badge/version-1.3.0-green.svg)](https://github.com/a2z2k25/bumba-claude)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org)
 
 🏁 **The only AI framework that gives you:**
-- **Parallel AI agents** working simultaneously without conflicts
-- **58 specialized commands** for every development need  
-- **Enterprise-grade security** with built-in validation and hooks
-- **Visual design integration** with Figma Dev Mode support
-- **True zero-configuration** - works out of the box
+- **Intelligent Command System** - 60+ commands with context-aware routing and specialist activation
+- **Multi-Agent Collaboration** - Departments and specialists work together seamlessly
+- **6 Execution Modes** - Full, Lite, Turbo, Eco, DICE, and Executive modes for every scenario
+- **Advanced Performance** - Caching, load balancing, and resource optimization built-in
+- **Command Chaining** - Complex workflows with &&, ||, |, and -> operators
+- **Enterprise-grade security** with comprehensive error handling and recovery
 
 *Used by teams to reduce feature development from days to minutes while maintaining production quality.*
 
@@ -71,6 +72,38 @@ Watch as BUMBA automatically orchestrates your development team:
 5. **🏁 Integration** - Everything merged, deployed, and monitored
 
 All happening **simultaneously**, not sequentially. Each agent works in parallel without stepping on each other.
+
+## 🆕 Version 1.3.0 - Intelligent Command System
+
+### Intelligent Routing & Execution
+Every command is now powered by an intelligent routing system that:
+- **Analyzes intent** and routes to the appropriate department (Product, Design, Backend)
+- **Selects optimal specialists** based on command requirements and context
+- **Generates context-aware output** with intelligent content generation
+- **Coordinates multi-agent collaboration** for cross-functional requirements
+
+### Command Chaining
+Execute complex workflows with powerful operators:
+```bash
+# Sequential execution (stops on failure)
+/bumba:analyze && /bumba:optimize && /bumba:implement
+
+# Conditional execution (runs next on failure)
+/bumba:test || /bumba:debug
+
+# Piped execution (passes output)
+/bumba:extract | /bumba:transform | /bumba:visualize
+
+# Transform execution
+/bumba:data -> /bumba:report
+```
+
+### Performance Optimization
+Built-in performance systems ensure lightning-fast execution:
+- **Intelligent Caching** - Smart caching with TTL and LRU eviction
+- **Load Balancing** - Distributes work across specialist pools
+- **Resource Optimization** - Memory management and garbage collection
+- **Query Optimization** - Indexed data access and batch processing
 
 ## 🎭 Agent Team Modalities
 
