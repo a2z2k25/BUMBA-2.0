@@ -17,7 +17,7 @@
     "test:coverage": "jest --config config/jest.config.js --coverage",
     "test:features": "node tests/integration/whispers-chaining.test.js",
     "lint": "eslint src/ --config config/eslint.config.mjs",
-    "postinstall": "node scripts/post-install.js"
+    "postinstall": "node scripts/post-install.js || true"
   },
   "keywords": [
     "claude",

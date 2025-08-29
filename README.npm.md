@@ -1,8 +1,8 @@
 # BUMBA CLI
 
-[![NPM Version](https://img.shields.io/npm/v/bumba-framework.svg)](https://www.npmjs.com/package/bumba-framework)
+[![NPM Version](https://img.shields.io/npm/v/bumba-cli.svg)](https://www.npmjs.com/package/bumba-cli)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/node/v/bumba-framework.svg)](https://nodejs.org)
+[![Node.js Version](https://img.shields.io/node/v/bumba-cli.svg)](https://nodejs.org)
 [![Security Score](https://img.shields.io/badge/Security%20Score-85%2F100-green)](https://github.com/a2z2k25/bumba-claude)
 
 Enterprise-grade AI orchestration framework with intelligent agent coordination, security validation, and production-ready workflows.
@@ -39,13 +39,13 @@ Enterprise-grade AI orchestration framework with intelligent agent coordination,
 ## Installation
 
 ```bash
-npm install bumba-framework
+npm install bumba-cli
 ```
 
 ## Quick Start
 
 ```javascript
-const { BumbaFramework } = require('bumba-framework');
+const { BumbaFramework } = require('bumba-cli');
 
 // Initialize with zero config
 const bumba = new BumbaFramework();
@@ -101,7 +101,7 @@ const result = await backendManager.executeTask({
 ### Security Validation
 
 ```javascript
-const { InputValidator } = require('bumba-framework/security');
+const { InputValidator } = require('bumba-cli/security');
 
 const validator = new InputValidator();
 
@@ -135,7 +135,7 @@ bumba.on('performance:warning', (metrics) => {
 ## Architecture
 
 ```
-bumba-framework/
+bumba-cli/
 ├── src/
 │   ├── core/           # Core framework components
 │   │   ├── auth/       # Authentication & authorization

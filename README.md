@@ -11,7 +11,7 @@
 
 **Transform Claude into an intelligent development team that builds production-ready features in minutes.**
 
-[![Version](https://img.shields.io/badge/version-2.0-green.svg)](https://github.com/bumba-ai/bumba)
+[![Version](https://img.shields.io/badge/version-1.0.0-green.svg)](https://github.com/a2z2k25/bumba-claude)
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org)
 
@@ -28,11 +28,11 @@
 
 ```bash
 # Install globally
-npm install -g bumba-framework
+npm install -g bumba-cli
 
 # Or clone for development
-git clone https://github.com/bumba-ai/bumba.git
-cd bumba
+git clone https://github.com/a2z2k25/bumba-claude.git
+cd bumba-claude
 npm install
 npm start
 ```
@@ -409,9 +409,9 @@ Quality Score: 98/100
 
 ## 🤝 Community & Support
 
-- **📚 Documentation**: [Complete Guide](https://bumba-ai.com/docs)
+- **📚 Documentation**: [Complete Guide](https://github.com/a2z2k25/bumba-claude/tree/main/docs)
 - **💬 Discord**: [Join Developer Community](https://discord.gg/bumba)
-- **🐛 Issues**: [Report Bugs & Request Features](https://github.com/bumba-ai/bumba/issues)
+- **🐛 Issues**: [Report Bugs & Request Features](https://github.com/a2z2k25/bumba-claude/issues)
 - **🤝 Contributing**: [Development Guidelines](docs/05-development/CONTRIBUTING.MD)
 - **📧 Enterprise**: [Contact Sales](mailto:enterprise@bumba-ai.com)
 
@@ -427,7 +427,7 @@ Built with consciousness-driven development principles, emphasizing quality, eff
 
 <p align="center">
   <b>🏁 Ready to transform your development workflow?</b><br><br>
-  <code>npm install -g bumba-framework</code>
+  <code>npm install -g bumba-cli</code>
 </p>
 
 <p align="center">

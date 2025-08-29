@@ -11,12 +11,21 @@ const { program } = require('commander');
 const path = require('path');
 const fs = require('fs');
 
-// Import hybrid mode components
-const ModeManager = require('../src/core/hybrid/mode-manager');
-const ConfigBridge = require('../src/core/hybrid/config-bridge');
+// Import hybrid mode components with proper path resolution
+let ModeManager, ConfigBridge, packageJson;
 
-// Version from package.json
-const packageJson = require('../package.json');
+try {
+  // Try to load from relative paths (development mode)
+  ModeManager = require('../src/core/hybrid/mode-manager');
+  ConfigBridge = require('../src/core/hybrid/config-bridge');
+  packageJson = require('../package.json');
+} catch (e) {
+  // Fallback for global installation
+  const moduleRoot = path.join(__dirname, '..');
+  ModeManager = require(path.join(moduleRoot, 'src/core/hybrid/mode-manager'));
+  ConfigBridge = require(path.join(moduleRoot, 'src/core/hybrid/config-bridge'));
+  packageJson = require(path.join(moduleRoot, 'package.json'));
+}
 
 // BUMBA brand colors
 const yellow = chalk.hex('#FFD700');
@@ -27,8 +36,15 @@ const orange = chalk.hex('#FFA500');
 // Check if first run (show installer experience)
 // Show installer for: bumba (no args) or bumba welcome
 if (process.argv.length === 2) {
-  // Show installer then menu
-  require('../scripts/post-install-display.js');
+  // Show installer then menu - with fallback if file not found
+  try {
+    const displayPath = path.join(__dirname, '..', 'scripts', 'post-install-display.js');
+    if (fs.existsSync(displayPath)) {
+      require(displayPath);
+    }
+  } catch (e) {
+    // If display script fails, continue to menu
+  }
   // After installer, show the menu
   console.log('🏁 BUMBA COMMAND MENU 🏁');
   console.log(chalk.gray('━'.repeat(60)));
@@ -53,7 +69,14 @@ if (process.argv.length === 2) {
   console.log('Example: bumba implement "user authentication system"');
   process.exit(0);
 } else if (process.argv[2] === 'welcome') {
-  require('../scripts/post-install.js');
+  try {
+    const installPath = path.join(__dirname, '..', 'scripts', 'post-install.js');
+    if (fs.existsSync(installPath)) {
+      require(installPath);
+    }
+  } catch (e) {
+    console.log('Welcome to BUMBA CLI!');
+  }
   process.exit(0);
 }
 
@@ -418,8 +441,12 @@ program
     const configPath = path.join(process.cwd(), 'bumba.config.js');
     if (fs.existsSync(configPath)) {
       console.log('✅ BUMBA initialized in this project');
-      const config = require(configPath);
-      console.log('Project: ' + config.project);
+      try {
+        const config = require(configPath);
+        console.log('Project: ' + config.project);
+      } catch (e) {
+        console.log('Project: ' + path.basename(process.cwd()));
+      }
     } else {
       console.log('⚠️  BUMBA not initialized in this project');
       console.log('Run: bumba init');
