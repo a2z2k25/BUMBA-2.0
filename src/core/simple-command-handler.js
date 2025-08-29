@@ -187,15 +187,86 @@ function showHelp() {
  * Show interactive menu
  */
 function showMenu() {
-  return {
-    type: 'menu',
-    categories: {
-      'Development': ['implement', 'analyze', 'design', 'fix', 'optimize', 'test', 'document'],
-      'System': ['help', 'status', 'memory'],
-      'Utility': ['secure', 'validate']
-    },
-    message: 'Select a command category to explore'
-  };
+  try {
+    // Read the full menu content from the menu.md file
+    const fs = require('fs');
+    const path = require('path');
+    const menuPath = path.join(__dirname, '..', 'templates', 'commands', 'menu.md');
+    
+    if (fs.existsSync(menuPath)) {
+      const menuContent = fs.readFileSync(menuPath, 'utf-8');
+      
+      // Return the full menu content
+      return {
+        type: 'menu',
+        content: menuContent,
+        message: 'BUMBA Framework Complete Command Reference (60+ commands)'
+      };
+    }
+    
+    // Fallback to structured menu if file not found
+    return {
+      type: 'menu',
+      categories: {
+        'Core Implementation': [
+          'implement', 'implement-strategy', 'implement-design', 
+          'implement-technical', 'implement-agents'
+        ],
+        'Product Strategy': [
+          'prd', 'requirements', 'roadmap', 'research-market',
+          'analyze-business', 'docs-business', 'improve-strategy',
+          'executive', 'leadership'
+        ],
+        'Design & UX': [
+          'design', 'figma', 'ui', 'visual', 'research-design',
+          'analyze-ux', 'docs-design', 'improve-design', 'accessibility'
+        ],
+        'Technical/Backend': [
+          'api', 'secure', 'scan', 'analyze', 'research-technical',
+          'docs-technical', 'improve-performance', 'database', 'devops', 'publish'
+        ],
+        'Multi-Agent': [
+          'team', 'collaborate', 'chain', 'workflow', 'checkpoint'
+        ],
+        'Consciousness': [
+          'conscious analyze', 'conscious reason', 'conscious wisdom',
+          'conscious purpose', 'conscious implement'
+        ],
+        'Health & Performance': [
+          'status', 'health', 'performance', 'resources',
+          'optimize', 'mode', 'benchmark', 'monitor'
+        ],
+        'Lite Mode': [
+          'lite', 'lite-analyze', 'lite-implement', 
+          'lite figma', 'lite executive', 'lite metrics'
+        ],
+        'Intelligence': [
+          'docs', 'research', 'snippets', 'analyze'
+        ],
+        'Quality & Security': [
+          'test', 'validate', 'audit', 'quality'
+        ],
+        'Git': [
+          'commit', 'review', 'branch'
+        ],
+        'System': [
+          'menu', 'agents', 'help', 'settings', 'version'
+        ],
+        'Ceremonies': [
+          'celebrate', 'ceremony'
+        ]
+      },
+      totalCommands: '60+ comprehensive commands',
+      message: 'Complete BUMBA Framework Command Library - Use /bumba:help [command] for details'
+    };
+  } catch (error) {
+    logger.error('Error loading menu:', error);
+    return {
+      type: 'menu',
+      error: 'Unable to load full menu. Use /bumba:help for command assistance.',
+      fallback: true
+    };
+  }
 }
 
 /**

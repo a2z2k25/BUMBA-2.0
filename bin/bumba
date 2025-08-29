@@ -72,32 +72,138 @@ program
   .version(packageJson.version)
   .description('BUMBA - AI Development Framework');
 
-// Menu command
+// Menu command - Show complete command library
 program
   .command('menu')
-  .description('Show all available BUMBA commands')
+  .description('Show complete BUMBA command library (60+ commands)')
   .action(() => {
-    console.log('🏁 BUMBA COMMAND MENU 🏁');
-    console.log(chalk.gray('━'.repeat(60)));
     console.log();
-    console.log('CORE COMMANDS:');
-    console.log('  bumba menu              - Show this menu');
-    console.log('  bumba implement <task>  - Build features with AI agents');
-    console.log('  bumba analyze <type>    - Analyze codebase');
-    console.log('  bumba help              - Get help');
+    console.log('🏁 BUMBA FRAMEWORK v3.0.4 - COMPLETE COMMAND LIBRARY (60+ Commands) 🏁');
+    console.log(chalk.gray('━'.repeat(70)));
     console.log();
-    console.log('DEPARTMENT COMMANDS:');
-    console.log('  ' + yellow('🟡') + ' bumba strategy <task>  - Product strategy planning');
-    console.log('  ' + green('🟢') + ' bumba backend <task>   - Backend development');
-    console.log('  ' + red('🔴') + ' bumba frontend <task>  - Frontend & UI development');
-    console.log('  ' + orange('🟠') + ' bumba test <task>      - Testing & quality assurance');
+    
+    console.log(chalk.green('🟢 CORE IMPLEMENTATION COMMANDS:'));
+    console.log('  /bumba:implement [feature]         - Auto-routing to best agent');
+    console.log('  /bumba:implement-strategy [feat]   - Product-focused implementation');
+    console.log('  /bumba:implement-design [feat]     - Design-focused implementation');
+    console.log('  /bumba:implement-technical [feat]  - Backend-focused implementation');
+    console.log('  /bumba:implement-agents [feat]     - Full team collaboration');
     console.log();
-    console.log('QUICK START:');
-    console.log('  bumba init              - Initialize BUMBA in current project');
-    console.log('  bumba status            - Check BUMBA status');
+    
+    console.log(chalk.yellow('🟡 PRODUCT STRATEGY (Product-Strategist Manager):'));
+    console.log('  /bumba:prd [action]                - Create comprehensive PRDs');
+    console.log('  /bumba:requirements [scope]        - Discover requirements');
+    console.log('  /bumba:roadmap [timeline]          - Strategic planning');
+    console.log('  /bumba:research-market [topic]     - Market research');
+    console.log('  /bumba:analyze-business [target]   - Business analysis');
+    console.log('  /bumba:docs-business [query]       - Business documentation');
+    console.log('  /bumba:improve-strategy [area]     - Strategy optimization');
+    console.log('  /bumba:executive [initiative]      - CEO-level coordination');
+    console.log('  /bumba:leadership [scope]          - Strategic leadership');
     console.log();
-    console.log(chalk.gray('━'.repeat(60)));
-    console.log('Example: bumba implement "user authentication system"');
+    
+    console.log(chalk.magenta('🎨 DESIGN & UX (Design-Engineer Manager):'));
+    console.log('  /bumba:design [workflow]           - Design automation');
+    console.log('  /bumba:figma [action]              - Figma Dev Mode integration');
+    console.log('  /bumba:ui [component]              - UI component generation');
+    console.log('  /bumba:visual [task]               - Visual asset optimization');
+    console.log('  /bumba:research-design [topic]     - Design pattern research');
+    console.log('  /bumba:analyze-ux [target]         - UX/accessibility analysis');
+    console.log('  /bumba:docs-design [query]         - Design documentation');
+    console.log('  /bumba:improve-design [area]       - UX/UI optimization');
+    console.log('  /bumba:accessibility [scope]       - WCAG compliance validation');
+    console.log();
+    
+    console.log(chalk.blue('🔧 TECHNICAL/BACKEND (Backend-Engineer Manager):'));
+    console.log('  /bumba:api [endpoint]              - API development');
+    console.log('  /bumba:secure [scope]              - Security validation');
+    console.log('  /bumba:scan [target]               - Security scanning');
+    console.log('  /bumba:analyze [target]            - Code analysis');
+    console.log('  /bumba:research-technical [topic]  - Technical research');
+    console.log('  /bumba:docs-technical [query]      - Technical documentation');
+    console.log('  /bumba:improve-performance [area]  - Performance optimization');
+    console.log('  /bumba:database [action]           - Database management');
+    console.log('  /bumba:devops [scope]              - DevOps & infrastructure');
+    console.log('  /bumba:publish [package]           - Package publishing');
+    console.log();
+    
+    console.log(chalk.cyan('🤝 MULTI-AGENT COLLABORATION:'));
+    console.log('  /bumba:team [action]               - Team coordination');
+    console.log('  /bumba:collaborate [action]        - Multi-agent work');
+    console.log('  /bumba:chain [commands]            - Command automation');
+    console.log('  /bumba:workflow [type]             - Workflow automation');
+    console.log('  /bumba:checkpoint [milestone]      - Milestone tracking');
+    console.log();
+    
+    console.log(chalk.hex('#9B59B6')('✨ CONSCIOUSNESS-DRIVEN DEVELOPMENT:'));
+    console.log('  /bumba:conscious analyze [target]  - Four Pillars analysis');
+    console.log('  /bumba:conscious reason [problem]  - Wisdom reasoning');
+    console.log('  /bumba:conscious wisdom [context]  - Contextual guidance');
+    console.log('  /bumba:conscious purpose [project] - Purpose alignment');
+    console.log('  /bumba:conscious implement [feat]  - Conscious implementation');
+    console.log();
+    
+    console.log(chalk.red('📊 HEALTH & PERFORMANCE:'));
+    console.log('  /bumba:status                      - System diagnostics');
+    console.log('  /bumba:health                      - Health check w/ auto-repair');
+    console.log('  /bumba:performance                 - Performance metrics');
+    console.log('  /bumba:resources                   - Resource analytics');
+    console.log('  /bumba:optimize                    - System optimization');
+    console.log('  /bumba:mode [switch]               - Switch full/lite mode');
+    console.log('  /bumba:benchmark                   - Performance benchmarking');
+    console.log('  /bumba:monitor                     - Continuous monitoring');
+    console.log();
+    
+    console.log(chalk.hex('#E67E22')('⚡ LITE MODE (Ultra-minimal):'));
+    console.log('  /bumba:lite [prompt]               - Auto-detect & develop');
+    console.log('  /bumba:lite-analyze [target]       - Lightweight analysis');
+    console.log('  /bumba:lite-implement [feature]    - Quick implementation');
+    console.log('  /bumba:lite figma [url]            - Figma to code');
+    console.log('  /bumba:lite executive              - CEO coordination');
+    console.log('  /bumba:lite metrics                - Performance dashboard');
+    console.log();
+    
+    console.log(chalk.hex('#3498DB')('🔍 INTELLIGENCE & RESEARCH:'));
+    console.log('  /bumba:docs [query]                - Smart documentation (60-95% fewer tokens)');
+    console.log('  /bumba:research [topic]            - AI-optimized research');
+    console.log('  /bumba:snippets [category]         - Code snippet management');
+    console.log();
+    
+    console.log(chalk.hex('#E74C3C')('🔐 QUALITY & SECURITY:'));
+    console.log('  /bumba:test [scope]                - Intelligent testing');
+    console.log('  /bumba:validate [target]           - Comprehensive validation');
+    console.log('  /bumba:audit [system]              - Security audit');
+    console.log('  /bumba:quality [scope]             - Quality assessment');
+    console.log();
+    
+    console.log(chalk.hex('#2ECC71')('🌿 GIT & COLLABORATION:'));
+    console.log('  /bumba:commit [message]            - Intelligent commits');
+    console.log('  /bumba:review [scope]              - Code review');
+    console.log('  /bumba:branch [action]             - Branch management');
+    console.log();
+    
+    console.log(chalk.gray('⚙️  SYSTEM & CONFIGURATION:'));
+    console.log('  /bumba:menu                        - This complete reference');
+    console.log('  /bumba:agents                      - Discover all agents');
+    console.log('  /bumba:help [command]              - Command help');
+    console.log('  /bumba:settings                    - Framework configuration');
+    console.log('  /bumba:version                     - Version information');
+    console.log();
+    
+    console.log(chalk.hex('#F39C12')('🎉 CEREMONIES:'));
+    console.log('  /bumba:celebrate [milestone]       - Milestone celebration with audio');
+    console.log('  /bumba:ceremony [type]             - Achievement ceremonies');
+    console.log();
+    
+    console.log(chalk.gray('━'.repeat(70)));
+    console.log(chalk.green.bold('Total: 60+ comprehensive commands across all territories'));
+    console.log();
+    console.log(chalk.yellow('💡 Tips:'));
+    console.log(chalk.yellow('  • Use /bumba:help [command] for detailed usage and examples'));
+    console.log(chalk.yellow('  • Commands work best within Claude interface'));
+    console.log(chalk.yellow('  • Use /bumba:implement for auto-routing to best agent'));
+    console.log(chalk.yellow('  • Try /bumba:agents to discover all available specialists'));
+    console.log();
   });
 
 // Implement command - Hybrid aware
