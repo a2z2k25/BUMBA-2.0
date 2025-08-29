@@ -40,17 +40,16 @@ setTimeout(() => {
   // Line 6 - Bottom of letters (red)
   console.log(red('╚═════╝  ╚═════╝ ╚═╝     ╚═╝╚═════╝ ╚═╝  ╚═╝'));
   console.log();
+  console.log();
   console.log(gray('Transform Claude into an intelligent development team'));
   console.log(gray('that builds production-ready features in minutes.'));
   console.log();
 
-  // Version Box
-  console.log('┌──────────────────────────────────────────────────┐');
-  console.log('│      🏁 BUMBA FRAMEWORK v3.0.4 🏁              │');
-  console.log('│                                                  │');
-  console.log('│        Features in minutes, not days             │');
-  console.log('│   ' + gray('100+ AI specialists working in parallel') + '      │');
-  console.log('└──────────────────────────────────────────────────┘');
+  // Display boxed welcome message above title
+  console.log();
+  console.log('┌────────────────────────────────────────────────────────┐');
+  console.log('│ 🏁 Welcome to BUMBA - Features in Minutes, Not Days 🏁 │');
+  console.log('└────────────────────────────────────────────────────────┘');
   console.log();
 
   // Feature Showcase - Updated with more impactful metrics
