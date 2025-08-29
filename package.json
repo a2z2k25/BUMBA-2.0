@@ -1,6 +1,6 @@
 {
   "name": "bumba-cli",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "BUMBA CLI 1.0 - Professional AI-enhanced command-line development framework with 100+ specialist agents",
   "main": "src/index.js",
   "bin": {

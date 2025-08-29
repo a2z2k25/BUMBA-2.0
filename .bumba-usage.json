@@ -1,0 +1,36 @@
+{
+  "date": "Fri Aug 29 2025",
+  "usage": {
+    "gemini": {
+      "tokens": 0,
+      "requests": 0,
+      "lastReset": "2025-08-29T07:58:07.356Z",
+      "exhausted": false
+    },
+    "deepseek": {
+      "tokens": 0,
+      "requests": 0,
+      "lastReset": "2025-08-29T07:58:07.356Z",
+      "exhausted": false
+    },
+    "qwen": {
+      "tokens": 0,
+      "requests": 0,
+      "lastReset": "2025-08-29T07:58:07.356Z",
+      "exhausted": false
+    },
+    "claude": {
+      "tokens": 0,
+      "requests": 0,
+      "lastReset": "2025-08-29T07:58:07.356Z",
+      "exhausted": false
+    },
+    "openai": {
+      "tokens": 0,
+      "requests": 0,
+      "lastReset": "2025-08-29T07:58:07.356Z",
+      "exhausted": false
+    }
+  },
+  "lastUpdated": "2025-08-29T07:58:07.356Z"
+}

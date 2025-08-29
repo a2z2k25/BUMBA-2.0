@@ -1,0 +1,70 @@
+#!/usr/bin/env node
+
+/**
+ * BUMBA Slash Command Runner
+ * Allows running /bumba: commands from terminal
+ */
+
+const { bumbaCommand } = require('./src/core/bumba-claude-integration');
+const chalk = require('chalk');
+
+async function main() {
+  // Get command from arguments
+  const args = process.argv.slice(2);
+  
+  if (args.length === 0) {
+    console.log(chalk.yellow('Usage: bumba-slash "/bumba:command args"'));
+    console.log(chalk.yellow('Example: bumba-slash "/bumba:implement user auth"'));
+    process.exit(1);
+  }
+  
+  // Join all arguments as the command
+  const command = args.join(' ');
+  
+  // Ensure it starts with /bumba:
+  const fullCommand = command.startsWith('/bumba:') ? command : `/bumba:${command}`;
+  
+  console.log(chalk.blue(`\n🏁 Executing: ${fullCommand}\n`));
+  
+  try {
+    const result = await bumbaCommand(fullCommand);
+    
+    // Display result
+    if (result.display) {
+      console.log(result.display);
+    } else {
+      // Format output
+      if (result.success) {
+        console.log(chalk.green('✅ Success!\n'));
+      } else {
+        console.log(chalk.red('❌ Failed\n'));
+      }
+      
+      if (result.message) {
+        console.log(result.message + '\n');
+      }
+      
+      if (result.files && result.files.length > 0) {
+        console.log(chalk.cyan('📁 Files created:'));
+        result.files.forEach(file => console.log(`  • ${file}`));
+        console.log();
+      }
+      
+      if (result.error) {
+        console.log(chalk.red(`Error: ${result.error}\n`));
+      }
+      
+      if (result.nextSteps && result.nextSteps.length > 0) {
+        console.log(chalk.yellow('📋 Next steps:'));
+        result.nextSteps.forEach((step, i) => console.log(`  ${i+1}. ${step}`));
+      }
+    }
+    
+    process.exit(result.success === false ? 1 : 0);
+  } catch (error) {
+    console.error(chalk.red('Error:'), error.message);
+    process.exit(1);
+  }
+}
+
+main();
