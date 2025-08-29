@@ -1,0 +1,206 @@
+#!/usr/bin/env node
+
+/**
+ * BUMBA Mode Manager CLI
+ * Switch between different team modes
+ */
+
+const chalk = require('chalk');
+const fs = require('fs');
+const path = require('path');
+
+// Available modes with their configurations
+const MODES = {
+  full: {
+    name: 'Full Mode',
+    emoji: '🟢',
+    description: 'All 23+ specialists active for comprehensive development',
+    agents: 23,
+    memory: 'High',
+    speed: 'Standard',
+    commands: [
+      'bumba implement-agents "complex feature"',
+      'bumba orchestrate "full system"',
+      'bumba team coordinate'
+    ]
+  },
+  lite: {
+    name: 'Lite Mode',
+    emoji: '⚡',
+    description: 'Only 3 core agents for fast execution',
+    agents: 3,
+    memory: 'Low (< 50MB)',
+    speed: 'Fast (< 100ms)',
+    commands: [
+      'bumba-slash "lite implement feature"',
+      'bumba-slash "lite-analyze"',
+      'bumba-slash "lite metrics"'
+    ]
+  },
+  turbo: {
+    name: 'Turbo Mode',
+    emoji: '🚀',
+    description: 'Parallel execution with all agents',
+    agents: 23,
+    memory: 'High',
+    speed: 'Blazing (3-5x faster)',
+    commands: [
+      'bumba implement --parallel',
+      'bumba chain --turbo "multiple tasks"',
+      'bumba team --concurrent'
+    ]
+  },
+  eco: {
+    name: 'Eco Mode',
+    emoji: '🌱',
+    description: 'Resource-optimized for cloud/edge',
+    agents: 'Dynamic',
+    memory: 'Optimized',
+    speed: 'Adaptive',
+    commands: [
+      'bumba implement --eco',
+      'bumba analyze --resource-limit',
+      'bumba team --throttled'
+    ]
+  },
+  dice: {
+    name: 'DICE Mode',
+    emoji: '🎲',
+    description: 'Random agent combinations for creative solutions',
+    agents: 'Random (3-10)',
+    memory: 'Variable',
+    speed: 'Unpredictable',
+    commands: [
+      'bumba implement --dice',
+      'bumba team --random',
+      'bumba creative "brainstorm"'
+    ]
+  },
+  executive: {
+    name: 'Executive Mode',
+    emoji: '👔',
+    description: 'CEO-level strategic coordination',
+    agents: 'Managers only',
+    memory: 'Medium',
+    speed: 'Strategic',
+    commands: [
+      'bumba executive "Q1 planning"',
+      'bumba leadership "product strategy"',
+      'bumba coordinate --strategic'
+    ]
+  }
+};
+
+// Mode configuration file
+const CONFIG_FILE = path.join(process.cwd(), '.bumba-mode');
+
+// Get current mode
+function getCurrentMode() {
+  try {
+    if (fs.existsSync(CONFIG_FILE)) {
+      const config = JSON.parse(fs.readFileSync(CONFIG_FILE, 'utf8'));
+      return config.mode || 'full';
+    }
+  } catch (e) {
+    // Default to full mode
+  }
+  return 'full';
+}
+
+// Set mode
+function setMode(mode) {
+  const config = {
+    mode,
+    timestamp: new Date().toISOString(),
+    settings: MODES[mode]
+  };
+  fs.writeFileSync(CONFIG_FILE, JSON.stringify(config, null, 2));
+}
+
+// Display current mode
+function showCurrentMode() {
+  const current = getCurrentMode();
+  const mode = MODES[current];
+  
+  console.log(chalk.cyan('\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'));
+  console.log(chalk.cyan.bold(`${mode.emoji} Current Mode: ${mode.name}`));
+  console.log(chalk.cyan('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━'));
+  console.log(chalk.gray(mode.description));
+  console.log();
+  console.log(chalk.yellow('Configuration:'));
+  console.log(`  • Agents: ${mode.agents}`);
+  console.log(`  • Memory: ${mode.memory}`);
+  console.log(`  • Speed: ${mode.speed}`);
+  console.log();
+  console.log(chalk.green('Available Commands in this mode:'));
+  mode.commands.forEach(cmd => {
+    console.log(`  ${chalk.gray('$')} ${cmd}`);
+  });
+  console.log();
+}
+
+// List all modes
+function listModes() {
+  const current = getCurrentMode();
+  
+  console.log(chalk.yellow('\n🎮 BUMBA Team Modes\n'));
+  console.log(chalk.gray('Switch modes to optimize for different scenarios\n'));
+  
+  Object.entries(MODES).forEach(([key, mode]) => {
+    const isCurrent = key === current;
+    const prefix = isCurrent ? chalk.green('→') : ' ';
+    const name = isCurrent ? chalk.green.bold(mode.name) : chalk.white(mode.name);
+    
+    console.log(`${prefix} ${mode.emoji} ${name} (${chalk.cyan(key)})`);
+    console.log(chalk.gray(`   ${mode.description}`));
+    console.log(chalk.gray(`   Agents: ${mode.agents} | Memory: ${mode.memory} | Speed: ${mode.speed}`));
+    console.log();
+  });
+  
+  console.log(chalk.yellow('Usage:'));
+  console.log(chalk.gray('  bumba-mode <mode>    Switch to a specific mode'));
+  console.log(chalk.gray('  bumba-mode status    Show current mode'));
+  console.log(chalk.gray('  bumba-mode list      List all available modes'));
+  console.log();
+  console.log(chalk.yellow('Examples:'));
+  console.log(chalk.gray('  bumba-mode lite      # Switch to Lite Mode'));
+  console.log(chalk.gray('  bumba-mode turbo     # Switch to Turbo Mode'));
+  console.log(chalk.gray('  bumba-mode executive # Switch to Executive Mode'));
+}
+
+// Main CLI
+const args = process.argv.slice(2);
+const command = args[0];
+
+if (!command || command === 'list') {
+  listModes();
+} else if (command === 'status') {
+  showCurrentMode();
+} else if (MODES[command]) {
+  const oldMode = getCurrentMode();
+  setMode(command);
+  console.log(chalk.green(`\n✅ Switched from ${MODES[oldMode].name} to ${MODES[command].name}`));
+  showCurrentMode();
+  
+  // Show mode-specific tips
+  if (command === 'lite') {
+    console.log(chalk.yellow('💡 Tip: Use lite mode for quick prototypes and MVPs'));
+  } else if (command === 'turbo') {
+    console.log(chalk.yellow('💡 Tip: Turbo mode runs all agents in parallel for maximum speed'));
+  } else if (command === 'executive') {
+    console.log(chalk.yellow('💡 Tip: Executive mode focuses on strategic decisions and high-level coordination'));
+  } else if (command === 'dice') {
+    console.log(chalk.yellow('💡 Tip: DICE mode randomizes team composition for creative problem-solving'));
+  }
+} else {
+  console.log(chalk.red(`\n❌ Unknown mode: ${command}`));
+  console.log(chalk.yellow('\nAvailable modes:'));
+  Object.keys(MODES).forEach(mode => {
+    console.log(`  • ${mode}`);
+  });
+}
+
+// Export mode for other scripts to check
+if (require.main !== module) {
+  module.exports = { getCurrentMode, setMode, MODES };
+}
