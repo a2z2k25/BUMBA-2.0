@@ -432,15 +432,6 @@ class SpecialistRegistry {
       expertise: ['game design', 'engines', 'graphics', 'gameplay']
     });
 
-    this.registerSpecialist('minecraft-specialist', {
-      name: 'Minecraft Specialist',
-      category: 'technical',
-      subcategory: 'advanced',
-      path: 'technical/advanced/minecraft-specialist',
-      keywords: ['minecraft', 'modding', 'bukkit', 'forge'],
-      expertise: ['minecraft modding', 'plugins', 'servers', 'redstone']
-    });
-
     this.registerSpecialist('blockchain-engineer', {
       name: 'Blockchain Engineer',
       category: 'technical',

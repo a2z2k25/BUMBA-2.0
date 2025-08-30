@@ -123,11 +123,10 @@ describe('Comprehensive Specialist Ecosystem Tests', () => {
       });
     });
 
-    describe('Advanced Specialists (7)', () => {
+    describe('Advanced Specialists (6)', () => {
       const advancedSpecialists = [
         'mobile-developer', 'ios-developer', 'flutter-expert',
-        'unity-developer', 'game-developer', 'minecraft-specialist',
-        'blockchain-engineer'
+        'unity-developer', 'game-developer', 'blockchain-engineer'
       ];
 
       advancedSpecialists.forEach(type => {
