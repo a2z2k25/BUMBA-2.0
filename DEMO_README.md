@@ -21,7 +21,7 @@ The demo simulates 12 different AI agents across 4 departments:
 - **Product Department** (🟡): Product Manager, Business Analyst, Requirements Analyst
 - **Design Department** (🔴): UI Designer, UX Researcher, Interaction Designer  
 - **Backend Department** (🟢): Backend Engineer, Database Architect, API Specialist
-- **QA Department** (🔵): Test Engineer, Security Specialist, Performance Analyst
+- **QA Department** (🟠): Test Engineer, Security Specialist, Performance Analyst
 
 ### ⚡ Parallel Execution
 Watch as multiple agents work simultaneously:

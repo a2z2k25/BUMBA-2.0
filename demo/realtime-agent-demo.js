@@ -151,9 +151,9 @@ class RealtimeAgentDemo {
       { id: 'api-1', name: 'API Specialist', dept: 'Backend', color: 'green', icon: '🟢' },
       
       // QA Department
-      { id: 'te-1', name: 'Test Engineer', dept: 'QA', color: 'blue', icon: '🔵' },
-      { id: 'ss-1', name: 'Security Specialist', dept: 'QA', color: 'blue', icon: '🔵' },
-      { id: 'pa-1', name: 'Performance Analyst', dept: 'QA', color: 'blue', icon: '🔵' }
+      { id: 'te-1', name: 'Test Engineer', dept: 'QA', color: 'yellow', icon: '🟠' },
+      { id: 'ss-1', name: 'Security Specialist', dept: 'QA', color: 'yellow', icon: '🟠' },
+      { id: 'pa-1', name: 'Performance Analyst', dept: 'QA', color: 'yellow', icon: '🟠' }
     ];
 
     agentDefinitions.forEach(def => {

@@ -14,7 +14,7 @@ class MultiAgentDemo {
       product: { color: 'yellow', icon: '🟡', name: 'Product' },
       design: { color: 'red', icon: '🔴', name: 'Design' },
       backend: { color: 'green', icon: '🟢', name: 'Backend' },
-      qa: { color: 'blue', icon: '🔵', name: 'QA' }
+      qa: { color: 'yellow', icon: '🟠', name: 'QA' }
     };
   }
 

@@ -75,6 +75,14 @@ const DEPARTMENTS = {
     managerPath: '../testing/testing-manager',
     emoji: '🧪',
     description: 'Testing, validation, and quality assurance'
+  },
+  QA: {
+    id: 'qa',
+    name: 'Quality Assurance',
+    managerClass: 'QAManager',
+    managerPath: '../qa/qa-manager',
+    emoji: '🟠',
+    description: 'Quality assurance, testing, security, and performance validation'
   }
 };
 

@@ -18,7 +18,7 @@ class AgentSimulator {
       product: { color: 'yellow', icon: '🟡' },
       design: { color: 'red', icon: '🔴' },
       backend: { color: 'green', icon: '🟢' },
-      qa: { color: 'blue', icon: '🔵' }
+      qa: { color: 'yellow', icon: '🟠' }
     };
   }
 

@@ -94,5 +94,15 @@
     "verify",
     "check",
     "audit"
+  ],
+  "qa": [
+    "qa",
+    "quality",
+    "test-suite",
+    "security-test",
+    "performance-test",
+    "integration-test",
+    "e2e-test",
+    "unit-test"
   ]
 }
